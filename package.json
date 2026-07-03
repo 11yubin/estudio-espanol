@@ -1,0 +1,14 @@
+{
+  "name": "spanish-vocab-study",
+  "version": "1.0.0",
+  "description": "스페인어 단어장 및 웹 데이터 빌드 스크립트",
+  "main": "build_단어장.js",
+  "scripts": {
+    "build:docx": "node build_단어장.js",
+    "build:web": "node build_web.js"
+  },
+  "dependencies": {
+    "docx": "^9.0.0"
+  },
+  "license": "MIT"
+}

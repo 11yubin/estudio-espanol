@@ -1,1 +1,570 @@
-[]
+[
+  {
+    "es": "a la derecha (de)",
+    "en": "to the right (of)",
+    "ko": "오른쪽에",
+    "ex": "Gira a la derecha en el semáforo.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "a la izquierda (de)",
+    "en": "to the left (of)",
+    "ko": "왼쪽에",
+    "ex": "El baño está a la izquierda.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "al lado de",
+    "en": "beside; next to",
+    "ko": "옆에",
+    "ex": "El banco está al lado de la farmacia.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "al otro lado de",
+    "en": "on the other side of",
+    "ko": "건너편에; 반대편에",
+    "ex": "La tienda está al otro lado de la calle.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "alegre",
+    "en": "cheerful; happy",
+    "ko": "즐거운; 명랑한",
+    "ex": "La música alegre me hace bailar.",
+    "note": "성별 구분 없음 (alegre m/f), 복수형: alegres",
+    "round": "wb1"
+  },
+  {
+    "es": "alquilar",
+    "en": "to rent",
+    "ko": "빌리다; 임대하다",
+    "ex": "Queremos alquilar un apartamento.",
+    "note": null,
+    "round": "wb2-pool"
+  },
+  {
+    "es": "amable",
+    "en": "kind; friendly",
+    "ko": "친절한",
+    "ex": "Él es muy amable con todos.",
+    "note": "성별 구분 없음 (amable m/f), 복수형: amables",
+    "round": "wb1"
+  },
+  {
+    "es": "aprender",
+    "en": "to learn",
+    "ko": "배우다",
+    "ex": "Quiero aprender español.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "aprovechar",
+    "en": "to take advantage of; to make the most of",
+    "ko": "활용하다; 이용하다",
+    "ex": "Aprovechan el buen tiempo para salir.",
+    "note": "규칙 동사: aprovecho, aprovechas, aprovecha... | Aprovecha = 잘 활용해!",
+    "round": "wb1"
+  },
+  {
+    "es": "araña",
+    "en": "spider",
+    "ko": "거미",
+    "ex": "Hay una araña en el techo.",
+    "note": "여성명사: la araña / 복수: las arañas",
+    "round": "wb1"
+  },
+  {
+    "es": "arreglar",
+    "en": "to fix; to arrange; to tidy up",
+    "ko": "고치다; 정리하다",
+    "ex": "Necesito arreglar mi bicicleta.",
+    "note": null,
+    "round": "wb2-pool"
+  },
+  {
+    "es": "beber",
+    "en": "to drink",
+    "ko": "마시다",
+    "ex": "Bebo agua todos los días.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "calor",
+    "en": "heat; warmth",
+    "ko": "더위; 열기",
+    "ex": "Hace mucho calor en verano.",
+    "note": "남성명사: el calor | hacer calor = 날씨가 덥다 (tener calor = 나(사람)는 덥다)",
+    "round": "wb1"
+  },
+  {
+    "es": "cerca de",
+    "en": "near; close to",
+    "ko": "근처에; ~에서 가까이",
+    "ex": "Vivo cerca del centro.",
+    "note": "cerca de(가까이) ↔ lejos de(멀리)",
+    "round": "wb1"
+  },
+  {
+    "es": "comenzar",
+    "en": "to start; to begin",
+    "ko": "시작하다",
+    "ex": "Comenzamos el proyecto hoy.",
+    "note": "어간 변화 e→ie: comienzo, comienzas, comienza... | 동의어: empezar (뜻 동일, 혼용 가능)",
+    "round": "wb1"
+  },
+  {
+    "es": "dar",
+    "en": "to give",
+    "ko": "주다",
+    "ex": "Te doy un regalo.",
+    "note": "불규칙 동사 — 현재: doy, das, da, damos, dais, dan | 단순과거: di, diste, dio, dimos, disteis, dieron",
+    "round": "wb1"
+  },
+  {
+    "es": "debajo de",
+    "en": "below; under",
+    "ko": "아래에",
+    "ex": "El gato está debajo de la cama.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "dejar",
+    "en": "to leave; to let; to stop",
+    "ko": "두다; 떠나다; 그만두다",
+    "ex": "Deja tu mochila aquí.",
+    "note": "dejar de + inf = ~하기를 그만두다 (e.g. Dejé de fumar. 담배를 끊었다.)",
+    "round": "wb2-pool"
+  },
+  {
+    "es": "delante de",
+    "en": "in front of",
+    "ko": "앞에",
+    "ex": "Espérame delante del cine.",
+    "note": "delante de(앞에) ↔ detrás de(뒤에)",
+    "round": "wb1"
+  },
+  {
+    "es": "delgado",
+    "en": "thin; slim",
+    "ko": "날씬한; 얇은",
+    "ex": "Ella es muy delgada.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "dentro de",
+    "en": "inside; within",
+    "ko": "안에",
+    "ex": "Las llaves están dentro del cajón.",
+    "note": "dentro de(안에) ↔ fuera de(밖에)",
+    "round": "wb1"
+  },
+  {
+    "es": "desordenado",
+    "en": "messy; disorganized",
+    "ko": "지저분한; 무질서한",
+    "ex": "Mi habitación está muy desordenada.",
+    "note": "estar 동사와 쓰임 (상태): estar desordenado/a",
+    "round": "wb1"
+  },
+  {
+    "es": "detrás de",
+    "en": "behind; in back of",
+    "ko": "뒤에",
+    "ex": "El jardín está detrás de la casa.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "dulce",
+    "en": "sweet",
+    "ko": "달콤한; 단",
+    "ex": "Este pastel está muy dulce.",
+    "note": "명사로도 쓰임: los dulces = 사탕, 과자류",
+    "round": "wb1"
+  },
+  {
+    "es": "echar",
+    "en": "to throw; to put; to pour",
+    "ko": "던지다; 넣다; 붓다",
+    "ex": "Echa la carta al buzón.",
+    "note": "관용구: echar de menos = 그리워하다 (e.g. Te echo de menos.)",
+    "round": "wb1"
+  },
+  {
+    "es": "edificio",
+    "en": "building",
+    "ko": "건물",
+    "ex": "El edificio tiene veinte pisos.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "ejercicio",
+    "en": "exercise; workout; practice",
+    "ko": "운동; 연습",
+    "ex": "Hago ejercicio todos los días.",
+    "note": "남성명사: el ejercicio | hacer ejercicio = 운동하다",
+    "round": "wb1"
+  },
+  {
+    "es": "empezar",
+    "en": "to start; to begin",
+    "ko": "시작하다",
+    "ex": "La clase empieza a las nueve.",
+    "note": "어간 변화 e→ie: empiezo, empiezas, empieza, empezamos, empezáis, empiezan | 동의어: comenzar",
+    "round": "wb1"
+  },
+  {
+    "es": "empresa",
+    "en": "company; firm; enterprise",
+    "ko": "회사; 기업",
+    "ex": "Trabajo en una empresa internacional.",
+    "note": "여성명사: la empresa / 복수: las empresas",
+    "round": "wb1"
+  },
+  {
+    "es": "encima de",
+    "en": "on top of; above",
+    "ko": "위에",
+    "ex": "El libro está encima de la mesa.",
+    "note": "encima de(위에) ↔ debajo de(아래에)",
+    "round": "wb1"
+  },
+  {
+    "es": "enfadado/a",
+    "en": "angry; annoyed",
+    "ko": "화난; 짜증난",
+    "ex": "Ella está muy enfadada.",
+    "note": "estar 동사와 쓰임 (감정·상태) | m: enfadado / f: enfadada",
+    "round": "wb1"
+  },
+  {
+    "es": "enfrente de",
+    "en": "in front of; across from",
+    "ko": "맞은편에; 정면에",
+    "ex": "El hotel está enfrente de la estación.",
+    "note": "≈ frente a (혼용 가능)",
+    "round": "wb1"
+  },
+  {
+    "es": "entender",
+    "en": "to understand",
+    "ko": "이해하다",
+    "ex": "No entiendo esta pregunta.",
+    "note": "어간 변화 e→ie: entiendo, entiendes, entiende, entendemos, entendéis, entienden",
+    "round": "wb1"
+  },
+  {
+    "es": "entre",
+    "en": "between; among",
+    "ko": "사이에",
+    "ex": "El banco está entre la farmacia y el supermercado.",
+    "note": "전치사 — 두 대상 사이: entre A y B",
+    "round": "wb1"
+  },
+  {
+    "es": "estación",
+    "en": "season; station",
+    "ko": "계절; 역",
+    "ex": "¿Cuál es tu estación favorita?",
+    "note": "두 가지 의미: estación del año (계절) / estación de metro (지하철역)",
+    "round": "wb1"
+  },
+  {
+    "es": "extranjero",
+    "en": "foreigner; foreign",
+    "ko": "외국인; 외국의",
+    "ex": "Hay muchos extranjeros en esta ciudad.",
+    "note": "명사/형용사 겸용 | 형용사: un restaurante extranjero (외국 식당)",
+    "round": "wb1"
+  },
+  {
+    "es": "flor",
+    "en": "flower",
+    "ko": "꽃",
+    "ex": "La flor huele muy bien.",
+    "note": "복수형: flores (여성명사: la flor)",
+    "round": "wb1"
+  },
+  {
+    "es": "frente a",
+    "en": "facing; opposite",
+    "ko": "맞은편에; ~을 향해",
+    "ex": "Hay un parque frente a mi casa.",
+    "note": "≈ enfrente de | frente a는 추상적 의미(~에 맞서)도 가능",
+    "round": "wb1"
+  },
+  {
+    "es": "fuera",
+    "en": "outside; out",
+    "ko": "밖에; 밖으로",
+    "ex": "Los niños están jugando fuera.",
+    "note": "전치사구: fuera de + 명사 = ~의 밖에 (e.g. fuera de la casa)",
+    "round": "wb1"
+  },
+  {
+    "es": "fuera de",
+    "en": "outside of",
+    "ko": "밖에; ~의 외부에",
+    "ex": "No se puede fumar fuera del edificio.",
+    "note": "fuera de(밖에) ↔ dentro de(안에)",
+    "round": "wb1"
+  },
+  {
+    "es": "fumar",
+    "en": "to smoke",
+    "ko": "담배 피우다",
+    "ex": "Aquí está prohibido fumar.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "ganar",
+    "en": "to win; to earn",
+    "ko": "이기다; 벌다",
+    "ex": "El equipo ganó el partido.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "garaje",
+    "en": "garage",
+    "ko": "차고; 주차장",
+    "ex": "El coche está en el garaje.",
+    "note": "남성명사: el garaje / 복수: los garajes",
+    "round": "wb1"
+  },
+  {
+    "es": "girar",
+    "en": "to turn; to rotate",
+    "ko": "돌다; 회전하다",
+    "ex": "Gira a la derecha en el semáforo.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "golpe",
+    "en": "hit; blow; coup",
+    "ko": "타격; 충격; 쿠데타",
+    "ex": "Me di un golpe en la cabeza.",
+    "note": "관용구: golpe de estado = 쿠데타 / de golpe = 갑자기",
+    "round": "wb1"
+  },
+  {
+    "es": "helado",
+    "en": "(n.) ice cream; (adj.) frozen",
+    "ko": "아이스크림; 얼어붙은",
+    "ex": "Quiero un helado de chocolate.",
+    "note": "명사: el helado (아이스크림) | 형용사: estar helado/a (얼어붙다, 매우 춥다)",
+    "round": "wb1"
+  },
+  {
+    "es": "imprescindible",
+    "en": "essential; indispensable",
+    "ko": "필수적인; 없어서는 안 될",
+    "ex": "El agua es imprescindible para vivir.",
+    "note": "성별 구분 없음 (m/f), 복수형: imprescindibles",
+    "round": "wb2-pool"
+  },
+  {
+    "es": "invierno",
+    "en": "winter",
+    "ko": "겨울",
+    "ex": "En invierno hace mucho frío.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "junto a",
+    "en": "right next to; beside",
+    "ko": "바로 옆에",
+    "ex": "Siéntate junto a mí.",
+    "note": "al lado de보다 밀착된 느낌",
+    "round": "wb1"
+  },
+  {
+    "es": "lejos de",
+    "en": "far from",
+    "ko": "~에서 멀리",
+    "ex": "La estación está lejos de aquí.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "llenar",
+    "en": "to fill",
+    "ko": "채우다",
+    "ex": "Llena el vaso de agua.",
+    "note": null,
+    "round": "wb2-pool"
+  },
+  {
+    "es": "los deberes",
+    "en": "homework",
+    "ko": "숙제",
+    "ex": "Tengo que hacer los deberes.",
+    "note": "항상 복수형으로 쓰임: los deberes (단수형 없음) | hacer los deberes = 숙제하다",
+    "round": "wb1"
+  },
+  {
+    "es": "marisco",
+    "en": "seafood; shellfish",
+    "ko": "해산물; 조개류",
+    "ex": "Me encanta el marisco fresco.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "mentir",
+    "en": "to lie",
+    "ko": "거짓말하다",
+    "ex": "No me mientas.",
+    "note": "어간 변화 e→ie/i: miento, mientes, miente... / 단순과거 yo: mentí",
+    "round": "wb1"
+  },
+  {
+    "es": "miel",
+    "en": "honey",
+    "ko": "꿀",
+    "ex": "Me gusta el té con miel.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "nieve",
+    "en": "snow",
+    "ko": "눈",
+    "ex": "La nieve cubre las montañas.",
+    "note": "동사형: nevar (눈이 오다) — 불규칙: nieva (3인칭 단수만 사용)",
+    "round": "wb1"
+  },
+  {
+    "es": "pasar",
+    "en": "to pass; to happen; to spend",
+    "ko": "지나다; 일어나다; 보내다",
+    "ex": "¿Qué pasó? / Pasé el fin de semana en casa.",
+    "note": "다의어 — ¿Qué pasa? = 무슨 일이야? / pasar tiempo = 시간을 보내다 / pasar por = ~을 지나치다",
+    "round": "wb1"
+  },
+  {
+    "es": "perder",
+    "en": "to lose; to miss",
+    "ko": "잃다; 놓치다",
+    "ex": "No quiero perder el tren.",
+    "note": "어간 변화 e→ie: pierdo, pierdes, pierde, perdemos, perdéis, pierden",
+    "round": "wb1"
+  },
+  {
+    "es": "piscina",
+    "en": "swimming pool",
+    "ko": "수영장",
+    "ex": "La piscina está abierta en verano.",
+    "note": "여성명사: la piscina / 복수: las piscinas",
+    "round": "wb1"
+  },
+  {
+    "es": "pobre",
+    "en": "poor; pitiful",
+    "ko": "가난한; 불쌍한",
+    "ex": "Es una familia muy pobre.",
+    "note": "위치 따라 의미 다름: un hombre pobre = 가난한 남자 / un pobre hombre = 불쌍한 남자",
+    "round": "wb1"
+  },
+  {
+    "es": "polvo",
+    "en": "dust; powder",
+    "ko": "먼지; 가루",
+    "ex": "Hay mucho polvo en esta habitación.",
+    "note": "남성명사: el polvo / 관용구: hacer polvo = 망가뜨리다; 녹초로 만들다",
+    "round": "wb1"
+  },
+  {
+    "es": "poner",
+    "en": "to put; to place",
+    "ko": "놓다; 두다",
+    "ex": "Pon el libro en la mesa.",
+    "note": "불규칙 동사 — yo: pongo | 단순과거: puse, pusiste, puso... | 미래 어간: pondr- | 과거분사: puesto",
+    "round": "wb2-pool"
+  },
+  {
+    "es": "preferir",
+    "en": "to prefer",
+    "ko": "선호하다",
+    "ex": "Prefiero el café al té.",
+    "note": "어간 변화 e→ie/i: prefiero, prefieres, prefiere, preferimos, preferís, prefieren",
+    "round": "wb1"
+  },
+  {
+    "es": "rallar",
+    "en": "to grate; to shred",
+    "ko": "강판에 갈다",
+    "ex": "Ralla el queso encima de la pasta.",
+    "note": null,
+    "round": "wb1"
+  },
+  {
+    "es": "resfriado",
+    "en": "(n.) cold; (adj.) having a cold",
+    "ko": "감기; 감기에 걸린",
+    "ex": "Tengo un resfriado. / Estoy resfriado.",
+    "note": "명사: el resfriado (감기) | 형용사: estar resfriado/a (감기에 걸리다)",
+    "round": "wb1"
+  },
+  {
+    "es": "sacar",
+    "en": "to take out; to get; to pull out",
+    "ko": "꺼내다; 얻다; 빼다",
+    "ex": "Saca el libro de la mochila.",
+    "note": "관용구: sacar una foto = 사진 찍다 / sacar buenas notas = 좋은 성적을 받다",
+    "round": "wb2-pool"
+  },
+  {
+    "es": "sentir",
+    "en": "to feel; to be sorry",
+    "ko": "느끼다; 유감이다",
+    "ex": "Siento mucho lo que pasó.",
+    "note": "어간 변화 e→ie/i: siento, sientes, siente... | lo siento = 미안합니다",
+    "round": "wb1"
+  },
+  {
+    "es": "todavía",
+    "en": "still; yet",
+    "ko": "아직; 여전히",
+    "ex": "Todavía no he comido.",
+    "note": "todavía (아직) vs ya (이미/벌써) — 반의어 관계",
+    "round": "wb1"
+  },
+  {
+    "es": "tomar",
+    "en": "to take; to drink; to have",
+    "ko": "마시다; 잡다; 먹다",
+    "ex": "Voy a tomar un café.",
+    "note": "beber vs tomar: beber는 '마시다' 전용 / tomar는 더 넓은 의미 (먹다·잡다 포함), 중남미에서 더 자주 쓰임",
+    "round": "wb1"
+  },
+  {
+    "es": "tranquilo/a",
+    "en": "calm; quiet; relaxed",
+    "ko": "조용한; 차분한",
+    "ex": "La playa está muy tranquila hoy.",
+    "note": "m: tranquilo / f: tranquila / 복수: tranquilos, tranquilas",
+    "round": "wb1"
+  },
+  {
+    "es": "vender",
+    "en": "to sell",
+    "ko": "팔다",
+    "ex": "Ella vende flores en el mercado.",
+    "note": null,
+    "round": "wb1"
+  }
+]
