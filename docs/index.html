@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e8f3ff">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" href="./icon-192.png">
+  <title>Estudio Español - 단어장</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #2563eb;
+      --primary-light: #dbeafe;
+      --bg: #ffffff;
+      --text: #1f2937;
+      --border: #e5e7eb;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111827;
+        --text: #f3f4f6;
+        --border: #374151;
+        --primary-light: #1e3a8a;
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    header {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+      background-color: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 12px;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.2s;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* 표 뷰 */
+    .controls {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 200px;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background-color: var(--bg);
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .filter-select {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background-color: var(--bg);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 2px solid var(--border);
+      font-weight: 600;
+      background-color: var(--primary-light);
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tr:hover {
+      background-color: var(--primary-light);
+    }
+
+    .round-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .no-data {
+      padding: 32px 16px;
+      text-align: center;
+      color: #9ca3af;
+    }
+
+    /* 플래시카드 뷰 */
+    .flashcard-container {
+      padding: 16px;
+    }
+
+    .flashcard-controls {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: var(--primary);
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+
+    .btn:active {
+      opacity: 0.8;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .card {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      max-width: 400px;
+      margin: 0 auto 16px;
+      padding: 24px;
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg) 100%);
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      user-select: none;
+      transition: transform 0.3s;
+      min-height: 300px;
+    }
+
+    .card:active {
+      transform: scale(0.98);
+    }
+
+    .card-front {
+      font-size: 32px;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .card-back {
+      display: none;
+    }
+
+    .card.flipped .card-front {
+      display: none;
+    }
+
+    .card.flipped .card-back {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card-back-item {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-back-item:last-child {
+      border-bottom: none;
+    }
+
+    .card-label {
+      font-size: 12px;
+      color: #9ca3af;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .card-value {
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    .card-nav {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .card-nav button {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      font-size: 18px;
+    }
+
+    .card-info {
+      padding: 8px 12px;
+      background-color: var(--primary-light);
+      border-radius: 6px;
+      font-size: 12px;
+      color: var(--text);
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    /* 반응형 */
+    @media (max-width: 640px) {
+      header {
+        padding: 12px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .tabs {
+        gap: 4px;
+      }
+
+      .tab-btn {
+        padding: 10px 8px;
+        font-size: 13px;
+      }
+
+      table {
+        font-size: 12px;
+      }
+
+      th, td {
+        padding: 8px;
+      }
+
+      .card {
+        padding: 16px;
+        min-height: 250px;
+      }
+
+      .card-front {
+        font-size: 24px;
+      }
+
+      .card-value {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Estudio Español</h1>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="table">표</button>
+        <button class="tab-btn" data-tab="flashcard">카드</button>
+      </div>
+    </header>
+
+    <!-- 표 뷰 -->
+    <div class="tab-content active" id="table">
+      <div class="controls">
+        <input type="text" class="search-box" id="searchInput" placeholder="스페인어, 영어, 한국어 검색...">
+        <select class="filter-select" id="filterSelect">
+          <option value="">모든 회차</option>
+        </select>
+      </div>
+      <div class="table-wrapper">
+        <table id="vocabTable">
+          <thead>
+            <tr>
+              <th>스페인어</th>
+              <th>영어</th>
+              <th>한국어</th>
+              <th>예문</th>
+              <th>회차</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+          </tbody>
+        </table>
+      </div>
+      <div class="no-data" id="noData">데이터 로딩 중...</div>
+    </div>
+
+    <!-- 플래시카드 뷰 -->
+    <div class="tab-content" id="flashcard">
+      <div class="flashcard-container">
+        <div class="flashcard-controls">
+          <button class="btn" id="shuffleBtn">🔀 셔플</button>
+          <button class="btn btn-secondary" id="hideKnownBtn">아는 단어 숨기기</button>
+        </div>
+        <div class="card-info" id="cardInfo">카드 1 / 0</div>
+        <div class="card" id="card">
+          <div class="card-front">Loading...</div>
+          <div class="card-back">
+            <div class="card-back-item">
+              <div class="card-label">영어</div>
+              <div class="card-value" id="cardEn"></div>
+            </div>
+            <div class="card-back-item">
+              <div class="card-label">한국어</div>
+              <div class="card-value" id="cardKo"></div>
+            </div>
+            <div class="card-back-item">
+              <div class="card-label">예문</div>
+              <div class="card-value" id="cardEx"></div>
+            </div>
+            <div class="card-back-item">
+              <div class="card-label">노트</div>
+              <div class="card-value" id="cardNote"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-nav">
+          <button class="btn btn-secondary" id="prevBtn" style="width: 50px;">← 이전</button>
+          <button class="btn btn-secondary" id="nextBtn" style="width: 50px;">다음 →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let allData = [];
+    let currentCardIndex = 0;
+    let filteredData = [];
+    let knownWords = new Set();
+
+    // 데이터 로드
+    async function loadData() {
+      try {
+        const response = await fetch('./data.json');
+        allData = await response.json();
+        initializeTable();
+        initializeFlashcard();
+      } catch (error) {
+        console.error('데이터 로드 실패:', error);
+        document.getElementById('noData').textContent = '데이터를 불러올 수 없습니다.';
+      }
+    }
+
+    // 표 뷰 초기화
+    function initializeTable() {
+      if (allData.length === 0) return;
+
+      const rounds = [...new Set(allData.map(w => w.round))].sort();
+      const filterSelect = document.getElementById('filterSelect');
+      rounds.forEach(round => {
+        const option = document.createElement('option');
+        option.value = round;
+        option.textContent = round;
+        filterSelect.appendChild(option);
+      });
+
+      filterSelect.addEventListener('change', updateTable);
+      document.getElementById('searchInput').addEventListener('input', updateTable);
+      updateTable();
+    }
+
+    function updateTable() {
+      const searchText = document.getElementById('searchInput').value.toLowerCase();
+      const selectedRound = document.getElementById('filterSelect').value;
+
+      filteredData = allData.filter(word => {
+        const matchSearch = !searchText || 
+          word.es.toLowerCase().includes(searchText) ||
+          word.en.toLowerCase().includes(searchText) ||
+          word.ko.toLowerCase().includes(searchText);
+        const matchRound = !selectedRound || word.round === selectedRound;
+        return matchSearch && matchRound;
+      });
+
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = '';
+
+      if (filteredData.length === 0) {
+        document.getElementById('noData').style.display = 'block';
+        return;
+      }
+
+      document.getElementById('noData').style.display = 'none';
+
+      filteredData.forEach(word => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td><strong>${word.es}</strong></td>
+          <td>${word.en || '-'}</td>
+          <td>${word.ko || '-'}</td>
+          <td>${word.ex || '-'}</td>
+          <td><span class="round-badge">${word.round}</span></td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    // 플래시카드 뷰 초기화
+    function initializeFlashcard() {
+      if (allData.length === 0) return;
+
+      const cardEl = document.getElementById('card');
+      cardEl.addEventListener('click', () => {
+        cardEl.classList.toggle('flipped');
+      });
+
+      document.getElementById('shuffleBtn').addEventListener('click', shuffleCards);
+      document.getElementById('nextBtn').addEventListener('click', nextCard);
+      document.getElementById('prevBtn').addEventListener('click', prevCard);
+      document.getElementById('hideKnownBtn').addEventListener('click', toggleHideKnown);
+
+      filteredData = allData;
+      currentCardIndex = 0;
+      updateCard();
+    }
+
+    function updateCard() {
+      if (filteredData.length === 0) return;
+
+      const word = filteredData[currentCardIndex];
+      document.getElementById('card').classList.remove('flipped');
+      document.querySelector('.card-front').textContent = word.es;
+      document.getElementById('cardEn').textContent = word.en || '-';
+      document.getElementById('cardKo').textContent = word.ko || '-';
+      document.getElementById('cardEx').textContent = word.ex || '-';
+      document.getElementById('cardNote').textContent = word.note || '-';
+      document.getElementById('cardInfo').textContent = `카드 ${currentCardIndex + 1} / ${filteredData.length}`;
+    }
+
+    function nextCard() {
+      currentCardIndex = (currentCardIndex + 1) % filteredData.length;
+      updateCard();
+    }
+
+    function prevCard() {
+      currentCardIndex = (currentCardIndex - 1 + filteredData.length) % filteredData.length;
+      updateCard();
+    }
+
+    function shuffleCards() {
+      for (let i = filteredData.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [filteredData[i], filteredData[j]] = [filteredData[j], filteredData[i]];
+      }
+      currentCardIndex = 0;
+      updateCard();
+    }
+
+    function toggleHideKnown() {
+      // 나중에 구현
+      alert('아는 단어 숨기기 기능은 곧 추가됩니다.');
+    }
+
+    // 탭 전환
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+        e.target.classList.add('active');
+        const tabId = e.target.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+
+        if (tabId === 'flashcard') {
+          filteredData = allData;
+          currentCardIndex = 0;
+          updateCard();
+        }
+      });
+    });
+
+    // 초기 로드
+    loadData();
+
+    // PWA 설치 안내 (선택사항)
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+  </script>
+</body>
+</html>
