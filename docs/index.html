@@ -412,6 +412,7 @@
     let allData = [];
     let currentCardIndex = 0;
     let filteredData = [];
+    let tableData = [];
     let knownWords = new Set();
 
     // 데이터 로드
@@ -458,7 +459,7 @@
       const searchText = document.getElementById('searchInput').value.toLowerCase();
       const selectedRound = document.getElementById('filterSelect').value;
 
-      filteredData = allData.filter(word => {
+      tableData = allData.filter(word => {
         const matchSearch = !searchText || 
           word.es.toLowerCase().includes(searchText) ||
           word.en.toLowerCase().includes(searchText) ||
@@ -470,14 +471,14 @@
       const tbody = document.getElementById('tableBody');
       tbody.innerHTML = '';
 
-      if (filteredData.length === 0) {
+      if (tableData.length === 0) {
         document.getElementById('noData').style.display = 'block';
         return;
       }
 
       document.getElementById('noData').style.display = 'none';
 
-      filteredData.forEach(word => {
+      tableData.forEach(word => {
         const row = document.createElement('tr');
         row.innerHTML = `
           <td><strong>${word.es}</strong></td>
@@ -488,6 +489,26 @@
         `;
         tbody.appendChild(row);
       });
+    }
+
+    function getVisibleWords() {
+      const hide = localStorage.getItem('hideKnown') === '1';
+      if (!hide) return allData.slice();
+      const known = JSON.parse(localStorage.getItem('knownWords') || '[]');
+      const knownSet = new Set(known);
+      return allData.filter(w => !knownSet.has(w.es));
+    }
+
+    function resetFlashcardDeck() {
+      filteredData = getVisibleWords();
+      if (filteredData.length === 0) {
+        currentCardIndex = 0;
+        updateCard();
+        return;
+      }
+      shuffleArray(filteredData);
+      currentCardIndex = 0;
+      updateCard();
     }
 
     // 플래시카드 뷰 초기화
@@ -504,12 +525,7 @@
       document.getElementById('prevBtn').addEventListener('click', prevCard);
       document.getElementById('hideKnownBtn').addEventListener('click', toggleHideKnown);
 
-      // filteredData is already set by applyKnownFilter; default to randomized order
-      if (!filteredData || filteredData.length === 0) filteredData = allData.slice();
-      // shuffle by default so cards appear in random order
-      shuffleCards();
-      currentCardIndex = 0;
-      updateCard();
+      resetFlashcardDeck();
     }
 
     function shuffleArray(arr) {
@@ -583,7 +599,9 @@
 
     function shuffleCards() {
       if (!filteredData) return;
-      shuffleArray(filteredData);
+      const shuffled = filteredData.slice();
+      shuffleArray(shuffled);
+      filteredData = shuffled;
       currentCardIndex = 0;
       updateCard();
     }
@@ -604,19 +622,9 @@
     }
 
     function applyKnownFilter() {
-      const hide = localStorage.getItem('hideKnown') === '1';
-      if (!hide) {
-        filteredData = allData.slice();
-      } else {
-        const known = JSON.parse(localStorage.getItem('knownWords') || '[]');
-        const knownSet = new Set(known);
-        filteredData = allData.filter(w => !knownSet.has(w.es));
-      }
-      // Update table and flashcard if visible
       updateTable();
       if (document.getElementById('flashcard').classList.contains('active')) {
-        currentCardIndex = 0;
-        updateCard();
+        resetFlashcardDeck();
       }
     }
 
@@ -651,9 +659,7 @@
         document.getElementById(tabId).classList.add('active');
 
         if (tabId === 'flashcard') {
-          filteredData = allData;
-          currentCardIndex = 0;
-          updateCard();
+          resetFlashcardDeck();
         }
       });
     });
