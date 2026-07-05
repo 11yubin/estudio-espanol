@@ -4,7 +4,9 @@
     "en": "to the right (of)",
     "ko": "오른쪽에",
     "ex": "Gira a la derecha en el semáforo.",
+    "ex_ko": "신호등에서 오른쪽으로 도세요.",
     "note": null,
+    "category": "direction",
     "round": "wb1"
   },
   {
@@ -12,7 +14,29 @@
     "en": "to the left (of)",
     "ko": "왼쪽에",
     "ex": "El baño está a la izquierda.",
+    "ex_ko": "화장실은 왼쪽에 있다.",
     "note": null,
+    "category": "direction",
+    "round": "wb1"
+  },
+  {
+    "es": "ágil",
+    "en": "agile; nimble",
+    "ko": "민첩한; 날렵한",
+    "ex": "Es una atleta muy ágil.",
+    "ex_ko": "그녀는 매우 민첩한 운동선수다.",
+    "note": "성별 구분 없음 (m/f), 복수형: ágiles",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "ahorrar",
+    "en": "to save (money/time)",
+    "ko": "저축하다; 아끼다",
+    "ex": "Necesito ahorrar más dinero.",
+    "ex_ko": "나는 돈을 더 저축해야 한다.",
+    "note": null,
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -20,7 +44,9 @@
     "en": "beside; next to",
     "ko": "옆에",
     "ex": "El banco está al lado de la farmacia.",
+    "ex_ko": "그 은행은 약국 옆에 있다.",
     "note": null,
+    "category": "direction",
     "round": "wb1"
   },
   {
@@ -28,7 +54,9 @@
     "en": "on the other side of",
     "ko": "건너편에; 반대편에",
     "ex": "La tienda está al otro lado de la calle.",
+    "ex_ko": "그 가게는 길 건너편에 있다.",
     "note": null,
+    "category": "direction",
     "round": "wb1"
   },
   {
@@ -36,7 +64,9 @@
     "en": "cheerful; happy",
     "ko": "즐거운; 명랑한",
     "ex": "La música alegre me hace bailar.",
+    "ex_ko": "즐거운 음악은 나를 춤추게 한다.",
     "note": "성별 구분 없음 (alegre m/f), 복수형: alegres",
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -44,7 +74,9 @@
     "en": "to rent",
     "ko": "빌리다; 임대하다",
     "ex": "Queremos alquilar un apartamento.",
+    "ex_ko": "우리는 아파트를 임대하고 싶다.",
     "note": null,
+    "category": "verb",
     "round": "wb2-pool"
   },
   {
@@ -52,7 +84,9 @@
     "en": "kind; friendly",
     "ko": "친절한",
     "ex": "Él es muy amable con todos.",
+    "ex_ko": "그는 모두에게 매우 친절하다.",
     "note": "성별 구분 없음 (amable m/f), 복수형: amables",
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -60,7 +94,9 @@
     "en": "to learn",
     "ko": "배우다",
     "ex": "Quiero aprender español.",
+    "ex_ko": "나는 스페인어를 배우고 싶다.",
     "note": null,
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -68,7 +104,9 @@
     "en": "to take advantage of; to make the most of",
     "ko": "활용하다; 이용하다",
     "ex": "Aprovechan el buen tiempo para salir.",
+    "ex_ko": "그들은 좋은 날씨를 이용해 외출한다.",
     "note": "규칙 동사: aprovecho, aprovechas, aprovecha... | Aprovecha = 잘 활용해!",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -76,7 +114,9 @@
     "en": "spider",
     "ko": "거미",
     "ex": "Hay una araña en el techo.",
+    "ex_ko": "천장에 거미가 있다.",
     "note": "여성명사: la araña / 복수: las arañas",
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -84,7 +124,9 @@
     "en": "to fix; to arrange; to tidy up",
     "ko": "고치다; 정리하다",
     "ex": "Necesito arreglar mi bicicleta.",
+    "ex_ko": "나는 자전거를 고쳐야 한다.",
     "note": null,
+    "category": "verb",
     "round": "wb2-pool"
   },
   {
@@ -92,7 +134,9 @@
     "en": "to drink",
     "ko": "마시다",
     "ex": "Bebo agua todos los días.",
+    "ex_ko": "나는 매일 물을 마신다.",
     "note": null,
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -100,7 +144,9 @@
     "en": "heat; warmth",
     "ko": "더위; 열기",
     "ex": "Hace mucho calor en verano.",
+    "ex_ko": "여름에는 매우 덥다.",
     "note": "남성명사: el calor | hacer calor = 날씨가 덥다 (tener calor = 나(사람)는 덥다)",
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -108,7 +154,39 @@
     "en": "near; close to",
     "ko": "근처에; ~에서 가까이",
     "ex": "Vivo cerca del centro.",
+    "ex_ko": "나는 시내 근처에 산다.",
     "note": "cerca de(가까이) ↔ lejos de(멀리)",
+    "category": "direction",
+    "round": "wb1"
+  },
+  {
+    "es": "chistoso/a",
+    "en": "funny; amusing",
+    "ko": "재미있는; 웃긴",
+    "ex": "Tu amigo es muy chistoso.",
+    "ex_ko": "네 친구는 매우 웃긴다.",
+    "note": "m: chistoso / f: chistosa | ≈ gracioso/a (동의어)",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "cien",
+    "en": "one hundred",
+    "ko": "100",
+    "ex": "Hay cien personas en la sala.",
+    "ex_ko": "그 방에는 100명이 있다.",
+    "note": "명사·형용사 앞에서 cien (cien libros) / 단독 또는 조합에서 ciento (ciento uno = 101)",
+    "category": "number",
+    "round": "wb1"
+  },
+  {
+    "es": "ciento",
+    "en": "one hundred (in compounds)",
+    "ko": "100 (복합수에서)",
+    "ex": "El libro cuesta ciento veinte euros.",
+    "ex_ko": "그 책은 120유로다.",
+    "note": "101~199 조합에서 사용: ciento uno, ciento cincuenta... / 명사 앞 단독: cien",
+    "category": "number",
     "round": "wb1"
   },
   {
@@ -116,7 +194,29 @@
     "en": "to start; to begin",
     "ko": "시작하다",
     "ex": "Comenzamos el proyecto hoy.",
+    "ex_ko": "우리는 오늘 그 프로젝트를 시작한다.",
     "note": "어간 변화 e→ie: comienzo, comienzas, comienza... | 동의어: empezar (뜻 동일, 혼용 가능)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "conmovedor/a",
+    "en": "moving; touching",
+    "ko": "감동적인",
+    "ex": "Fue una película muy conmovedora.",
+    "ex_ko": "그것은 매우 감동적인 영화였다.",
+    "note": "m: conmovedor / f: conmovedora / 복수: conmovedores, conmovedoras",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "cuarto/a",
+    "en": "fourth",
+    "ko": "네 번째",
+    "ex": "Llegó en cuarto lugar.",
+    "ex_ko": "그는 4등으로 도착했다.",
+    "note": null,
+    "category": "ordinal",
     "round": "wb1"
   },
   {
@@ -124,7 +224,9 @@
     "en": "to give",
     "ko": "주다",
     "ex": "Te doy un regalo.",
+    "ex_ko": "너에게 선물을 줄게.",
     "note": "불규칙 동사 — 현재: doy, das, da, damos, dais, dan | 단순과거: di, diste, dio, dimos, disteis, dieron",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -132,7 +234,39 @@
     "en": "below; under",
     "ko": "아래에",
     "ex": "El gato está debajo de la cama.",
+    "ex_ko": "그 고양이는 침대 아래에 있다.",
     "note": null,
+    "category": "direction",
+    "round": "wb1"
+  },
+  {
+    "es": "décimo/a",
+    "en": "tenth",
+    "ko": "열 번째",
+    "ex": "Es el décimo aniversario.",
+    "ex_ko": "그것은 열 번째 기념일이다.",
+    "note": null,
+    "category": "ordinal",
+    "round": "wb1"
+  },
+  {
+    "es": "decimocuarto/a",
+    "en": "fourteenth",
+    "ko": "열네 번째",
+    "ex": "Es la decimocuarta edición.",
+    "ex_ko": "그것은 열네 번째 판이다.",
+    "note": null,
+    "category": "ordinal",
+    "round": "wb1"
+  },
+  {
+    "es": "decimotercero/a",
+    "en": "thirteenth",
+    "ko": "열세 번째",
+    "ex": "Está en el decimotercer puesto.",
+    "ex_ko": "그것은 13위에 있다.",
+    "note": "남성 단수 앞: decimotercer (단축형)",
+    "category": "ordinal",
     "round": "wb1"
   },
   {
@@ -140,7 +274,9 @@
     "en": "to leave; to let; to stop",
     "ko": "두다; 떠나다; 그만두다",
     "ex": "Deja tu mochila aquí.",
+    "ex_ko": "가방을 여기에 두어라.",
     "note": "dejar de + inf = ~하기를 그만두다 (e.g. Dejé de fumar. 담배를 끊었다.)",
+    "category": "verb",
     "round": "wb2-pool"
   },
   {
@@ -148,15 +284,19 @@
     "en": "in front of",
     "ko": "앞에",
     "ex": "Espérame delante del cine.",
+    "ex_ko": "영화관 앞에서 나를 기다려.",
     "note": "delante de(앞에) ↔ detrás de(뒤에)",
+    "category": "direction",
     "round": "wb1"
   },
   {
-    "es": "delgado",
+    "es": "delgado/a",
     "en": "thin; slim",
     "ko": "날씬한; 얇은",
     "ex": "Ella es muy delgada.",
+    "ex_ko": "그녀는 매우 날씬하다.",
     "note": null,
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -164,15 +304,19 @@
     "en": "inside; within",
     "ko": "안에",
     "ex": "Las llaves están dentro del cajón.",
+    "ex_ko": "열쇠는 서랍 안에 있다.",
     "note": "dentro de(안에) ↔ fuera de(밖에)",
+    "category": "direction",
     "round": "wb1"
   },
   {
-    "es": "desordenado",
+    "es": "desordenado/a",
     "en": "messy; disorganized",
     "ko": "지저분한; 무질서한",
     "ex": "Mi habitación está muy desordenada.",
+    "ex_ko": "내 방은 매우 지저분하다.",
     "note": "estar 동사와 쓰임 (상태): estar desordenado/a",
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -180,7 +324,19 @@
     "en": "behind; in back of",
     "ko": "뒤에",
     "ex": "El jardín está detrás de la casa.",
+    "ex_ko": "정원은 집 뒤에 있다.",
     "note": null,
+    "category": "direction",
+    "round": "wb1"
+  },
+  {
+    "es": "doscientos/as",
+    "en": "two hundred",
+    "ko": "200",
+    "ex": "Hay doscientas personas en el evento.",
+    "ex_ko": "그 행사에는 200명이 있다.",
+    "note": "성 일치: doscientos (m) / doscientas (f) | 300~900도 동일 규칙 적용",
+    "category": "number",
     "round": "wb1"
   },
   {
@@ -188,7 +344,19 @@
     "en": "sweet",
     "ko": "달콤한; 단",
     "ex": "Este pastel está muy dulce.",
+    "ex_ko": "이 케이크는 매우 달다.",
     "note": "명사로도 쓰임: los dulces = 사탕, 과자류",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "duodécimo/a",
+    "en": "twelfth",
+    "ko": "열두 번째",
+    "ex": "Es el duodécimo capítulo.",
+    "ex_ko": "그것은 열두 번째 장이다.",
+    "note": null,
+    "category": "ordinal",
     "round": "wb1"
   },
   {
@@ -196,7 +364,29 @@
     "en": "to throw; to put; to pour",
     "ko": "던지다; 넣다; 붓다",
     "ex": "Echa la carta al buzón.",
+    "ex_ko": "편지를 우체통에 넣어라.",
     "note": "관용구: echar de menos = 그리워하다 (e.g. Te echo de menos.)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "económicamente",
+    "en": "economically; affordably",
+    "ko": "경제적으로; 저렴하게",
+    "ex": "Vivir aquí es económicamente viable.",
+    "ex_ko": "여기서 사는 것은 경제적으로 감당할 만하다.",
+    "note": "← económico + -mente",
+    "category": "adverb",
+    "round": "wb1"
+  },
+  {
+    "es": "económico/a",
+    "en": "economic; cheap; affordable",
+    "ko": "경제적인; 저렴한",
+    "ex": "Este restaurante es muy económico.",
+    "ex_ko": "이 식당은 매우 저렴하다.",
+    "note": "m: económico / f: económica | 두 가지 의미: 경제와 관련된 / 가격이 저렴한",
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -204,7 +394,9 @@
     "en": "building",
     "ko": "건물",
     "ex": "El edificio tiene veinte pisos.",
+    "ex_ko": "그 건물은 20층이다.",
     "note": null,
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -212,7 +404,9 @@
     "en": "exercise; workout; practice",
     "ko": "운동; 연습",
     "ex": "Hago ejercicio todos los días.",
+    "ex_ko": "나는 매일 운동을 한다.",
     "note": "남성명사: el ejercicio | hacer ejercicio = 운동하다",
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -220,7 +414,9 @@
     "en": "to start; to begin",
     "ko": "시작하다",
     "ex": "La clase empieza a las nueve.",
+    "ex_ko": "수업은 9시에 시작한다.",
     "note": "어간 변화 e→ie: empiezo, empiezas, empieza, empezamos, empezáis, empiezan | 동의어: comenzar",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -228,7 +424,9 @@
     "en": "company; firm; enterprise",
     "ko": "회사; 기업",
     "ex": "Trabajo en una empresa internacional.",
+    "ex_ko": "나는 국제적인 회사에서 일한다.",
     "note": "여성명사: la empresa / 복수: las empresas",
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -236,7 +434,9 @@
     "en": "on top of; above",
     "ko": "위에",
     "ex": "El libro está encima de la mesa.",
+    "ex_ko": "그 책은 탁자 위에 있다.",
     "note": "encima de(위에) ↔ debajo de(아래에)",
+    "category": "direction",
     "round": "wb1"
   },
   {
@@ -244,7 +444,9 @@
     "en": "angry; annoyed",
     "ko": "화난; 짜증난",
     "ex": "Ella está muy enfadada.",
+    "ex_ko": "그녀는 매우 화가 나 있다.",
     "note": "estar 동사와 쓰임 (감정·상태) | m: enfadado / f: enfadada",
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -252,7 +454,9 @@
     "en": "in front of; across from",
     "ko": "맞은편에; 정면에",
     "ex": "El hotel está enfrente de la estación.",
+    "ex_ko": "그 호텔은 역 맞은편에 있다.",
     "note": "≈ frente a (혼용 가능)",
+    "category": "direction",
     "round": "wb1"
   },
   {
@@ -260,7 +464,9 @@
     "en": "to understand",
     "ko": "이해하다",
     "ex": "No entiendo esta pregunta.",
+    "ex_ko": "나는 이 질문을 이해하지 못한다.",
     "note": "어간 변화 e→ie: entiendo, entiendes, entiende, entendemos, entendéis, entienden",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -268,7 +474,9 @@
     "en": "between; among",
     "ko": "사이에",
     "ex": "El banco está entre la farmacia y el supermercado.",
+    "ex_ko": "그 은행은 약국과 슈퍼마켓 사이에 있다.",
     "note": "전치사 — 두 대상 사이: entre A y B",
+    "category": "direction",
     "round": "wb1"
   },
   {
@@ -276,15 +484,29 @@
     "en": "season; station",
     "ko": "계절; 역",
     "ex": "¿Cuál es tu estación favorita?",
+    "ex_ko": "네가 가장 좋아하는 계절은 무엇이니?",
     "note": "두 가지 의미: estación del año (계절) / estación de metro (지하철역)",
+    "category": "noun",
     "round": "wb1"
   },
   {
-    "es": "extranjero",
+    "es": "exacto/a",
+    "en": "exact; accurate; precise",
+    "ko": "정확한",
+    "ex": "Necesito la hora exacta.",
+    "ex_ko": "나는 정확한 시간이 필요하다.",
+    "note": "m: exacto / f: exacta | 부사형: exactamente",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "extranjero/a",
     "en": "foreigner; foreign",
     "ko": "외국인; 외국의",
     "ex": "Hay muchos extranjeros en esta ciudad.",
+    "ex_ko": "이 도시에는 외국인이 많다.",
     "note": "명사/형용사 겸용 | 형용사: un restaurante extranjero (외국 식당)",
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -292,7 +514,29 @@
     "en": "flower",
     "ko": "꽃",
     "ex": "La flor huele muy bien.",
+    "ex_ko": "그 꽃은 매우 좋은 냄새가 난다.",
     "note": "복수형: flores (여성명사: la flor)",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "frecuente",
+    "en": "frequent; common",
+    "ko": "빈번한; 잦은",
+    "ex": "Los retrasos son frecuentes en esta línea.",
+    "ex_ko": "이 노선에서는 연착이 잦다.",
+    "note": "성별 구분 없음 (m/f), 복수형: frecuentes",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "frecuentemente",
+    "en": "frequently; often",
+    "ko": "자주; 빈번하게",
+    "ex": "Viajo frecuentemente por trabajo.",
+    "ex_ko": "나는 일 때문에 자주 여행한다.",
+    "note": "← frecuente + -mente | 구어에서는 con frecuencia도 자주 쓰임",
+    "category": "adverb",
     "round": "wb1"
   },
   {
@@ -300,7 +544,9 @@
     "en": "facing; opposite",
     "ko": "맞은편에; ~을 향해",
     "ex": "Hay un parque frente a mi casa.",
+    "ex_ko": "우리 집 맞은편에 공원이 있다.",
     "note": "≈ enfrente de | frente a는 추상적 의미(~에 맞서)도 가능",
+    "category": "direction",
     "round": "wb1"
   },
   {
@@ -308,7 +554,9 @@
     "en": "outside; out",
     "ko": "밖에; 밖으로",
     "ex": "Los niños están jugando fuera.",
+    "ex_ko": "아이들이 밖에서 놀고 있다.",
     "note": "전치사구: fuera de + 명사 = ~의 밖에 (e.g. fuera de la casa)",
+    "category": "adverb",
     "round": "wb1"
   },
   {
@@ -316,7 +564,9 @@
     "en": "outside of",
     "ko": "밖에; ~의 외부에",
     "ex": "No se puede fumar fuera del edificio.",
+    "ex_ko": "건물 밖에서는 흡연할 수 없다.",
     "note": "fuera de(밖에) ↔ dentro de(안에)",
+    "category": "direction",
     "round": "wb1"
   },
   {
@@ -324,7 +574,9 @@
     "en": "to smoke",
     "ko": "담배 피우다",
     "ex": "Aquí está prohibido fumar.",
+    "ex_ko": "여기서는 흡연이 금지되어 있다.",
     "note": null,
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -332,7 +584,9 @@
     "en": "to win; to earn",
     "ko": "이기다; 벌다",
     "ex": "El equipo ganó el partido.",
+    "ex_ko": "그 팀이 경기를 이겼다.",
     "note": null,
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -340,7 +594,9 @@
     "en": "garage",
     "ko": "차고; 주차장",
     "ex": "El coche está en el garaje.",
+    "ex_ko": "그 차는 차고에 있다.",
     "note": "남성명사: el garaje / 복수: los garajes",
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -348,7 +604,9 @@
     "en": "to turn; to rotate",
     "ko": "돌다; 회전하다",
     "ex": "Gira a la derecha en el semáforo.",
+    "ex_ko": "신호등에서 오른쪽으로 도세요.",
     "note": null,
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -356,7 +614,9 @@
     "en": "hit; blow; coup",
     "ko": "타격; 충격; 쿠데타",
     "ex": "Me di un golpe en la cabeza.",
+    "ex_ko": "나는 머리를 부딪쳤다.",
     "note": "관용구: golpe de estado = 쿠데타 / de golpe = 갑자기",
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -364,7 +624,9 @@
     "en": "(n.) ice cream; (adj.) frozen",
     "ko": "아이스크림; 얼어붙은",
     "ex": "Quiero un helado de chocolate.",
+    "ex_ko": "나는 초콜릿 아이스크림을 원한다.",
     "note": "명사: el helado (아이스크림) | 형용사: estar helado/a (얼어붙다, 매우 춥다)",
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -372,7 +634,9 @@
     "en": "essential; indispensable",
     "ko": "필수적인; 없어서는 안 될",
     "ex": "El agua es imprescindible para vivir.",
+    "ex_ko": "물은 살아가는 데 필수적이다.",
     "note": "성별 구분 없음 (m/f), 복수형: imprescindibles",
+    "category": "adjective",
     "round": "wb2-pool"
   },
   {
@@ -380,7 +644,9 @@
     "en": "winter",
     "ko": "겨울",
     "ex": "En invierno hace mucho frío.",
+    "ex_ko": "겨울에는 매우 춥다.",
     "note": null,
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -388,7 +654,9 @@
     "en": "right next to; beside",
     "ko": "바로 옆에",
     "ex": "Siéntate junto a mí.",
+    "ex_ko": "내 옆에 앉아.",
     "note": "al lado de보다 밀착된 느낌",
+    "category": "direction",
     "round": "wb1"
   },
   {
@@ -396,7 +664,29 @@
     "en": "far from",
     "ko": "~에서 멀리",
     "ex": "La estación está lejos de aquí.",
+    "ex_ko": "그 역은 여기서 멀리 있다.",
     "note": null,
+    "category": "direction",
+    "round": "wb1"
+  },
+  {
+    "es": "lentamente",
+    "en": "slowly",
+    "ko": "느리게",
+    "ex": "Habla más lentamente, por favor.",
+    "ex_ko": "더 천천히 말해 주세요.",
+    "note": "← lento + -mente",
+    "category": "adverb",
+    "round": "wb1"
+  },
+  {
+    "es": "lento/a",
+    "en": "slow",
+    "ko": "느린",
+    "ex": "El tren va muy lento.",
+    "ex_ko": "그 기차는 매우 느리게 간다.",
+    "note": "m: lento / f: lenta | 부사형: lentamente",
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -404,7 +694,9 @@
     "en": "to fill",
     "ko": "채우다",
     "ex": "Llena el vaso de agua.",
+    "ex_ko": "컵에 물을 채워라.",
     "note": null,
+    "category": "verb",
     "round": "wb2-pool"
   },
   {
@@ -412,7 +704,9 @@
     "en": "homework",
     "ko": "숙제",
     "ex": "Tengo que hacer los deberes.",
+    "ex_ko": "나는 숙제를 해야 한다.",
     "note": "항상 복수형으로 쓰임: los deberes (단수형 없음) | hacer los deberes = 숙제하다",
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -420,7 +714,9 @@
     "en": "seafood; shellfish",
     "ko": "해산물; 조개류",
     "ex": "Me encanta el marisco fresco.",
+    "ex_ko": "나는 신선한 해산물을 정말 좋아한다.",
     "note": null,
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -428,7 +724,9 @@
     "en": "to lie",
     "ko": "거짓말하다",
     "ex": "No me mientas.",
+    "ex_ko": "나에게 거짓말하지 마.",
     "note": "어간 변화 e→ie/i: miento, mientes, miente... / 단순과거 yo: mentí",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -436,7 +734,19 @@
     "en": "honey",
     "ko": "꿀",
     "ex": "Me gusta el té con miel.",
+    "ex_ko": "나는 꿀을 넣은 차를 좋아한다.",
     "note": null,
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "mil",
+    "en": "one thousand",
+    "ko": "1,000",
+    "ex": "Este coche cuesta veinte mil euros.",
+    "ex_ko": "이 차는 2만 유로다.",
+    "note": "복수형 없음 (단: miles de = 수천의) | un mil (X) → mil (O)",
+    "category": "number",
     "round": "wb1"
   },
   {
@@ -444,7 +754,49 @@
     "en": "snow",
     "ko": "눈",
     "ex": "La nieve cubre las montañas.",
+    "ex_ko": "눈이 산을 덮고 있다.",
     "note": "동사형: nevar (눈이 오다) — 불규칙: nieva (3인칭 단수만 사용)",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "noveno/a",
+    "en": "ninth",
+    "ko": "아홉 번째",
+    "ex": "Está en el noveno lugar.",
+    "ex_ko": "그것은 아홉 번째 자리에 있다.",
+    "note": null,
+    "category": "ordinal",
+    "round": "wb1"
+  },
+  {
+    "es": "octavo/a",
+    "en": "eighth",
+    "ko": "여덟 번째",
+    "ex": "Es el octavo día del mes.",
+    "ex_ko": "그것은 그 달의 여덟 번째 날이다.",
+    "note": null,
+    "category": "ordinal",
+    "round": "wb1"
+  },
+  {
+    "es": "odiar",
+    "en": "to hate; to detest",
+    "ko": "미워하다; 싫어하다",
+    "ex": "Odio madrugar los lunes.",
+    "ex_ko": "나는 월요일에 일찍 일어나는 것을 싫어한다.",
+    "note": "규칙 동사: odio, odias, odia, odiamos, odiáis, odian",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "página",
+    "en": "page",
+    "ko": "페이지; 쪽",
+    "ex": "Abre el libro en la página diez.",
+    "ex_ko": "책을 10페이지에서 펼쳐라.",
+    "note": "여성명사: la página / 복수: las páginas",
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -452,7 +804,9 @@
     "en": "to pass; to happen; to spend",
     "ko": "지나다; 일어나다; 보내다",
     "ex": "¿Qué pasó? / Pasé el fin de semana en casa.",
+    "ex_ko": "무슨 일이 있었어? / 나는 주말을 집에서 보냈다.",
     "note": "다의어 — ¿Qué pasa? = 무슨 일이야? / pasar tiempo = 시간을 보내다 / pasar por = ~을 지나치다",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -460,7 +814,9 @@
     "en": "to lose; to miss",
     "ko": "잃다; 놓치다",
     "ex": "No quiero perder el tren.",
+    "ex_ko": "나는 기차를 놓치고 싶지 않다.",
     "note": "어간 변화 e→ie: pierdo, pierdes, pierde, perdemos, perdéis, pierden",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -468,7 +824,19 @@
     "en": "swimming pool",
     "ko": "수영장",
     "ex": "La piscina está abierta en verano.",
+    "ex_ko": "그 수영장은 여름에 문을 연다.",
     "note": "여성명사: la piscina / 복수: las piscinas",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "piso",
+    "en": "floor; storey; apartment",
+    "ko": "층; 아파트",
+    "ex": "Vivo en el tercer piso.",
+    "ex_ko": "나는 3층에 산다.",
+    "note": "남성명사: el piso | 두 가지 의미: 건물의 층 / 스페인식 아파트",
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -476,7 +844,19 @@
     "en": "poor; pitiful",
     "ko": "가난한; 불쌍한",
     "ex": "Es una familia muy pobre.",
+    "ex_ko": "그것은 매우 가난한 가족이다.",
     "note": "위치 따라 의미 다름: un hombre pobre = 가난한 남자 / un pobre hombre = 불쌍한 남자",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "político/a",
+    "en": "political; politician",
+    "ko": "정치적인; 정치인",
+    "ex": "Es un tema muy político.",
+    "ex_ko": "그것은 매우 정치적인 주제다.",
+    "note": "명사/형용사 겸용: el político = 정치인 / una decisión política = 정치적 결정",
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -484,7 +864,9 @@
     "en": "dust; powder",
     "ko": "먼지; 가루",
     "ex": "Hay mucho polvo en esta habitación.",
+    "ex_ko": "이 방에는 먼지가 많다.",
     "note": "남성명사: el polvo / 관용구: hacer polvo = 망가뜨리다; 녹초로 만들다",
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -492,7 +874,9 @@
     "en": "to put; to place",
     "ko": "놓다; 두다",
     "ex": "Pon el libro en la mesa.",
+    "ex_ko": "책을 탁자 위에 놓아라.",
     "note": "불규칙 동사 — yo: pongo | 단순과거: puse, pusiste, puso... | 미래 어간: pondr- | 과거분사: puesto",
+    "category": "verb",
     "round": "wb2-pool"
   },
   {
@@ -500,7 +884,39 @@
     "en": "to prefer",
     "ko": "선호하다",
     "ex": "Prefiero el café al té.",
+    "ex_ko": "나는 차보다 커피를 선호한다.",
     "note": "어간 변화 e→ie/i: prefiero, prefieres, prefiere, preferimos, preferís, prefieren",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "primero/a",
+    "en": "first",
+    "ko": "첫 번째",
+    "ex": "Es la primera vez que vengo aquí.",
+    "ex_ko": "여기 오는 것은 이번이 처음이다.",
+    "note": "남성 단수 명사 앞에서 primer로 단축: el primer piso / la primera planta",
+    "category": "ordinal",
+    "round": "wb1"
+  },
+  {
+    "es": "quinientos/as",
+    "en": "five hundred",
+    "ko": "500",
+    "ex": "El hotel tiene quinientas habitaciones.",
+    "ex_ko": "그 호텔은 500개의 객실이 있다.",
+    "note": "불규칙 형태 주의 — cincuientos가 아님! | 성 일치: quinientos (m) / quinientas (f)",
+    "category": "number",
+    "round": "wb1"
+  },
+  {
+    "es": "quinto/a",
+    "en": "fifth",
+    "ko": "다섯 번째",
+    "ex": "Vivo en el quinto piso.",
+    "ex_ko": "나는 5층에 산다.",
+    "note": null,
+    "category": "ordinal",
     "round": "wb1"
   },
   {
@@ -508,7 +924,29 @@
     "en": "to grate; to shred",
     "ko": "강판에 갈다",
     "ex": "Ralla el queso encima de la pasta.",
+    "ex_ko": "파스타 위에 치즈를 갈아 뿌려라.",
     "note": null,
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "rápidamente",
+    "en": "quickly; rapidly",
+    "ko": "빠르게",
+    "ex": "Resolvió el problema rápidamente.",
+    "ex_ko": "그는 그 문제를 빠르게 해결했다.",
+    "note": "← rápido + -mente | 구어에서는 rápido 단독으로도 부사 역할",
+    "category": "adverb",
+    "round": "wb1"
+  },
+  {
+    "es": "rápido/a",
+    "en": "fast; quick",
+    "ko": "빠른",
+    "ex": "Necesito una solución rápida.",
+    "ex_ko": "나는 빠른 해결책이 필요하다.",
+    "note": "m: rápido / f: rápida | 부사형: rápidamente / 구어: rápido (부사로도 쓰임)",
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -516,7 +954,9 @@
     "en": "(n.) cold; (adj.) having a cold",
     "ko": "감기; 감기에 걸린",
     "ex": "Tengo un resfriado. / Estoy resfriado.",
+    "ex_ko": "나는 감기에 걸렸다. / 나는 감기 상태다.",
     "note": "명사: el resfriado (감기) | 형용사: estar resfriado/a (감기에 걸리다)",
+    "category": "noun",
     "round": "wb1"
   },
   {
@@ -524,15 +964,69 @@
     "en": "to take out; to get; to pull out",
     "ko": "꺼내다; 얻다; 빼다",
     "ex": "Saca el libro de la mochila.",
+    "ex_ko": "가방에서 책을 꺼내라.",
     "note": "관용구: sacar una foto = 사진 찍다 / sacar buenas notas = 좋은 성적을 받다",
+    "category": "verb",
     "round": "wb2-pool"
+  },
+  {
+    "es": "segundo/a",
+    "en": "second",
+    "ko": "두 번째",
+    "ex": "Vivo en el segundo piso.",
+    "ex_ko": "나는 2층에 산다.",
+    "note": null,
+    "category": "ordinal",
+    "round": "wb1"
   },
   {
     "es": "sentir",
     "en": "to feel; to be sorry",
     "ko": "느끼다; 유감이다",
     "ex": "Siento mucho lo que pasó.",
+    "ex_ko": "일어난 일에 대해 정말 유감이다.",
     "note": "어간 변화 e→ie/i: siento, sientes, siente... | lo siento = 미안합니다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "séptimo/a",
+    "en": "seventh",
+    "ko": "일곱 번째",
+    "ex": "Vivo en el séptimo piso.",
+    "ex_ko": "나는 7층에 산다.",
+    "note": null,
+    "category": "ordinal",
+    "round": "wb1"
+  },
+  {
+    "es": "sexto/a",
+    "en": "sixth",
+    "ko": "여섯 번째",
+    "ex": "Es el sexto mes del año.",
+    "ex_ko": "그것은 한 해의 여섯 번째 달이다.",
+    "note": null,
+    "category": "ordinal",
+    "round": "wb1"
+  },
+  {
+    "es": "soltero/a",
+    "en": "single; unmarried",
+    "ko": "미혼의; 독신의",
+    "ex": "Todavía soy soltero.",
+    "ex_ko": "나는 아직 미혼이다.",
+    "note": "m: soltero / f: soltera | 반의어: casado/a (기혼)",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "tercero/a",
+    "en": "third",
+    "ko": "세 번째",
+    "ex": "Es el tercer día del viaje.",
+    "ex_ko": "여행 셋째 날이다.",
+    "note": "남성 단수 명사 앞에서 tercer로 단축: el tercer piso / la tercera planta",
+    "category": "ordinal",
     "round": "wb1"
   },
   {
@@ -540,7 +1034,9 @@
     "en": "still; yet",
     "ko": "아직; 여전히",
     "ex": "Todavía no he comido.",
+    "ex_ko": "나는 아직 먹지 않았다.",
     "note": "todavía (아직) vs ya (이미/벌써) — 반의어 관계",
+    "category": "adverb",
     "round": "wb1"
   },
   {
@@ -548,7 +1044,9 @@
     "en": "to take; to drink; to have",
     "ko": "마시다; 잡다; 먹다",
     "ex": "Voy a tomar un café.",
+    "ex_ko": "나는 커피를 마실 것이다.",
     "note": "beber vs tomar: beber는 '마시다' 전용 / tomar는 더 넓은 의미 (먹다·잡다 포함), 중남미에서 더 자주 쓰임",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -556,7 +1054,39 @@
     "en": "calm; quiet; relaxed",
     "ko": "조용한; 차분한",
     "ex": "La playa está muy tranquila hoy.",
+    "ex_ko": "오늘 해변은 매우 조용하다.",
     "note": "m: tranquilo / f: tranquila / 복수: tranquilos, tranquilas",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "trescientos/as",
+    "en": "three hundred",
+    "ko": "300",
+    "ex": "El vuelo dura trescientos minutos.",
+    "ex_ko": "그 비행은 300분 걸린다.",
+    "note": "성 일치: trescientos (m) / trescientas (f)",
+    "category": "number",
+    "round": "wb1"
+  },
+  {
+    "es": "un millón",
+    "en": "one million",
+    "ko": "100만",
+    "ex": "Un millón de personas viven aquí.",
+    "ex_ko": "100만 명이 여기에 산다.",
+    "note": "복수: millones | millón de + 명사 (de 필수): un millón de euros (O) / un millón euros (X)",
+    "category": "number",
+    "round": "wb1"
+  },
+  {
+    "es": "undécimo/a",
+    "en": "eleventh",
+    "ko": "열한 번째",
+    "ex": "Es el undécimo piso.",
+    "ex_ko": "그것은 11층이다.",
+    "note": "10 이후 서수는 일상에서 잘 안 쓰이고 기수(11번, 12번...)로 대체하는 경우 많음",
+    "category": "ordinal",
     "round": "wb1"
   },
   {
@@ -564,7 +1094,19 @@
     "en": "to sell",
     "ko": "팔다",
     "ex": "Ella vende flores en el mercado.",
+    "ex_ko": "그녀는 시장에서 꽃을 판다.",
     "note": null,
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "volver",
+    "en": "to return; to come back",
+    "ko": "돌아오다; 돌아가다",
+    "ex": "Vuelvo a casa a las seis.",
+    "ex_ko": "나는 6시에 집에 돌아온다.",
+    "note": "어간 변화 o→ue: vuelvo, vuelves, vuelve, volvemos, volvéis, vuelven | 과거분사: vuelto (불규칙)",
+    "category": "verb",
     "round": "wb1"
   }
 ]

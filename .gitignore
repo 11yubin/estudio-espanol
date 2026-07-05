@@ -24,3 +24,7 @@ npm-debug.log*
 # 시스템
 .env.local
 .env.*.local
+
+# markdown files
+*.md
+guide/

@@ -1,0 +1,44 @@
+#separator:tab
+#html:true
+#columns:Front	Back	Tags
+to win; to earn	<b>ganar</b><br><i>El equipo ganó el partido.</i><br>🇰🇷 이기다; 벌다	wb1
+to learn	<b>aprender</b><br><i>Quiero aprender español.</i><br>🇰🇷 배우다	wb1
+to sell	<b>vender</b><br><i>Ella vende flores en el mercado.</i><br>🇰🇷 팔다	wb1
+kind; friendly	<b>amable</b><br><i>Él es muy amable con todos.</i><br>🇰🇷 친절한<br><span style="color:#888">▸ 성별 구분 없음 (amable m/f), 복수형: amables</span>	wb1
+(n.) cold; (adj.) having a cold	<b>resfriado</b><br><i>Tengo un resfriado. / Estoy resfriado.</i><br>🇰🇷 감기; 감기에 걸린<br><span style="color:#888">▸ 명사: el resfriado (감기) | 형용사: estar resfriado/a (감기에 걸리다)</span>	wb1
+cheerful; happy	<b>alegre</b><br><i>La música alegre me hace bailar.</i><br>🇰🇷 즐거운; 명랑한<br><span style="color:#888">▸ 성별 구분 없음 (alegre m/f), 복수형: alegres</span>	wb1
+to take; to drink; to have	<b>tomar</b><br><i>Voy a tomar un café.</i><br>🇰🇷 마시다; 잡다; 먹다<br><span style="color:#888">▸ beber vs tomar: beber는 '마시다' 전용 / tomar는 더 넓은 의미 (먹다·잡다 포함), 중남미에서 더 자주 쓰임</span>	wb1
+to drink	<b>beber</b><br><i>Bebo agua todos los días.</i><br>🇰🇷 마시다	wb1
+to throw; to put; to pour	<b>echar</b><br><i>Echa la carta al buzón.</i><br>🇰🇷 던지다; 넣다; 붓다<br><span style="color:#888">▸ 관용구: echar de menos = 그리워하다 (e.g. Te echo de menos.)</span>	wb1
+to smoke	<b>fumar</b><br><i>Aquí está prohibido fumar.</i><br>🇰🇷 담배 피우다	wb1
+essential; indispensable	<b>imprescindible</b><br><i>El agua es imprescindible para vivir.</i><br>🇰🇷 필수적인; 없어서는 안 될<br><span style="color:#888">▸ 성별 구분 없음 (m/f), 복수형: imprescindibles</span>	wb1
+to give	<b>dar</b><br><i>Te doy un regalo.</i><br>🇰🇷 주다<br><span style="color:#888">▸ 불규칙 동사 — 현재: doy, das, da, damos, dais, dan | 단순과거: di, diste, dio, dimos, disteis, dieron</span>	wb1
+seafood; shellfish	<b>marisco</b><br><i>Me encanta el marisco fresco.</i><br>🇰🇷 해산물; 조개류	wb1
+to put; to place	<b>poner</b><br><i>Pon el libro en la mesa.</i><br>🇰🇷 놓다; 두다<br><span style="color:#888">▸ 불규칙 동사 — yo: pongo | 단순과거: puse, pusiste, puso... | 미래 어간: pondr- | 과거분사: puesto</span>	wb1
+to take out; to get; to pull out	<b>sacar</b><br><i>Saca el libro de la mochila.</i><br>🇰🇷 꺼내다; 얻다; 빼다<br><span style="color:#888">▸ 관용구: sacar una foto = 사진 찍다 / sacar buenas notas = 좋은 성적을 받다</span>	wb1
+to leave; to let; to stop	<b>dejar</b><br><i>Deja tu mochila aquí.</i><br>🇰🇷 두다; 떠나다; 그만두다<br><span style="color:#888">▸ dejar de + inf = ~하기를 그만두다 (e.g. Dejé de fumar. 담배를 끊었다.)</span>	wb1
+to fix; to arrange; to tidy up	<b>arreglar</b><br><i>Necesito arreglar mi bicicleta.</i><br>🇰🇷 고치다; 정리하다	wb1
+to turn; to rotate	<b>girar</b><br><i>Gira a la derecha en el semáforo.</i><br>🇰🇷 돌다; 회전하다	wb1
+to fill	<b>llenar</b><br><i>Llena el vaso de agua.</i><br>🇰🇷 채우다	wb1
+to rent	<b>alquilar</b><br><i>Queremos alquilar un apartamento.</i><br>🇰🇷 빌리다; 임대하다	wb1
+to grate; to shred	<b>rallar</b><br><i>Ralla el queso encima de la pasta.</i><br>🇰🇷 강판에 갈다	wb1
+foreigner; foreign	<b>extranjero</b><br><i>Hay muchos extranjeros en esta ciudad.</i><br>🇰🇷 외국인; 외국의<br><span style="color:#888">▸ 명사/형용사 겸용 | 형용사: un restaurante extranjero (외국 식당)</span>	wb1
+poor; pitiful	<b>pobre</b><br><i>Es una familia muy pobre.</i><br>🇰🇷 가난한; 불쌍한<br><span style="color:#888">▸ 위치 따라 의미 다름: un hombre pobre = 가난한 남자 / un pobre hombre = 불쌍한 남자</span>	wb1
+still; yet	<b>todavía</b><br><i>Todavía no he comido.</i><br>🇰🇷 아직; 여전히<br><span style="color:#888">▸ todavía (아직) vs ya (이미/벌써) — 반의어 관계</span>	wb1
+winter	<b>invierno</b><br><i>En invierno hace mucho frío.</i><br>🇰🇷 겨울	wb1
+building	<b>edificio</b><br><i>El edificio tiene veinte pisos.</i><br>🇰🇷 건물	wb1
+messy; disorganized	<b>desordenado</b><br><i>Mi habitación está muy desordenada.</i><br>🇰🇷 지저분한; 무질서한<br><span style="color:#888">▸ estar 동사와 쓰임 (상태): estar desordenado/a</span>	wb1
+thin; slim	<b>delgado</b><br><i>Ella es muy delgada.</i><br>🇰🇷 날씬한; 얇은	wb1
+snow	<b>nieve</b><br><i>La nieve cubre las montañas.</i><br>🇰🇷 눈<br><span style="color:#888">▸ 동사형: nevar (눈이 오다) — 불규칙: nieva (3인칭 단수만 사용)</span>	wb1
+sweet	<b>dulce</b><br><i>Este pastel está muy dulce.</i><br>🇰🇷 달콤한; 단<br><span style="color:#888">▸ 명사로도 쓰임: los dulces = 사탕, 과자류</span>	wb1
+honey	<b>miel</b><br><i>Me gusta el té con miel.</i><br>🇰🇷 꿀	wb1
+to start; to begin	<b>empezar</b><br><i>La clase empieza a las nueve.</i><br>🇰🇷 시작하다<br><span style="color:#888">▸ 어간 변화 e→ie: empiezo, empiezas, empieza, empezamos, empezáis, empiezan | 동의어: comenzar</span>	wb1
+to start; to begin	<b>comenzar</b><br><i>Comenzamos el proyecto hoy.</i><br>🇰🇷 시작하다<br><span style="color:#888">▸ 어간 변화 e→ie: comienzo, comienzas, comienza... | 동의어: empezar (뜻 동일, 혼용 가능)</span>	wb1
+hit; blow; coup	<b>golpe</b><br><i>Me di un golpe en la cabeza.</i><br>🇰🇷 타격; 충격; 쿠데타<br><span style="color:#888">▸ 관용구: golpe de estado = 쿠데타 / de golpe = 갑자기</span>	wb1
+to understand	<b>entender</b><br><i>No entiendo esta pregunta.</i><br>🇰🇷 이해하다<br><span style="color:#888">▸ 어간 변화 e→ie: entiendo, entiendes, entiende, entendemos, entendéis, entienden</span>	wb1
+to lose; to miss	<b>perder</b><br><i>No quiero perder el tren.</i><br>🇰🇷 잃다; 놓치다<br><span style="color:#888">▸ 어간 변화 e→ie: pierdo, pierdes, pierde, perdemos, perdéis, pierden</span>	wb1
+to lie	<b>mentir</b><br><i>No me mientas.</i><br>🇰🇷 거짓말하다<br><span style="color:#888">▸ 어간 변화 e→ie/i: miento, mientes, miente... / 단순과거 yo: mentí</span>	wb1
+flower	<b>flor</b><br><i>La flor huele muy bien.</i><br>🇰🇷 꽃<br><span style="color:#888">▸ 복수형: flores (여성명사: la flor)</span>	wb1
+to feel; to be sorry	<b>sentir</b><br><i>Siento mucho lo que pasó.</i><br>🇰🇷 느끼다; 유감이다<br><span style="color:#888">▸ 어간 변화 e→ie/i: siento, sientes, siente... | lo siento = 미안합니다</span>	wb1
+season; station	<b>estación</b><br><i>¿Cuál es tu estación favorita?</i><br>🇰🇷 계절; 역<br><span style="color:#888">▸ 두 가지 의미: estación del año (계절) / estación de metro (지하철역)</span>	wb1
+to prefer	<b>preferir</b><br><i>Prefiero el café al té.</i><br>🇰🇷 선호하다<br><span style="color:#888">▸ 어간 변화 e→ie/i: prefiero, prefieres, prefiere, preferimos, preferís, prefieren</span>	wb1

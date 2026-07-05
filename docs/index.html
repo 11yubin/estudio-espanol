@@ -20,6 +20,11 @@
       --bg: #ffffff;
       --text: #1f2937;
       --border: #e5e7eb;
+      --muted: #9ca3af;
+      --partial: #d97706;
+      --partial-bg: #fef3c7;
+      --mastered: #16a34a;
+      --mastered-bg: #dcfce7;
       --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
@@ -29,6 +34,8 @@
         --text: #f3f4f6;
         --border: #374151;
         --primary-light: #1e3a8a;
+        --partial-bg: #422006;
+        --mastered-bg: #052e16;
       }
     }
 
@@ -108,7 +115,7 @@
 
     .search-box {
       flex: 1;
-      min-width: 200px;
+      min-width: 180px;
       padding: 8px 12px;
       border: 1px solid var(--border);
       border-radius: 6px;
@@ -143,15 +150,13 @@
       border-bottom: 2px solid var(--border);
       font-weight: 600;
       background-color: var(--primary-light);
+      white-space: nowrap;
     }
 
     td {
       padding: 12px;
       border-bottom: 1px solid var(--border);
-    }
-
-    tr:hover {
-      background-color: var(--primary-light);
+      vertical-align: top;
     }
 
     .round-badge {
@@ -162,12 +167,73 @@
       border-radius: 4px;
       font-size: 12px;
       font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .cat-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      background-color: var(--primary-light);
+      color: var(--text);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .status-partial { background-color: var(--partial-bg); color: var(--partial); }
+    .status-mastered { background-color: var(--mastered-bg); color: var(--mastered); }
+    .status-none { color: var(--muted); }
+
+    /* 예문 해석 토글 */
+    .ex-toggle {
+      margin-top: 4px;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: none;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .ex-ko {
+      margin-top: 4px;
+      padding: 6px 8px;
+      font-size: 13px;
+      background-color: var(--primary-light);
+      border-radius: 6px;
+      color: var(--text);
+    }
+
+    .ex-ko[hidden] { display: none; }
+
+    .mini-btn {
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: none;
+      color: var(--primary);
+      cursor: pointer;
+      white-space: nowrap;
     }
 
     .no-data {
       padding: 32px 16px;
       text-align: center;
-      color: #9ca3af;
+      color: var(--muted);
     }
 
     /* 플래시카드 뷰 */
@@ -180,6 +246,7 @@
       gap: 8px;
       margin-bottom: 16px;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     .btn {
@@ -194,15 +261,16 @@
       transition: opacity 0.2s;
     }
 
-    .btn:active {
-      opacity: 0.8;
-    }
+    .btn:active { opacity: 0.8; }
 
     .btn-secondary {
       background-color: transparent;
       border: 1px solid var(--border);
       color: var(--text);
     }
+
+    .btn-partial { background-color: var(--partial); color: white; }
+    .btn-mastered { background-color: var(--mastered); color: white; }
 
     .card {
       width: 100%;
@@ -224,9 +292,7 @@
       min-height: 300px;
     }
 
-    .card:active {
-      transform: scale(0.98);
-    }
+    .card:active { transform: scale(0.98); }
 
     .card-front {
       font-size: 32px;
@@ -234,18 +300,15 @@
       color: var(--primary);
     }
 
-    .card-back {
-      display: none;
-    }
+    .card-back { display: none; }
 
-    .card.flipped .card-front {
-      display: none;
-    }
+    .card.flipped .card-front { display: none; }
 
     .card.flipped .card-back {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 12px;
+      width: 100%;
     }
 
     .card-back-item {
@@ -253,13 +316,11 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .card-back-item:last-child {
-      border-bottom: none;
-    }
+    .card-back-item:last-child { border-bottom: none; }
 
     .card-label {
       font-size: 12px;
-      color: #9ca3af;
+      color: var(--muted);
       text-transform: uppercase;
       font-weight: 600;
     }
@@ -269,6 +330,16 @@
       color: var(--text);
     }
 
+    .card-ex-ko {
+      margin-top: 6px;
+      padding: 6px 8px;
+      font-size: 15px;
+      background-color: var(--primary-light);
+      border-radius: 6px;
+    }
+
+    .card-ex-ko[hidden] { display: none; }
+
     .card-nav {
       display: flex;
       gap: 8px;
@@ -277,11 +348,18 @@
     }
 
     .card-nav button {
-      width: 40px;
-      height: 40px;
-      padding: 0;
-      font-size: 18px;
+      min-width: 64px;
+      padding: 10px 12px;
     }
+
+    .mastery-controls {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 12px;
+    }
+
+    .mastery-controls .btn { flex: 1; max-width: 200px; }
 
     .card-info {
       padding: 8px 12px;
@@ -293,45 +371,50 @@
       margin-bottom: 16px;
     }
 
+    /* 복습 뷰 */
+    .review-container { padding: 16px; }
+
+    .review-section-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 16px 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .review-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .review-word { font-weight: 700; color: var(--primary); }
+    .review-meaning { color: var(--muted); font-size: 13px; flex: 1; min-width: 100px; }
+    .review-actions { display: flex; gap: 6px; }
+
+    .review-note {
+      font-size: 12px;
+      color: var(--muted);
+      padding: 4px 0 12px;
+    }
+
     /* 반응형 */
     @media (max-width: 640px) {
-      header {
-        padding: 12px;
-      }
-
-      h1 {
-        font-size: 20px;
-      }
-
-      .tabs {
-        gap: 4px;
-      }
-
-      .tab-btn {
-        padding: 10px 8px;
-        font-size: 13px;
-      }
-
-      table {
-        font-size: 12px;
-      }
-
-      th, td {
-        padding: 8px;
-      }
-
-      .card {
-        padding: 16px;
-        min-height: 250px;
-      }
-
-      .card-front {
-        font-size: 24px;
-      }
-
-      .card-value {
-        font-size: 16px;
-      }
+      header { padding: 12px; }
+      h1 { font-size: 20px; }
+      .tabs { gap: 4px; }
+      .tab-btn { padding: 10px 6px; font-size: 13px; }
+      table { font-size: 12px; }
+      th, td { padding: 8px; }
+      .card { padding: 16px; min-height: 250px; }
+      .card-front { font-size: 24px; }
+      .card-value { font-size: 16px; }
     }
   </style>
 </head>
@@ -342,6 +425,7 @@
       <div class="tabs">
         <button class="tab-btn active" data-tab="table">표</button>
         <button class="tab-btn" data-tab="flashcard">카드</button>
+        <button class="tab-btn" data-tab="review">복습</button>
       </div>
     </header>
 
@@ -349,8 +433,17 @@
     <div class="tab-content active" id="table">
       <div class="controls">
         <input type="text" class="search-box" id="searchInput" placeholder="스페인어, 영어, 한국어 검색...">
-        <select class="filter-select" id="filterSelect">
+        <select class="filter-select" id="roundSelect">
           <option value="">모든 회차</option>
+        </select>
+        <select class="filter-select" id="categorySelect">
+          <option value="">모든 분류</option>
+        </select>
+        <select class="filter-select" id="statusSelect">
+          <option value="">모든 상태</option>
+          <option value="none">학습 중</option>
+          <option value="partial">적당히 앎</option>
+          <option value="mastered">완전 터득</option>
         </select>
       </div>
       <div class="table-wrapper">
@@ -358,14 +451,13 @@
           <thead>
             <tr>
               <th>스페인어</th>
-              <th>영어</th>
               <th>한국어</th>
               <th>예문</th>
-              <th>회차</th>
+              <th>분류</th>
+              <th>상태</th>
             </tr>
           </thead>
-          <tbody id="tableBody">
-          </tbody>
+          <tbody id="tableBody"></tbody>
         </table>
       </div>
       <div class="no-data" id="noData">데이터 로딩 중...</div>
@@ -376,9 +468,11 @@
       <div class="flashcard-container">
         <div class="flashcard-controls">
           <button class="btn" id="shuffleBtn">🔀 셔플</button>
-          <button class="btn btn-secondary" id="hideKnownBtn">아는 단어 숨기기</button>
+          <select class="filter-select" id="cardCategorySelect">
+            <option value="">모든 분류</option>
+          </select>
         </div>
-        <div class="card-info" id="cardInfo">카드 1 / 0</div>
+        <div class="card-info" id="cardInfo">카드 0 / 0</div>
         <div class="card" id="card">
           <div class="card-front">Loading...</div>
           <div class="card-back">
@@ -393,6 +487,8 @@
             <div class="card-back-item">
               <div class="card-label">예문</div>
               <div class="card-value" id="cardEx"></div>
+              <button class="ex-toggle" id="cardExToggle" type="button">해석 보기</button>
+              <div class="card-ex-ko" id="cardExKo" hidden></div>
             </div>
             <div class="card-back-item">
               <div class="card-label">노트</div>
@@ -400,134 +496,175 @@
             </div>
           </div>
         </div>
-        <div class="card-nav">
-          <button class="btn btn-secondary" id="prevBtn" style="width: 50px;">← 이전</button>
-          <button class="btn btn-secondary" id="nextBtn" style="width: 50px;">다음 →</button>
+        <div class="mastery-controls">
+          <button class="btn btn-partial" id="markPartialBtn">적당히 앎</button>
+          <button class="btn btn-mastered" id="markMasteredBtn">완전 터득</button>
         </div>
+        <div class="card-nav">
+          <button class="btn btn-secondary" id="prevBtn">← 이전</button>
+          <button class="btn btn-secondary" id="nextBtn">다음 →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 복습 뷰 -->
+    <div class="tab-content" id="review">
+      <div class="review-container">
+        <div class="review-note">숨긴(적당히 앎·완전 터득) 단어는 카드 로테이션에서 빠집니다. 여기서 다시 학습 대상으로 복구하거나 승격할 수 있어요. ※ 상태는 이 기기(브라우저)에만 저장돼요.</div>
+        <div id="reviewContent"></div>
       </div>
     </div>
   </div>
 
   <script>
-    let allData = [];
-    let currentCardIndex = 0;
-    let filteredData = [];
-    let tableData = [];
-    let knownWords = new Set();
+    const CATEGORY_LABELS = {
+      verb: '동사', noun: '명사', adjective: '형용사', adverb: '부사',
+      number: '수사', ordinal: '서수', direction: '방향'
+    };
+    const catLabel = (c) => c ? (CATEGORY_LABELS[c] || c) : '';
 
-    // 데이터 로드
+    let allData = [];
+    let deck = [];
+    let currentCardIndex = 0;
+
+    // ── 상태 저장 (localStorage: wordStatus 맵) ──────────────
+    let wordStatus = {};
+
+    function loadStatus() {
+      try {
+        wordStatus = JSON.parse(localStorage.getItem('wordStatus') || '{}');
+      } catch (e) { wordStatus = {}; }
+      // 구버전 knownWords → partial 로 1회 마이그레이션
+      if (Object.keys(wordStatus).length === 0) {
+        try {
+          const legacy = JSON.parse(localStorage.getItem('knownWords') || '[]');
+          if (Array.isArray(legacy) && legacy.length) {
+            legacy.forEach(es => { wordStatus[es] = 'partial'; });
+            saveStatus();
+          }
+        } catch (e) {}
+      }
+    }
+    function saveStatus() {
+      localStorage.setItem('wordStatus', JSON.stringify(wordStatus));
+    }
+    function getStatus(es) { return wordStatus[es] || 'none'; }
+    function setStatus(es, status) {
+      if (status === 'none' || !status) delete wordStatus[es];
+      else wordStatus[es] = status;
+      saveStatus();
+    }
+
+    function escapeHtml(s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // ── 데이터 로드 ──────────────────────────────────────────
     async function loadData() {
       try {
         const response = await fetch('./data.json');
         allData = await response.json();
-        // restore known/hide state
-        const hide = localStorage.getItem('hideKnown') === '1';
-        const hideBtn = document.getElementById('hideKnownBtn');
-        if (hideBtn) {
-          hideBtn.dataset.hide = hide ? '1' : '0';
-          hideBtn.textContent = hide ? '숨긴 단어 보기' : '아는 단어 숨기기';
-        }
-        // apply known filter before initializing views
-        applyKnownFilter();
-        initializeTable();
-        initializeFlashcard();
+        loadStatus();
+        populateFilters();
+        updateTable();
+        resetDeck();
+        renderReview();
       } catch (error) {
         console.error('데이터 로드 실패:', error);
         document.getElementById('noData').textContent = '데이터를 불러올 수 없습니다.';
       }
     }
 
-    // 표 뷰 초기화
-    function initializeTable() {
-      if (allData.length === 0) return;
-
+    function populateFilters() {
       const rounds = [...new Set(allData.map(w => w.round))].sort();
-      const filterSelect = document.getElementById('filterSelect');
-      rounds.forEach(round => {
-        const option = document.createElement('option');
-        option.value = round;
-        option.textContent = round;
-        filterSelect.appendChild(option);
+      const roundSel = document.getElementById('roundSelect');
+      rounds.forEach(r => {
+        const o = document.createElement('option');
+        o.value = r; o.textContent = r;
+        roundSel.appendChild(o);
       });
 
-      filterSelect.addEventListener('change', updateTable);
-      document.getElementById('searchInput').addEventListener('input', updateTable);
-      updateTable();
+      const cats = [...new Set(allData.map(w => w.category).filter(Boolean))]
+        .sort((a, b) => catLabel(a).localeCompare(catLabel(b)));
+      [document.getElementById('categorySelect'), document.getElementById('cardCategorySelect')]
+        .forEach(sel => {
+          cats.forEach(c => {
+            const o = document.createElement('option');
+            o.value = c; o.textContent = catLabel(c);
+            sel.appendChild(o);
+          });
+        });
     }
 
+    // ── 표 뷰 ────────────────────────────────────────────────
     function updateTable() {
       const searchText = document.getElementById('searchInput').value.toLowerCase();
-      const selectedRound = document.getElementById('filterSelect').value;
+      const round = document.getElementById('roundSelect').value;
+      const category = document.getElementById('categorySelect').value;
+      const status = document.getElementById('statusSelect').value;
 
-      tableData = allData.filter(word => {
-        const matchSearch = !searchText || 
-          word.es.toLowerCase().includes(searchText) ||
-          word.en.toLowerCase().includes(searchText) ||
-          word.ko.toLowerCase().includes(searchText);
-        const matchRound = !selectedRound || word.round === selectedRound;
-        return matchSearch && matchRound;
+      const rows = allData.filter(w => {
+        const matchSearch = !searchText ||
+          w.es.toLowerCase().includes(searchText) ||
+          (w.en || '').toLowerCase().includes(searchText) ||
+          (w.ko || '').toLowerCase().includes(searchText);
+        const matchRound = !round || w.round === round;
+        const matchCat = !category || w.category === category;
+        const matchStatus = !status || getStatus(w.es) === status;
+        return matchSearch && matchRound && matchCat && matchStatus;
       });
 
       const tbody = document.getElementById('tableBody');
+      const noData = document.getElementById('noData');
       tbody.innerHTML = '';
 
-      if (tableData.length === 0) {
-        document.getElementById('noData').style.display = 'block';
+      if (rows.length === 0) {
+        noData.style.display = 'block';
+        noData.textContent = '조건에 맞는 단어가 없습니다.';
         return;
       }
+      noData.style.display = 'none';
 
-      document.getElementById('noData').style.display = 'none';
-
-      tableData.forEach(word => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td><strong>${word.es}</strong></td>
-          <td>${word.en || '-'}</td>
-          <td>${word.ko || '-'}</td>
-          <td>${word.ex || '-'}</td>
-          <td><span class="round-badge">${word.round}</span></td>
-        `;
-        tbody.appendChild(row);
+      rows.forEach(w => {
+        const st = getStatus(w.es);
+        const stLabel = st === 'partial' ? '적당히 앎' : st === 'mastered' ? '완전 터득' : '학습 중';
+        const tr = document.createElement('tr');
+        tr.innerHTML =
+          `<td><strong>${escapeHtml(w.es)}</strong><br><span style="color:var(--muted);font-size:12px">${escapeHtml(w.en || '')}</span></td>` +
+          `<td>${escapeHtml(w.ko || '-')}</td>` +
+          `<td class="ex-cell">` +
+            `<div>${escapeHtml(w.ex || '-')}</div>` +
+            (w.ex_ko ? `<button class="ex-toggle" type="button">해석</button><div class="ex-ko" hidden>${escapeHtml(w.ex_ko)}</div>` : '') +
+          `</td>` +
+          `<td>${w.category ? `<span class="cat-badge">${escapeHtml(catLabel(w.category))}</span>` : '-'}</td>` +
+          `<td><span class="status-badge status-${st}">${stLabel}</span>` +
+            (st !== 'none' ? `<br><button class="mini-btn" data-restore="${escapeHtml(w.es)}">복구</button>` : '') +
+          `</td>`;
+        tbody.appendChild(tr);
       });
     }
 
-    function getVisibleWords() {
-      const hide = localStorage.getItem('hideKnown') === '1';
-      if (!hide) return allData.slice();
-      const known = JSON.parse(localStorage.getItem('knownWords') || '[]');
-      const knownSet = new Set(known);
-      return allData.filter(w => !knownSet.has(w.es));
-    }
-
-    function resetFlashcardDeck() {
-      filteredData = getVisibleWords();
-      if (filteredData.length === 0) {
-        currentCardIndex = 0;
-        updateCard();
-        return;
+    // 표: 예문 해석 토글 + 복구 (이벤트 위임)
+    document.getElementById('tableBody').addEventListener('click', (e) => {
+      if (e.target.classList.contains('ex-toggle')) {
+        const exKo = e.target.nextElementSibling;
+        const hidden = exKo.hasAttribute('hidden');
+        if (hidden) { exKo.removeAttribute('hidden'); e.target.textContent = '해석 닫기'; }
+        else { exKo.setAttribute('hidden', ''); e.target.textContent = '해석'; }
+      } else if (e.target.dataset.restore) {
+        setStatus(e.target.dataset.restore, 'none');
+        updateTable(); renderReview(); resetDeck();
       }
-      shuffleArray(filteredData);
-      currentCardIndex = 0;
-      updateCard();
-    }
+    });
 
-    // 플래시카드 뷰 초기화
-    function initializeFlashcard() {
-      if (allData.length === 0) return;
+    ['searchInput', 'roundSelect', 'categorySelect', 'statusSelect'].forEach(id => {
+      document.getElementById(id).addEventListener('input', updateTable);
+      document.getElementById(id).addEventListener('change', updateTable);
+    });
 
-      const cardEl = document.getElementById('card');
-      cardEl.addEventListener('click', () => {
-        cardEl.classList.toggle('flipped');
-      });
-
-      document.getElementById('shuffleBtn').addEventListener('click', shuffleCards);
-      document.getElementById('nextBtn').addEventListener('click', nextCard);
-      document.getElementById('prevBtn').addEventListener('click', prevCard);
-      document.getElementById('hideKnownBtn').addEventListener('click', toggleHideKnown);
-
-      resetFlashcardDeck();
-    }
-
+    // ── 플래시카드 뷰 ────────────────────────────────────────
     function shuffleArray(arr) {
       for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -535,139 +672,158 @@
       }
     }
 
-    // Add swipe support for mobile (simple horizontal swipe)
-    (function addSwipeSupport(){
-      const cardEl = document.getElementById('card');
-      let startX = null;
-      let startY = null;
-      const threshold = 40; // px
-
-      cardEl.addEventListener('touchstart', (e) => {
-        const t = e.touches[0];
-        startX = t.clientX;
-        startY = t.clientY;
-      }, {passive: true});
-
-      cardEl.addEventListener('touchend', (e) => {
-        if (startX === null) return;
-        const t = e.changedTouches[0];
-        const dx = t.clientX - startX;
-        const dy = t.clientY - startY;
-        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > threshold) {
-          if (dx < 0) nextCard(); else prevCard();
-        }
-        startX = null; startY = null;
-      });
-    })();
-
-    // Add 'Mark Known' button to card controls
-    (function addMarkKnownButton(){
-      const nav = document.querySelector('.card-nav');
-      const btn = document.createElement('button');
-      btn.className = 'btn btn-secondary';
-      btn.style.width = '120px';
-      btn.textContent = '아는 단어로 표시';
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        markCurrentKnown();
-      });
-      nav.appendChild(btn);
-    })();
-
-    function updateCard() {
-      if (filteredData.length === 0) return;
-
-      const word = filteredData[currentCardIndex];
-      document.getElementById('card').classList.remove('flipped');
-      document.querySelector('.card-front').textContent = word.es;
-      document.getElementById('cardEn').textContent = word.en || '-';
-      document.getElementById('cardKo').textContent = word.ko || '-';
-      document.getElementById('cardEx').textContent = word.ex || '-';
-      document.getElementById('cardNote').textContent = word.note || '-';
-      document.getElementById('cardInfo').textContent = `카드 ${currentCardIndex + 1} / ${filteredData.length}`;
+    function buildDeck() {
+      const cat = document.getElementById('cardCategorySelect').value;
+      return allData.filter(w =>
+        getStatus(w.es) === 'none' && (!cat || w.category === cat));
     }
 
-    function nextCard() {
-      currentCardIndex = (currentCardIndex + 1) % filteredData.length;
-      updateCard();
-    }
-
-    function prevCard() {
-      currentCardIndex = (currentCardIndex - 1 + filteredData.length) % filteredData.length;
-      updateCard();
-    }
-
-    function shuffleCards() {
-      if (!filteredData) return;
-      const shuffled = filteredData.slice();
-      shuffleArray(shuffled);
-      filteredData = shuffled;
+    function resetDeck() {
+      deck = buildDeck();
+      shuffleArray(deck);
       currentCardIndex = 0;
       updateCard();
     }
 
-    function toggleHideKnown() {
-      const btn = document.getElementById('hideKnownBtn');
-      const currently = btn.dataset.hide === '1';
-      if (currently) {
-        btn.dataset.hide = '0';
-        btn.textContent = '아는 단어 숨기기';
-        localStorage.setItem('hideKnown', '0');
-      } else {
-        btn.dataset.hide = '1';
-        btn.textContent = '숨긴 단어 보기';
-        localStorage.setItem('hideKnown', '1');
+    function updateCard() {
+      const card = document.getElementById('card');
+      card.classList.remove('flipped');
+      document.getElementById('cardExKo').setAttribute('hidden', '');
+      document.getElementById('cardExToggle').textContent = '해석 보기';
+
+      if (deck.length === 0) {
+        document.querySelector('.card-front').textContent = '🎉 다 봤어요!';
+        document.getElementById('cardInfo').textContent = '카드 0 / 0';
+        return;
       }
-      applyKnownFilter();
+      const w = deck[currentCardIndex];
+      document.querySelector('.card-front').textContent = w.es;
+      document.getElementById('cardEn').textContent = w.en || '-';
+      document.getElementById('cardKo').textContent = w.ko || '-';
+      document.getElementById('cardEx').textContent = w.ex || '-';
+      const exKoEl = document.getElementById('cardExKo');
+      const exToggle = document.getElementById('cardExToggle');
+      if (w.ex_ko) { exKoEl.textContent = w.ex_ko; exToggle.style.display = ''; }
+      else { exKoEl.textContent = ''; exToggle.style.display = 'none'; }
+      document.getElementById('cardNote').textContent = w.note || '-';
+      document.getElementById('cardInfo').textContent = `카드 ${currentCardIndex + 1} / ${deck.length}`;
     }
 
-    function applyKnownFilter() {
+    function nextCard() {
+      if (deck.length === 0) return;
+      currentCardIndex = (currentCardIndex + 1) % deck.length;
+      updateCard();
+    }
+    function prevCard() {
+      if (deck.length === 0) return;
+      currentCardIndex = (currentCardIndex - 1 + deck.length) % deck.length;
+      updateCard();
+    }
+
+    // 현재 카드에 상태 부여 → 덱에서 제거하고 다음 카드
+    function markCurrent(status) {
+      if (deck.length === 0) return;
+      const w = deck[currentCardIndex];
+      setStatus(w.es, status);
+      deck.splice(currentCardIndex, 1);
+      if (currentCardIndex >= deck.length) currentCardIndex = 0;
+      updateCard();
       updateTable();
-      if (document.getElementById('flashcard').classList.contains('active')) {
-        resetFlashcardDeck();
-      }
+      renderReview();
     }
 
-    function markCurrentKnown() {
-      const word = filteredData[currentCardIndex];
-      if (!word) return;
-      const known = JSON.parse(localStorage.getItem('knownWords') || '[]');
-      if (!known.includes(word.es)) {
-        known.push(word.es);
-        localStorage.setItem('knownWords', JSON.stringify(known));
+    document.getElementById('card').addEventListener('click', (e) => {
+      if (e.target.closest('.ex-toggle')) return; // 토글 버튼 클릭은 뒤집기 방지
+      document.getElementById('card').classList.toggle('flipped');
+    });
+    document.getElementById('cardExToggle').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const el = document.getElementById('cardExKo');
+      const hidden = el.hasAttribute('hidden');
+      if (hidden) { el.removeAttribute('hidden'); e.target.textContent = '해석 닫기'; }
+      else { el.setAttribute('hidden', ''); e.target.textContent = '해석 보기'; }
+    });
+    document.getElementById('shuffleBtn').addEventListener('click', resetDeck);
+    document.getElementById('cardCategorySelect').addEventListener('change', resetDeck);
+    document.getElementById('nextBtn').addEventListener('click', nextCard);
+    document.getElementById('prevBtn').addEventListener('click', prevCard);
+    document.getElementById('markPartialBtn').addEventListener('click', (e) => { e.stopPropagation(); markCurrent('partial'); });
+    document.getElementById('markMasteredBtn').addEventListener('click', (e) => { e.stopPropagation(); markCurrent('mastered'); });
+
+    // 스와이프 (좌우)
+    (function addSwipeSupport() {
+      const card = document.getElementById('card');
+      let startX = null, startY = null;
+      const threshold = 40;
+      card.addEventListener('touchstart', (e) => {
+        const t = e.touches[0]; startX = t.clientX; startY = t.clientY;
+      }, { passive: true });
+      card.addEventListener('touchend', (e) => {
+        if (startX === null) return;
+        const t = e.changedTouches[0];
+        const dx = t.clientX - startX, dy = t.clientY - startY;
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > threshold) {
+          if (dx < 0) nextCard(); else prevCard();
+        }
+        startX = startY = null;
+      });
+    })();
+
+    // ── 복습 뷰 ──────────────────────────────────────────────
+    function renderReview() {
+      const container = document.getElementById('reviewContent');
+      const partial = allData.filter(w => getStatus(w.es) === 'partial');
+      const mastered = allData.filter(w => getStatus(w.es) === 'mastered');
+
+      if (partial.length === 0 && mastered.length === 0) {
+        container.innerHTML = '<div class="no-data">아직 숨긴 단어가 없어요. 카드에서 "적당히 앎"/"완전 터득"을 눌러보세요.</div>';
+        return;
       }
-      // If hide-known is enabled, apply filter (will remove the word). Otherwise remove from current session's list to avoid immediate repeat.
-      const hide = localStorage.getItem('hideKnown') === '1';
-      if (hide) {
-        applyKnownFilter();
-      } else {
-        // remove current from filteredData and show next
-        filteredData.splice(currentCardIndex, 1);
-        if (currentCardIndex >= filteredData.length) currentCardIndex = 0;
-        updateCard();
-      }
+
+      const row = (w, promote) =>
+        `<div class="review-item">` +
+          `<span class="review-word">${escapeHtml(w.es)}</span>` +
+          `<span class="review-meaning">${escapeHtml(w.ko || w.en || '')}</span>` +
+          `<span class="review-actions">` +
+            (promote ? `<button class="mini-btn" data-promote="${escapeHtml(w.es)}">완전 터득으로 승격</button>` : '') +
+            `<button class="mini-btn" data-restore="${escapeHtml(w.es)}">복구</button>` +
+          `</span>` +
+        `</div>`;
+
+      let html = '';
+      html += `<div class="review-section-title"><span class="status-badge status-partial">적당히 앎</span> ${partial.length}개</div>`;
+      html += partial.length ? partial.map(w => row(w, true)).join('') : '<div class="review-note">없음</div>';
+      html += `<div class="review-section-title"><span class="status-badge status-mastered">완전 터득</span> ${mastered.length}개</div>`;
+      html += mastered.length ? mastered.map(w => row(w, false)).join('') : '<div class="review-note">없음</div>';
+      container.innerHTML = html;
     }
 
-    // 탭 전환
+    document.getElementById('reviewContent').addEventListener('click', (e) => {
+      const promote = e.target.dataset.promote;
+      const restore = e.target.dataset.restore;
+      if (promote) { setStatus(promote, 'mastered'); }
+      else if (restore) { setStatus(restore, 'none'); }
+      else return;
+      renderReview(); updateTable(); resetDeck();
+    });
+
+    // ── 탭 전환 ──────────────────────────────────────────────
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
         document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-
         e.target.classList.add('active');
         const tabId = e.target.getAttribute('data-tab');
         document.getElementById(tabId).classList.add('active');
-
-        if (tabId === 'flashcard') {
-          resetFlashcardDeck();
-        }
+        if (tabId === 'flashcard') resetDeck();
+        if (tabId === 'review') renderReview();
+        if (tabId === 'table') updateTable();
       });
     });
 
-    // 초기 로드
     loadData();
 
-    // PWA 설치 안내 (선택사항)
+    // PWA 설치 안내
     let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();

@@ -36,16 +36,22 @@ if (fs.existsSync(docsPollDir)) {
   });
 }
 
-// 2. es 기준으로 중복 제거 (나중 파일 우선)
-const uniqueWords = [];
-const seenEs = new Set();
-for (let i = allWords.length - 1; i >= 0; i--) {
-  const word = allWords[i];
-  if (!seenEs.has(word.es)) {
-    seenEs.add(word.es);
-    uniqueWords.unshift(word);
+// 2. es 기준으로 중복 제거 (나중 파일 우선, 누락 필드는 이전 값으로 백필)
+const byEs = new Map();
+for (const word of allWords) {
+  const prev = byEs.get(word.es);
+  if (!prev) {
+    byEs.set(word.es, { ...word });
+  } else {
+    // 나중 항목이 우선하되, null/undefined 필드는 이전 항목 값 유지
+    const merged = { ...prev };
+    for (const [k, v] of Object.entries(word)) {
+      if (v !== null && v !== undefined) merged[k] = v;
+    }
+    byEs.set(word.es, merged);
   }
 }
+const uniqueWords = [...byEs.values()];
 
 // 3. 알파벳순 정렬
 uniqueWords.sort((a, b) => a.es.localeCompare(b.es));
