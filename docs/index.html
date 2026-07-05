@@ -500,6 +500,45 @@
       updateCard();
     }
 
+    // Add swipe support for mobile (simple horizontal swipe)
+    (function addSwipeSupport(){
+      const cardEl = document.getElementById('card');
+      let startX = null;
+      let startY = null;
+      const threshold = 40; // px
+
+      cardEl.addEventListener('touchstart', (e) => {
+        const t = e.touches[0];
+        startX = t.clientX;
+        startY = t.clientY;
+      }, {passive: true});
+
+      cardEl.addEventListener('touchend', (e) => {
+        if (startX === null) return;
+        const t = e.changedTouches[0];
+        const dx = t.clientX - startX;
+        const dy = t.clientY - startY;
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > threshold) {
+          if (dx < 0) nextCard(); else prevCard();
+        }
+        startX = null; startY = null;
+      });
+    })();
+
+    // Add 'Mark Known' button to card controls
+    (function addMarkKnownButton(){
+      const nav = document.querySelector('.card-nav');
+      const btn = document.createElement('button');
+      btn.className = 'btn btn-secondary';
+      btn.style.width = '120px';
+      btn.textContent = '아는 단어로 표시';
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        markCurrentKnown();
+      });
+      nav.appendChild(btn);
+    })();
+
     function updateCard() {
       if (filteredData.length === 0) return;
 
@@ -533,8 +572,46 @@
     }
 
     function toggleHideKnown() {
-      // 나중에 구현
-      alert('아는 단어 숨기기 기능은 곧 추가됩니다.');
+      const btn = document.getElementById('hideKnownBtn');
+      const currently = btn.dataset.hide === '1';
+      if (currently) {
+        btn.dataset.hide = '0';
+        btn.textContent = '아는 단어 숨기기';
+        localStorage.setItem('hideKnown', '0');
+      } else {
+        btn.dataset.hide = '1';
+        btn.textContent = '숨긴 단어 보기';
+        localStorage.setItem('hideKnown', '1');
+      }
+      applyKnownFilter();
+    }
+
+    function applyKnownFilter() {
+      const hide = localStorage.getItem('hideKnown') === '1';
+      if (!hide) {
+        filteredData = allData.slice();
+      } else {
+        const known = JSON.parse(localStorage.getItem('knownWords') || '[]');
+        const knownSet = new Set(known);
+        filteredData = allData.filter(w => !knownSet.has(w.es));
+      }
+      // Update table and flashcard if visible
+      updateTable();
+      if (document.getElementById('flashcard').classList.contains('active')) {
+        currentCardIndex = 0;
+        updateCard();
+      }
+    }
+
+    function markCurrentKnown() {
+      const word = filteredData[currentCardIndex];
+      if (!word) return;
+      const known = JSON.parse(localStorage.getItem('knownWords') || '[]');
+      if (!known.includes(word.es)) {
+        known.push(word.es);
+        localStorage.setItem('knownWords', JSON.stringify(known));
+      }
+      applyKnownFilter();
     }
 
     // 탭 전환
