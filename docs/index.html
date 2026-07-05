@@ -419,6 +419,15 @@
       try {
         const response = await fetch('./data.json');
         allData = await response.json();
+        // restore known/hide state
+        const hide = localStorage.getItem('hideKnown') === '1';
+        const hideBtn = document.getElementById('hideKnownBtn');
+        if (hideBtn) {
+          hideBtn.dataset.hide = hide ? '1' : '0';
+          hideBtn.textContent = hide ? '숨긴 단어 보기' : '아는 단어 숨기기';
+        }
+        // apply known filter before initializing views
+        applyKnownFilter();
         initializeTable();
         initializeFlashcard();
       } catch (error) {
@@ -495,9 +504,19 @@
       document.getElementById('prevBtn').addEventListener('click', prevCard);
       document.getElementById('hideKnownBtn').addEventListener('click', toggleHideKnown);
 
-      filteredData = allData;
+      // filteredData is already set by applyKnownFilter; default to randomized order
+      if (!filteredData || filteredData.length === 0) filteredData = allData.slice();
+      // shuffle by default so cards appear in random order
+      shuffleCards();
       currentCardIndex = 0;
       updateCard();
+    }
+
+    function shuffleArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
     }
 
     // Add swipe support for mobile (simple horizontal swipe)
@@ -563,10 +582,8 @@
     }
 
     function shuffleCards() {
-      for (let i = filteredData.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [filteredData[i], filteredData[j]] = [filteredData[j], filteredData[i]];
-      }
+      if (!filteredData) return;
+      shuffleArray(filteredData);
       currentCardIndex = 0;
       updateCard();
     }
@@ -611,7 +628,16 @@
         known.push(word.es);
         localStorage.setItem('knownWords', JSON.stringify(known));
       }
-      applyKnownFilter();
+      // If hide-known is enabled, apply filter (will remove the word). Otherwise remove from current session's list to avoid immediate repeat.
+      const hide = localStorage.getItem('hideKnown') === '1';
+      if (hide) {
+        applyKnownFilter();
+      } else {
+        // remove current from filteredData and show next
+        filteredData.splice(currentCardIndex, 1);
+        if (currentCardIndex >= filteredData.length) currentCardIndex = 0;
+        updateCard();
+      }
     }
 
     // 탭 전환
