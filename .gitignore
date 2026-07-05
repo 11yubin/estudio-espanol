@@ -26,5 +26,5 @@ npm-debug.log*
 .env.*.local
 
 # markdown files
-*.md
-guide/
+guide/*.md
+CLAUDE.md
