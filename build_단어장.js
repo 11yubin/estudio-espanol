@@ -52,6 +52,21 @@ function dataCell(text, colIndex, bold = false, italic = false) {
   });
 }
 
+function exCell(ex, ex_ko) {
+  const children = [new TextRun({ text: ex, size: 20, font: "Malgun Gothic" })];
+  if (ex_ko) {
+    children.push(new TextRun({ text: "\n" + ex_ko, size: 17, color: "777777", font: "Malgun Gothic", break: 1 }));
+  }
+  return new TableCell({
+    borders,
+    width: { size: COL_WIDTHS[4], type: WidthType.DXA },
+    shading: { fill: "FFFFFF", type: ShadingType.CLEAR },
+    margins: { top: 80, bottom: 80, left: 120, right: 120 },
+    verticalAlign: VerticalAlign.CENTER,
+    children: [new Paragraph({ children })]
+  });
+}
+
 function categoryCell(category) {
   const cat = CATEGORY_LABELS[category] || { label: category, color: "888888" };
   return new TableCell({
@@ -90,7 +105,7 @@ function makeTable(words) {
         categoryCell(w.category),
         dataCell(w.en, 2),
         dataCell(w.ko, 3),
-        dataCell(w.ex, 4),
+        exCell(w.ex, w.ex_ko),
       ]
     }));
     if (w.note) rows.push(new TableRow({ children: [noteCell(w.note)] }));
