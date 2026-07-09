@@ -1,6 +1,6 @@
-# 📚 Estudio Español — 스페인어 단어장 웹앱
+# 📚 Estudio Español — 스페인어 단어장 웹앱 (개인 학습용)
 
-SNULT 독해 대비 스페인어 단어를 **휴대폰에서 바로 복습**하기 위한 정적 웹앱. 단어를 JSON에 추가하고 빌드 → `git push` 한 번이면 배포가 끝난다. 별도 백엔드·DB 없음.
+스페인어 단어를 **휴대폰에서 바로 복습**하기 위한 정적 웹앱. 단어를 JSON에 추가하고 빌드 → git pages로 배포. 별도 백엔드·DB 없음. (단어 수 추가시 추후 SQLite DB 추가 예정)
 
 🔗 **배포 주소:** https://11yubin.github.io/estudio-espanol/
 
