@@ -27,4 +27,5 @@ npm-debug.log*
 
 # markdown files
 guide/*.md
+guide/_old
 CLAUDE.md
