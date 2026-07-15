@@ -10,6 +10,16 @@
     "round": "wb1"
   },
   {
+    "es": "a la deriva",
+    "en": "adrift; drifting",
+    "ko": "표류하여; 방향 없이",
+    "ex": "El barco quedó a la deriva.",
+    "ex_ko": "배가 표류하게 됐다.",
+    "note": "관용구 | la deriva(명사) = 표류 | derivar(동사) = 표류하다; 파생되다 | ir a la deriva = 표류하다; 목적 없이 떠돌다",
+    "category": "adverb",
+    "round": "wb1"
+  },
+  {
     "es": "a la izquierda (de)",
     "en": "to the left (of)",
     "ko": "왼쪽에",
@@ -36,6 +46,26 @@
     "ex": "Acabo de llegar a casa.",
     "ex_ko": "방금 집에 도착했다.",
     "note": "acabar de + inf = 방금 ~했다 (직후 표현) | 현재 또는 과거형으로 쓰임: acabo de / acababa de",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "accidentado/a",
+    "en": "accident victim; rough; eventful",
+    "ko": "사고를 당한; 험한; 파란만장한",
+    "ex": "Resultó accidentado en un choque de tráfico.",
+    "ex_ko": "교통사고로 부상을 입었다.",
+    "note": "형용사/명사 | terreno accidentado = 험한 지형 | una vida accidentada = 파란만장한 인생 | el accidentado(명사) = 사고 부상자",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "aconsejar",
+    "en": "to advise; to recommend; to counsel",
+    "ko": "조언하다; 권고하다",
+    "ex": "Le aconsejo que descanse más.",
+    "ex_ko": "그에게 더 쉬라고 조언한다.",
+    "note": "규칙 동사 | aconsejar + que + 접속법 | el consejo(명사) = 조언 | el/la consejero/a = 상담사; 고문 | ≈ recomendar",
     "category": "verb",
     "round": "wb1"
   },
@@ -130,12 +160,32 @@
     "round": "wb1"
   },
   {
+    "es": "al parecer",
+    "en": "apparently; seemingly; it seems",
+    "ko": "보아하니; 알고 보니; 겉보기엔",
+    "ex": "Al parecer, no viene nadie más.",
+    "ex_ko": "알고 보니 아무도 더 오지 않는다.",
+    "note": "부사구 | = por lo visto, aparentemente | 문장 앞·뒤 어디에나 위치 가능 | parecer(보이다)의 전치사구 형태",
+    "category": "adverb",
+    "round": "wb1"
+  },
+  {
     "es": "alegre",
     "en": "cheerful; happy",
     "ko": "즐거운; 명랑한",
     "ex": "La música alegre me hace bailar.",
     "ex_ko": "즐거운 음악은 나를 춤추게 한다.",
     "note": "성별 구분 없음 (alegre m/f), 복수형: alegres",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "alguno/a",
+    "en": "some; any; a certain",
+    "ko": "어떤; 몇몇; 일부",
+    "ex": "¿Tienes algún problema?",
+    "ex_ko": "무슨 문제 있어?",
+    "note": "남성 단수 명사 앞: algún | f: alguna | 복수: algunos/as | ↔ ninguno/a(어떤 ~도 없다) | algún día = 언젠가",
     "category": "adjective",
     "round": "wb1"
   },
@@ -157,6 +207,16 @@
     "ex_ko": "그는 모두에게 매우 친절하다.",
     "note": "성별 구분 없음 (amable m/f), 복수형: amables",
     "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "animar",
+    "en": "to encourage; to cheer up; to animate",
+    "ko": "격려하다; 기운 북돋우다; 활기띠다",
+    "ex": "Sus amigos le animaron a seguir.",
+    "ex_ko": "친구들이 그에게 계속하라고 격려했다.",
+    "note": "규칙 동사 | animarse = 기운이 나다; 용기를 내다 | ¡Ánimo! = 힘내! | el ánimo(기운; 의지) | animar la fiesta = 파티 분위기를 띄우다",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -230,6 +290,36 @@
     "round": "wb1"
   },
   {
+    "es": "aumentar",
+    "en": "to increase; to grow; to raise",
+    "ko": "늘리다; 증가하다; 올리다",
+    "ex": "Los precios han aumentado mucho.",
+    "ex_ko": "물가가 많이 올랐다.",
+    "note": "규칙 동사 | aumentar de peso = 체중이 늘다 | el aumento(명사) = 증가; 인상 | aumento de sueldo = 급여 인상 | ↔ disminuir(줄다)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "ayer",
+    "en": "yesterday",
+    "ko": "어제",
+    "ex": "Ayer no fui al trabajo.",
+    "ex_ko": "어제 일하러 가지 않았다.",
+    "note": "부사 | ayer por la mañana = 어제 아침에 | ayer por la noche = 어제 저녁에 | anteayer = 그저께 | ↔ mañana(내일)",
+    "category": "adverb",
+    "round": "wb1"
+  },
+  {
+    "es": "ayunar",
+    "en": "to fast; to go without food",
+    "ko": "단식하다; 금식하다",
+    "ex": "Ayuna doce horas antes del análisis de sangre.",
+    "ex_ko": "혈액 검사 전 12시간 금식해야 한다.",
+    "note": "규칙 동사 | el ayuno(명사) = 단식; 금식 | ayuno intermitente = 간헐적 단식 | en ayunas = 공복으로",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "bañarse",
     "en": "to take a bath; to bathe; to swim",
     "ko": "목욕하다; 수영하다",
@@ -281,11 +371,11 @@
   },
   {
     "es": "buscar",
-    "en": "to search; to look for",
+    "en": "to look for; to search; to seek",
     "ko": "찾다; 검색하다",
-    "ex": "Estoy buscando mis llaves.",
-    "ex_ko": "나는 열쇠를 찾고 있다.",
-    "note": "철자 변화: c→qu (단순과거 yo: busqué) | buscar en Google = 구글에서 검색하다",
+    "ex": "Busco mis llaves por todas partes.",
+    "ex_ko": "열쇠를 온 사방으로 찾고 있다.",
+    "note": "규칙 동사 | 철자 변화: c→qu (busqué) | buscar en Google = 구글로 검색하다 | ir a buscar = ~를 데리러/찾으러 가다",
     "category": "verb",
     "round": "wb1"
   },
@@ -410,6 +500,16 @@
     "round": "wb1"
   },
   {
+    "es": "ciego/a",
+    "en": "blind; unaware; reckless",
+    "ko": "눈먼; 맹목적인; 장님의",
+    "ex": "De ciego no tiene nada, ve perfectamente.",
+    "ex_ko": "전혀 눈이 멀지 않았어, 완벽하게 잘 보인다.",
+    "note": "형용사 | m: ciego / f: ciega | quedarse ciego = 눈이 멀다 | amor ciego = 맹목적인 사랑 | a ciegas = 눈을 감고; 막연히",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
     "es": "cien",
     "en": "one hundred",
     "ko": "100",
@@ -427,6 +527,16 @@
     "ex_ko": "그 책은 120유로다.",
     "note": "101~199 조합에서 사용: ciento uno, ciento cincuenta... / 명사 앞 단독: cien",
     "category": "number",
+    "round": "wb1"
+  },
+  {
+    "es": "cobrar",
+    "en": "to charge; to earn; to collect (payment)",
+    "ko": "청구하다; 벌다; 받다",
+    "ex": "¿Cuánto cobras al mes?",
+    "ex_ko": "한 달에 얼마 버니?",
+    "note": "규칙 동사 | cobrar un sueldo = 급여를 받다 | cobrar una factura = 청구서를 받다 | ¿Cuánto cobra? = 얼마예요? (요금 물을 때)",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -480,12 +590,32 @@
     "round": "wb1"
   },
   {
+    "es": "contar",
+    "en": "to count; to tell; to narrate",
+    "ko": "세다; 말하다; 이야기하다",
+    "ex": "Cuéntame qué pasó.",
+    "ex_ko": "무슨 일이 있었는지 말해줘.",
+    "note": "어간 변화 o→ue: cuento, cuentas, cuenta, contamos, contáis, cuentan | contar con = ~을 믿다; ~을 보유하다 | contar un chiste = 농담하다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "cualquier cosa",
     "en": "anything; whatever",
     "ko": "뭐든지; 어떤 것이든",
     "ex": "Puedo comer cualquier cosa.",
     "ex_ko": "나는 뭐든지 먹을 수 있어.",
     "note": "cualquier + 명사 = 어떤 ~든 | cualquiera(단독) / cualquier(명사 앞 단축형) | 복수: cualesquiera",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "cualquier(a)",
+    "en": "any; whatever; whichever",
+    "ko": "어떤 ~이든; 무엇이든",
+    "ex": "Puedes elegir cualquier libro.",
+    "ex_ko": "어떤 책이든 골라도 돼.",
+    "note": "cualquier = 명사 앞 단축형 (m/f 공통) | cualquiera = 명사 뒤 또는 단독 사용 | cualquier persona = 누구든지 | sea lo que sea / sea cual sea",
     "category": "adjective",
     "round": "wb1"
   },
@@ -497,6 +627,16 @@
     "ex_ko": "그는 4등으로 도착했다.",
     "note": null,
     "category": "ordinal",
+    "round": "wb1"
+  },
+  {
+    "es": "cuidar",
+    "en": "to take care of; to look after; to mind",
+    "ko": "돌보다; 주의하다; 신경 쓰다",
+    "ex": "Ella cuida a sus abuelos.",
+    "ex_ko": "그녀는 조부모님을 돌본다.",
+    "note": "규칙 동사 | cuidar de = ~을 돌보다 | cuidarse = 자기 자신을 돌보다 | ¡Cuídate! = 몸 조심해! | el cuidado(명사) = 주의; 간호",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -610,6 +750,16 @@
     "round": "wb1"
   },
   {
+    "es": "descubrir",
+    "en": "to discover; to find out; to uncover",
+    "ko": "발견하다; 알아내다",
+    "ex": "Colón descubrió América en 1492.",
+    "ex_ko": "콜럼버스는 1492년에 아메리카를 발견했다.",
+    "note": "규칙 동사 (-ir) | 과거분사 불규칙: descubierto | el descubrimiento(명사) = 발견 | descubrir un secreto = 비밀을 알아내다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "desordenado/a",
     "en": "messy; disorganized",
     "ko": "지저분한; 무질서한",
@@ -617,6 +767,16 @@
     "ex_ko": "내 방은 매우 지저분하다.",
     "note": "estar 동사와 쓰임 (상태): estar desordenado/a",
     "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "despertar",
+    "en": "to wake (someone) up; to arouse",
+    "ko": "깨우다; 불러일으키다",
+    "ex": "Despiértame a las seis.",
+    "ex_ko": "6시에 나 깨워줘.",
+    "note": "어간 변화 e→ie: despierto, despiertas, despierta... | 타동사(누군가를 깨우다) ↔ despertarse(재귀, 스스로 잠에서 깨다) | despertar curiosidad = 호기심을 불러일으키다",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -637,6 +797,26 @@
     "ex_ko": "정원은 집 뒤에 있다.",
     "note": null,
     "category": "direction",
+    "round": "wb1"
+  },
+  {
+    "es": "devolver",
+    "en": "to return; to give back; to vomit",
+    "ko": "돌려주다; 반납하다; 토하다",
+    "ex": "Tengo que devolver estos libros a la biblioteca.",
+    "ex_ko": "이 책들을 도서관에 반납해야 한다.",
+    "note": "어간 변화 o→ue: devuelvo, devuelves, devuelve... | 과거분사 불규칙: devuelto | devolver el dinero = 돈을 돌려주다 | volver(돌아오다)의 강조형",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "doler",
+    "en": "to hurt; to ache; to pain",
+    "ko": "아프다; 쑤시다",
+    "ex": "Me duele la cabeza.",
+    "ex_ko": "머리가 아프다.",
+    "note": "어간 변화 o→ue: duele / duelen (3인칭만 씀, gustar 구조) | Me duele el brazo. / Me duelen los pies. | el dolor(명사) = 통증 | dolerle a uno = ~에게 아프다",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -830,6 +1010,16 @@
     "round": "wb1"
   },
   {
+    "es": "el camino",
+    "en": "path; road; way; route",
+    "ko": "길; 경로; 방법",
+    "ex": "Este es el camino más corto.",
+    "ex_ko": "이것이 가장 짧은 길이다.",
+    "note": "남성명사: el camino | en camino = 가는 중에 | abrir camino = 길을 열다; 선구적으로 나아가다 | ≈ la calle(도로), la carretera(고속도로)",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
     "es": "el campo",
     "en": "field; countryside; camp",
     "ko": "들판; 시골; 야외",
@@ -886,6 +1076,16 @@
     "ex": "Vi un ciervo en el bosque.",
     "ex_ko": "숲에서 사슴을 봤다.",
     "note": "남성명사: el ciervo / f: la cierva(암사슴) / 복수: los ciervos",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "el codo",
+    "en": "elbow",
+    "ko": "팔꿈치",
+    "ex": "Se apoyó en la mesa con los codos.",
+    "ex_ko": "팔꿈치를 책상에 올렸다.",
+    "note": "남성명사: el codo | hablar por los codos = 수다를 너무 많이 떨다 | empujar con el codo = 팔꿈치로 밀다",
     "category": "noun",
     "round": "wb1"
   },
@@ -1050,6 +1250,36 @@
     "round": "wb1"
   },
   {
+    "es": "el imperio",
+    "en": "empire",
+    "ko": "제국",
+    "ex": "El Imperio Romano duró siglos.",
+    "ex_ko": "로마 제국은 수세기 동안 지속됐다.",
+    "note": "남성명사: el imperio | imperial(형용사) = 제국의 | el imperialismo = 제국주의 | el/la emperador/emperatriz = 황제/황후",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "el intervalo",
+    "en": "interval; gap; break",
+    "ko": "간격; 인터벌; 휴식시간",
+    "ex": "Hay un intervalo de diez minutos.",
+    "ex_ko": "10분 간격이 있다.",
+    "note": "남성명사: el intervalo | a intervalos = 간격을 두고 | intervalo de tiempo = 시간 간격 | ≈ el descanso(휴식), la pausa(잠깐 멈춤)",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "el ladrón",
+    "en": "thief; robber; burglar",
+    "ko": "도둑; 강도",
+    "ex": "El ladrón escapó antes de que llegara la policía.",
+    "ex_ko": "경찰이 도착하기 전에 도둑이 달아났다.",
+    "note": "m: el ladrón / f: la ladrona / 복수: los ladrones | robar(훔치다) / el robo(도둑질) | ¡Al ladrón! = 도둑이야!",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
     "es": "el lanzador",
     "en": "pitcher (baseball); thrower",
     "ko": "투수; 던지는 사람",
@@ -1096,6 +1326,16 @@
     "ex": "Quiero viajar por todo el mundo.",
     "ex_ko": "전 세계를 여행하고 싶다.",
     "note": "남성명사: el mundo | todo el mundo = 모두, 모든 사람 | el mundo entero = 온 세상",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "el muslo",
+    "en": "thigh",
+    "ko": "허벅지",
+    "ex": "Los ciclistas tienen los muslos muy desarrollados.",
+    "ex_ko": "사이클 선수들은 허벅지가 매우 발달해 있다.",
+    "note": "남성명사: el muslo | muslo de pollo = 닭 허벅지살(닭다리 위 부분) | ↔ la pantorrilla(종아리)",
     "category": "noun",
     "round": "wb1"
   },
@@ -1150,6 +1390,16 @@
     "round": "wb1"
   },
   {
+    "es": "el pecho",
+    "en": "chest; breast",
+    "ko": "가슴; 흉부",
+    "ex": "Le duele el pecho.",
+    "ex_ko": "가슴이 아프다.",
+    "note": "남성명사: el pecho | dolor de pecho = 가슴 통증 | dar el pecho = 모유 수유하다 | a pecho = 진심으로 받아들여",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
     "es": "el perdedor",
     "en": "loser",
     "ko": "패자; 패배자",
@@ -1180,6 +1430,16 @@
     "round": "wb1"
   },
   {
+    "es": "el plazo",
+    "en": "deadline; term; period; installment",
+    "ko": "기한; 기간; 할부",
+    "ex": "El plazo de entrega es el viernes.",
+    "ex_ko": "제출 기한은 금요일이다.",
+    "note": "남성명사: el plazo | en un plazo de = ~기간 내에 | a plazos = 할부로 | plazo fijo = 정기예금 | cumplir el plazo = 기한을 지키다",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
     "es": "el portero",
     "en": "goalkeeper; doorman; janitor",
     "ko": "골키퍼; 문지기",
@@ -1200,12 +1460,62 @@
     "round": "wb1"
   },
   {
+    "es": "el registro",
+    "en": "record; register; registration; search",
+    "ko": "기록; 등록; 수색",
+    "ex": "Hay que hacer un registro de todas las ventas.",
+    "ex_ko": "모든 판매 기록을 남겨야 한다.",
+    "note": "남성명사: el registro | registrarse = 등록하다; 체크인하다 | registro civil = 호적 | registro policial = 경찰 수색",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "el rey",
+    "en": "king",
+    "ko": "왕",
+    "ex": "El rey firmó la ley.",
+    "ex_ko": "왕이 법에 서명했다.",
+    "note": "남성명사: el rey / f: la reina(여왕) / 복수: los reyes(왕들; 또는 왕과 왕비) | los Reyes Magos = 동방박사 세 명 | reino(왕국)",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "el síntoma",
+    "en": "symptom",
+    "ko": "증상; 징후",
+    "ex": "Los síntomas del resfriado incluyen fiebre.",
+    "ex_ko": "감기 증상에는 발열이 포함된다.",
+    "note": "⚠️ 남성명사: el síntoma (예외: -a 어미지만 남성 — 그리스어 기원) / 복수: los síntomas | presentar síntomas = 증상이 나타나다",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "el timbre",
+    "en": "doorbell; bell; stamp; timbre (sound quality)",
+    "ko": "초인종; 우표; 음색",
+    "ex": "Alguien tocó el timbre.",
+    "ex_ko": "누군가 초인종을 눌렀다.",
+    "note": "남성명사: el timbre | tocar el timbre = 초인종을 누르다 | el timbre de voz = 음색 | (중남미) el timbre = 우표 (스페인: el sello)",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
     "es": "el tirador",
     "en": "shooter; marksman",
     "ko": "사수; 저격수",
     "ex": "Es un excelente tirador.",
     "ex_ko": "그는 훌륭한 사수이다.",
     "note": "m: el tirador / f: la tiradora | ← tirar(던지다/쏘다) + -dor",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "el tobillo",
+    "en": "ankle",
+    "ko": "발목",
+    "ex": "Se torció el tobillo bajando las escaleras.",
+    "ex_ko": "계단을 내려오다가 발목을 삐었다.",
+    "note": "남성명사: el tobillo | torcerse el tobillo = 발목을 삐다 | el esguince de tobillo = 발목 염좌",
     "category": "noun",
     "round": "wb1"
   },
@@ -1240,6 +1550,16 @@
     "round": "wb1"
   },
   {
+    "es": "el/la campesino/a",
+    "en": "peasant; farmer; country person",
+    "ko": "농민; 시골 사람",
+    "ex": "Los campesinos trabajan la tierra desde el amanecer.",
+    "ex_ko": "농민들은 새벽부터 땅을 일군다.",
+    "note": "m: el campesino / f: la campesina | el campo(들판; 시골) + -ino(사람) | ≈ el agricultor(농부, 더 격식체) | la vida campesina = 농촌 생활",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
     "es": "el/la cartero/a",
     "en": "mail carrier; postman",
     "ko": "우편배달부",
@@ -1266,6 +1586,26 @@
     "ex": "Mi cuñado y yo nos llevamos bien.",
     "ex_ko": "나와 처남은 사이가 좋다.",
     "note": "m: el cuñado / f: la cuñada | 배우자의 형제자매, 또는 형제자매의 배우자 모두를 가리킴",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "el/la dictador/a",
+    "en": "dictator",
+    "ko": "독재자",
+    "ex": "El dictador gobernó el país durante décadas.",
+    "ex_ko": "독재자는 수십 년간 나라를 통치했다.",
+    "note": "m: el dictador / f: la dictadora | la dictadura(명사) = 독재; 독재 정권 | dictar(동사) = 받아쓰게 하다; 명하다",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "el/la esclavo/a",
+    "en": "slave; enslaved person",
+    "ko": "노예",
+    "ex": "Los esclavos trabajaban sin libertad.",
+    "ex_ko": "노예들은 자유 없이 일했다.",
+    "note": "m: el esclavo / f: la esclava | la esclavitud(명사) = 노예제 | ser esclavo de = ~의 노예가 되다(비유) | abolir la esclavitud = 노예제를 폐지하다",
     "category": "noun",
     "round": "wb1"
   },
@@ -1397,6 +1737,16 @@
     "ex_ko": "그 은행은 약국과 슈퍼마켓 사이에 있다.",
     "note": "전치사 — 두 대상 사이: entre A y B",
     "category": "direction",
+    "round": "wb1"
+  },
+  {
+    "es": "entregar",
+    "en": "to deliver; to hand over; to submit",
+    "ko": "제출하다; 넘겨주다; 배달하다",
+    "ex": "Tienes que entregar el trabajo mañana.",
+    "ex_ko": "내일까지 과제를 제출해야 한다.",
+    "note": "규칙 동사 | 철자 변화: g→gu (entregué) | entregarse = 자수하다; 헌신하다 | la entrega(납품; 제출; 시상) | entregar en mano = 직접 전달",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -1660,6 +2010,16 @@
     "round": "wb1"
   },
   {
+    "es": "la caducidad",
+    "en": "expiration; expiry; caducity",
+    "ko": "유효기간 만료; 소멸",
+    "ex": "Revisa la fecha de caducidad antes de comer.",
+    "ex_ko": "먹기 전에 유효기간을 확인해.",
+    "note": "여성명사: la caducidad | fecha de caducidad = 유통기한; 유효기간 | caducar(동사) = 만료되다 | caduco/a(형용사) = 만료된; 낡은",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
     "es": "la caña",
     "en": "fishing rod; reed; cane",
     "ko": "낚싯대; 갈대; 지팡이",
@@ -1686,6 +2046,26 @@
     "ex": "Hizo un voto de castidad.",
     "ex_ko": "그는 순결 서약을 했다.",
     "note": "여성명사: la castidad | voto de castidad = 순결 서약",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "la columna vertebral",
+    "en": "spine; vertebral column; backbone",
+    "ko": "척추; 등뼈",
+    "ex": "Hay que cuidar la columna vertebral al sentarse.",
+    "ex_ko": "앉을 때 척추를 잘 관리해야 한다.",
+    "note": "여성명사 | columna(기둥; 칼럼) + vertebral(척추의) | la vértebra(척추뼈) / 복수: las vértebras | columna dorsal(동의어, 비공식)",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "la copa",
+    "en": "cup (trophy); wine glass; treetop",
+    "ko": "우승컵; 와인잔; (나무) 꼭대기",
+    "ex": "El equipo ganó la copa.",
+    "ex_ko": "팀이 우승컵을 들어 올렸다.",
+    "note": "여성명사: la copa | la Copa del Mundo = 월드컵 | copa de vino = 와인 한 잔 | la taza(커피잔·머그) / el vaso(물컵)와 구분",
     "category": "noun",
     "round": "wb1"
   },
@@ -1720,6 +2100,16 @@
     "round": "wb1"
   },
   {
+    "es": "la estantería",
+    "en": "bookshelf; shelving unit; shelf",
+    "ko": "책꽂이; 선반",
+    "ex": "Los libros están en la estantería.",
+    "ex_ko": "책들이 책꽂이에 있다.",
+    "note": "여성명사: la estantería / 복수: las estanterías | estante(선반 한 칸) | librería = 서점 (책꽂이가 아님!)",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
     "es": "la flecha",
     "en": "arrow",
     "ko": "화살",
@@ -1746,6 +2136,16 @@
     "ex": "Lanzó la jabalina a gran distancia.",
     "ex_ko": "그는 창을 멀리 던졌다.",
     "note": "여성명사: la jabalina / 복수: las jabalinas | lanzamiento de jabalina = 창던지기 종목",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "la ley",
+    "en": "law; act; legislation",
+    "ko": "법; 법률; 법령",
+    "ex": "Todos somos iguales ante la ley.",
+    "ex_ko": "우리는 모두 법 앞에 평등하다.",
+    "note": "여성명사: la ley / 복수: las leyes | cumplir la ley = 법을 지키다 | el derecho(법학; 권리) | según la ley = 법에 따라",
     "category": "noun",
     "round": "wb1"
   },
@@ -1810,6 +2210,26 @@
     "round": "wb1"
   },
   {
+    "es": "la muerte",
+    "en": "death; decease",
+    "ko": "죽음; 사망",
+    "ex": "La muerte es parte de la vida.",
+    "ex_ko": "죽음은 삶의 일부다.",
+    "note": "여성명사: la muerte | la pena de muerte = 사형 | morir(동사) = 죽다 | muerto/a(형용사) = 죽은 | Día de los Muertos = 멕시코 죽은 자의 날",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "la muñeca",
+    "en": "wrist; doll",
+    "ko": "손목; 인형",
+    "ex": "Se lesionó la muñeca jugando al tenis.",
+    "ex_ko": "테니스를 하다가 손목을 다쳤다.",
+    "note": "여성명사: la muñeca | 두 가지 뜻: 손목(신체) / 인형(장난감) | el reloj de muñeca = 손목시계 | jugar con muñecas = 인형 놀이하다",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
     "es": "la nariz",
     "en": "nose",
     "ko": "코",
@@ -1846,6 +2266,16 @@
     "ex": "Hay que tener paciencia.",
     "ex_ko": "인내심을 가져야 한다.",
     "note": "여성명사: la paciencia | tener paciencia = 참을성이 있다 / ¡Ten paciencia! = 참아!",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "la pantorrilla",
+    "en": "calf (of the leg)",
+    "ko": "종아리",
+    "ex": "Me duele la pantorrilla después del maratón.",
+    "ex_ko": "마라톤 후에 종아리가 아프다.",
+    "note": "여성명사: la pantorrilla / 복수: las pantorrillas | el gemelo(쌍둥이; 비복근)도 동의어로 사용됨 | ↔ el muslo(허벅지)",
     "category": "noun",
     "round": "wb1"
   },
@@ -1896,6 +2326,36 @@
     "ex": "No sé la respuesta correcta.",
     "ex_ko": "정답을 모르겠다.",
     "note": "여성명사: la respuesta | ← responder(대답하다) | en respuesta a = ~에 대한 답으로",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "la rodilla",
+    "en": "knee",
+    "ko": "무릎",
+    "ex": "Le duele la rodilla después de correr.",
+    "ex_ko": "달린 후에 무릎이 아프다.",
+    "note": "여성명사: la rodilla | de rodillas = 무릎 꿇고 | doblar las rodillas = 무릎을 구부리다 | la rótula = 슬개골(무릎뼈)",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "la solicitud",
+    "en": "request; application; petition",
+    "ko": "요청; 신청; 청원",
+    "ex": "Mandé la solicitud de trabajo por correo.",
+    "ex_ko": "이력서(입사 지원서)를 이메일로 보냈다.",
+    "note": "여성명사: la solicitud | solicitar(동사) = 신청하다; 요청하다 | solicitud de visado = 비자 신청 | a solicitud de = ~의 요청에 의해",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "la sospecha",
+    "en": "suspicion; suspect; doubt",
+    "ko": "의심; 혐의; 의혹",
+    "ex": "La policía tiene sus sospechas.",
+    "ex_ko": "경찰은 의혹을 가지고 있다.",
+    "note": "여성명사: la sospecha | sospechar(동사) = 의심하다 | el/la sospechoso/a(형용사/명사) = 의심스러운; 용의자 | bajo sospecha = 혐의를 받고",
     "category": "noun",
     "round": "wb1"
   },
@@ -2030,6 +2490,16 @@
     "round": "wb1"
   },
   {
+    "es": "los indocumentados",
+    "en": "undocumented people; undocumented immigrants",
+    "ko": "미등록 이민자; 서류 미비자",
+    "ex": "Miles de indocumentados cruzan la frontera.",
+    "ex_ko": "수천 명의 미등록 이민자들이 국경을 넘는다.",
+    "note": "남성 복수형 | m: el indocumentado / f: la indocumentada | sin papeles(서류 없이)도 동의어로 쓰임 | documentado(형용사) = 문서가 있는",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
     "es": "los naipes",
     "en": "playing cards",
     "ko": "트럼프 카드",
@@ -2120,6 +2590,26 @@
     "round": "wb1"
   },
   {
+    "es": "mudar(se)",
+    "en": "to move (house); to change; to molt",
+    "ko": "이사하다; 바꾸다; 털을 갈다",
+    "ex": "Nos mudamos a un piso más grande.",
+    "ex_ko": "우리는 더 큰 아파트로 이사했다.",
+    "note": "mudarse = 이사하다 (재귀) | mudar de opinión = 의견을 바꾸다 | mudar la ropa = 옷을 갈아입다 | (동물) mudar la piel/plumas = 허물벗다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "nadie",
+    "en": "nobody; no one; not anyone",
+    "ko": "아무도 (없다/아니다)",
+    "ex": "No hay nadie en casa.",
+    "ex_ko": "집에 아무도 없다.",
+    "note": "부정 대명사 | 동사 앞: No viene nadie / 동사 뒤: Nadie viene (이중 부정 아님) | nadie más = 아무도 더 | ↔ alguien(누군가)",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
     "es": "navegar",
     "en": "to navigate; to sail; to browse",
     "ko": "항해하다; 검색하다",
@@ -2137,6 +2627,16 @@
     "ex_ko": "눈이 산을 덮고 있다.",
     "note": "동사형: nevar (눈이 오다) — 불규칙: nieva (3인칭 단수만 사용)",
     "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "ninguno/a",
+    "en": "none; no; neither; not any",
+    "ko": "아무도; 아무것도; 어떤 ~도 없는",
+    "ex": "No queda ningún billete.",
+    "ex_ko": "표가 한 장도 남지 않았다.",
+    "note": "남성 단수 명사 앞: ningún | f: ninguna | 복수: ningunos/as (드묾) | ninguno de ellos = 그들 중 아무도 | ↔ alguno(어떤)",
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -2235,7 +2735,17 @@
     "ko": "잃다; 놓치다",
     "ex": "No quiero perder el tren.",
     "ex_ko": "나는 기차를 놓치고 싶지 않다.",
-    "note": "어간 변화 e→ie: pierdo, pierdes, pierde, perdemos, perdéis, pierden",
+    "note": "어간 변화 e→ie: pierdo, pierdes, pierde, perdemos, perdéis, pierden | perder peso = 살을 빼다, 체중을 줄이다 | perder el tiempo = 시간을 낭비하다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "persistir",
+    "en": "to persist; to continue; to last",
+    "ko": "지속하다; 고집하다; 계속되다",
+    "ex": "Si los síntomas persisten, consulta al médico.",
+    "ex_ko": "증상이 지속되면 의사에게 상담하세요.",
+    "note": "규칙 동사 (-ir) | persistir en = ~을 고집하다 | la persistencia(명사) = 지속; 끈기 | persistente(형용사) = 지속적인; 끈질긴",
     "category": "verb",
     "round": "wb1"
   },
@@ -2350,6 +2860,16 @@
     "round": "wb1"
   },
   {
+    "es": "prometer",
+    "en": "to promise",
+    "ko": "약속하다",
+    "ex": "Te prometo que vuelvo pronto.",
+    "ex_ko": "곧 돌아올게, 약속해.",
+    "note": "규칙 동사 (-er) | la promesa(명사) = 약속 | prometer + inf = ~하기로 약속하다 | cumplir una promesa = 약속을 지키다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "pues",
     "en": "well; then; since",
     "ko": "글쎄; 그러면; 왜냐하면",
@@ -2436,6 +2956,16 @@
     "ex": "Revisa el documento antes de enviarlo.",
     "ex_ko": "보내기 전에 문서를 검토해라.",
     "note": "규칙 동사 | ≈ comprobar, verificar | revisión(명사) = 검토, 점검",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "romperse",
+    "en": "to break; to get broken; to tear",
+    "ko": "부러지다; 깨지다; 찢어지다",
+    "ex": "Se me rompió el vaso.",
+    "ex_ko": "컵이 깨졌다.",
+    "note": "재귀동사 | romper(타동사, 깨다) ↔ romperse(자동사, 깨지다) | 과거분사 불규칙: roto | Se rompió la pierna = 다리가 부러졌다",
     "category": "verb",
     "round": "wb1"
   },
@@ -2570,6 +3100,16 @@
     "round": "wb1"
   },
   {
+    "es": "sonoro/a",
+    "en": "sonorous; resonant; loud; voiced (phonetics)",
+    "ko": "울리는; 공명하는; 유성음의",
+    "ex": "Tiene una voz muy sonora.",
+    "ex_ko": "그녀는 매우 울리는 목소리를 가지고 있다.",
+    "note": "형용사 | m: sonoro / f: sonora | 언어학: consonante sonora = 유성 자음 (↔ sorda 무성음) | efecto sonoro = 음향 효과",
+    "category": "adjective",
+    "round": "wb1"
+  },
+  {
     "es": "tanto/a",
     "en": "so much; so many",
     "ko": "그렇게 많은; 너무 많은",
@@ -2610,6 +3150,16 @@
     "round": "wb1"
   },
   {
+    "es": "tolerar",
+    "en": "to tolerate; to bear; to put up with",
+    "ko": "참다; 견디다; 용인하다",
+    "ex": "No tolero el ruido cuando estudio.",
+    "ex_ko": "공부할 때 소음을 참을 수 없다.",
+    "note": "규칙 동사 | la tolerancia(명사) = 관용; 내성 | tolerante(형용사) = 관대한 | ≈ aguantar, soportar | intolerancia = 불관용; 불내증",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "tomar",
     "en": "to take; to drink; to have",
     "ko": "마시다; 잡다; 먹다",
@@ -2617,6 +3167,16 @@
     "ex_ko": "나는 커피를 마실 것이다.",
     "note": "beber vs tomar: beber는 '마시다' 전용 / tomar는 더 넓은 의미 (먹다·잡다 포함), 중남미에서 더 자주 쓰임",
     "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "tonto/a",
+    "en": "stupid; foolish; silly; dumb",
+    "ko": "어리석은; 바보 같은",
+    "ex": "No seas tonto, es una broma.",
+    "ex_ko": "바보 같이 굴지 마, 농담이야.",
+    "note": "형용사/명사 | m: tonto / f: tonta | el tonto del pueblo = 마을의 바보 | hacer el tonto = 바보처럼 굴다 | ↔ listo/a(영리한)",
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -2640,6 +3200,16 @@
     "round": "wb1"
   },
   {
+    "es": "tratar",
+    "en": "to treat; to deal with; to try; to address",
+    "ko": "다루다; 대하다; 시도하다",
+    "ex": "Hay que tratar este problema con cuidado.",
+    "ex_ko": "이 문제는 신중하게 다뤄야 한다.",
+    "note": "규칙 동사 | tratar de + inf = ~하려고 하다 | tratar a alguien bien/mal = ~을 잘/못 대하다 | tratarse de = ~에 관한 것이다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "trescientos/as",
     "en": "three hundred",
     "ko": "300",
@@ -2647,6 +3217,16 @@
     "ex_ko": "그 비행은 300분 걸린다.",
     "note": "성 일치: trescientos (m) / trescientas (f)",
     "category": "number",
+    "round": "wb1"
+  },
+  {
+    "es": "último/a",
+    "en": "last; latest; final; ultimate",
+    "ko": "마지막의; 최근의; 최종의",
+    "ex": "Es la última oportunidad.",
+    "ex_ko": "이것이 마지막 기회다.",
+    "note": "형용사 | m: último / f: última | por último = 마지막으로 | el último = 맨 뒤에 있는 사람 | últimas noticias = 최신 뉴스 | ↔ primero",
+    "category": "adjective",
     "round": "wb1"
   },
   {
@@ -2677,6 +3257,16 @@
     "ex_ko": "그것은 11층이다.",
     "note": "10 이후 서수는 일상에서 잘 안 쓰이고 기수(11번, 12번...)로 대체하는 경우 많음",
     "category": "ordinal",
+    "round": "wb1"
+  },
+  {
+    "es": "valiente",
+    "en": "brave; courageous; bold",
+    "ko": "용감한; 대담한",
+    "ex": "Es muy valiente enfrentarse a ese miedo.",
+    "ex_ko": "그 두려움에 맞서다니 매우 용감하다.",
+    "note": "형용사 (m/f 동형) / 복수: valientes | el/la valiente(명사) = 용감한 사람 | la valentía(명사) = 용기 | ↔ cobarde(겁쟁이)",
+    "category": "adjective",
     "round": "wb1"
   },
   {
