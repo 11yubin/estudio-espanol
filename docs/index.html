@@ -418,6 +418,7 @@
     }
 
     .quiz-answer[hidden] { display: none; }
+    .quiz-hint[hidden] { display: none; }
 
     .quiz-answer-word { font-size: 26px; font-weight: 700; color: var(--primary); }
     .quiz-answer-ex { margin-top: 8px; font-size: 16px; }
@@ -874,13 +875,14 @@
         `<div class="quiz-progress">복습 ${quizPos + 1} / ${quizQueue.length} · <span class="status-badge status-${getStatus(w.es)}">${STATUS_LABELS[getStatus(w.es)]}</span></div>` +
         `<div class="quiz-card">` +
           prompt +
-          `<div class="quiz-hint">뜻: ${escapeHtml(w.ko || w.en || '')}</div>` +
+          `<div class="quiz-hint" id="quizHint" hidden>뜻: ${escapeHtml(w.ko || w.en || '')}</div>` +
           `<div class="quiz-answer" id="quizAnswer" hidden>` +
             `<div class="quiz-answer-word">${escapeHtml(w.es)}</div>` +
             `<div class="quiz-answer-ex">${escapeHtml(w.ex || '')}</div>` +
             (w.ex_ko ? `<div class="quiz-answer-exko">${escapeHtml(w.ex_ko)}</div>` : '') +
           `</div>` +
           `<div class="quiz-controls">` +
+            `<button class="btn btn-secondary" id="quizHintBtn">💡 힌트(뜻)</button>` +
             `<button class="btn" id="quizReveal">정답 보기</button>` +
             `<div class="quiz-grade" id="quizGrade" hidden>` +
               `<button class="btn btn-dont" data-grade="0">❌ 틀렸어요</button>` +
@@ -900,7 +902,10 @@
     }
 
     document.getElementById('quizArea').addEventListener('click', (e) => {
-      if (e.target.id === 'quizReveal') {
+      if (e.target.id === 'quizHintBtn') {
+        document.getElementById('quizHint').removeAttribute('hidden');
+        e.target.setAttribute('hidden', '');
+      } else if (e.target.id === 'quizReveal') {
         document.getElementById('quizAnswer').removeAttribute('hidden');
         document.getElementById('quizGrade').removeAttribute('hidden');
         e.target.setAttribute('hidden', '');
