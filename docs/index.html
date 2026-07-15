@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#e8f3ff">
   <link rel="manifest" href="./manifest.json">
-  <link rel="icon" type="image/png" href="./icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="./icon-192.svg">
   <title>Estudio Español - 단어장</title>
   <style>
     * {
@@ -23,8 +23,11 @@
       --muted: #9ca3af;
       --partial: #d97706;
       --partial-bg: #fef3c7;
+      --almost: #0891b2;
+      --almost-bg: #cffafe;
       --mastered: #16a34a;
       --mastered-bg: #dcfce7;
+      --wrong: #dc2626;
       --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
@@ -35,6 +38,7 @@
         --border: #374151;
         --primary-light: #1e3a8a;
         --partial-bg: #422006;
+        --almost-bg: #083344;
         --mastered-bg: #052e16;
       }
     }
@@ -159,17 +163,6 @@
       vertical-align: top;
     }
 
-    .round-badge {
-      display: inline-block;
-      padding: 2px 8px;
-      background-color: var(--primary);
-      color: white;
-      border-radius: 4px;
-      font-size: 12px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
     .cat-badge {
       display: inline-block;
       padding: 2px 8px;
@@ -191,6 +184,7 @@
     }
 
     .status-partial { background-color: var(--partial-bg); color: var(--partial); }
+    .status-almost { background-color: var(--almost-bg); color: var(--almost); }
     .status-mastered { background-color: var(--mastered-bg); color: var(--mastered); }
     .status-none { color: var(--muted); }
 
@@ -217,6 +211,8 @@
     }
 
     .ex-ko[hidden] { display: none; }
+
+    .row-actions { display: inline-flex; gap: 6px; margin-top: 4px; }
 
     .mini-btn {
       padding: 3px 8px;
@@ -269,8 +265,16 @@
       color: var(--text);
     }
 
-    .btn-partial { background-color: var(--partial); color: white; }
-    .btn-mastered { background-color: var(--mastered); color: white; }
+    .btn-know { background-color: var(--mastered); color: white; }
+    .btn-dont { background-color: var(--wrong); color: white; }
+
+    .btn-sub {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      opacity: 0.85;
+      margin-top: 2px;
+    }
 
     .card {
       width: 100%;
@@ -340,26 +344,14 @@
 
     .card-ex-ko[hidden] { display: none; }
 
-    .card-nav {
+    .card-actions {
       display: flex;
       gap: 8px;
       justify-content: center;
-      margin-top: 16px;
+      margin-top: 4px;
     }
 
-    .card-nav button {
-      min-width: 64px;
-      padding: 10px 12px;
-    }
-
-    .mastery-controls {
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      margin-top: 12px;
-    }
-
-    .mastery-controls .btn { flex: 1; max-width: 200px; }
+    .card-actions .btn { flex: 1; max-width: 200px; }
 
     .card-info {
       padding: 8px 12px;
@@ -371,38 +363,71 @@
       margin-bottom: 16px;
     }
 
-    /* 복습 뷰 */
+    /* 복습 뷰 — 빈칸 퀴즈 */
     .review-container { padding: 16px; }
-
-    .review-section-title {
-      font-size: 16px;
-      font-weight: 700;
-      margin: 16px 0 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .review-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 12px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      margin-bottom: 8px;
-      flex-wrap: wrap;
-    }
-
-    .review-word { font-weight: 700; color: var(--primary); }
-    .review-meaning { color: var(--muted); font-size: 13px; flex: 1; min-width: 100px; }
-    .review-actions { display: flex; gap: 6px; }
 
     .review-note {
       font-size: 12px;
       color: var(--muted);
-      padding: 4px 0 12px;
+      padding: 0 0 12px;
     }
+
+    .quiz-progress {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .quiz-card {
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg) 100%);
+    }
+
+    .quiz-sentence {
+      font-size: 20px;
+      line-height: 1.7;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .quiz-blank {
+      display: inline-block;
+      min-width: 72px;
+      border-bottom: 3px solid var(--primary);
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .quiz-hint {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .quiz-answer {
+      margin: 8px 0 16px;
+      padding: 12px;
+      border-radius: 8px;
+      background-color: var(--bg);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .quiz-answer[hidden] { display: none; }
+
+    .quiz-answer-word { font-size: 26px; font-weight: 700; color: var(--primary); }
+    .quiz-answer-ex { margin-top: 8px; font-size: 16px; }
+    .quiz-answer-exko { margin-top: 4px; font-size: 14px; color: var(--muted); }
+
+    .quiz-controls { display: flex; flex-direction: column; gap: 8px; }
+    .quiz-controls .btn { width: 100%; }
+    .quiz-grade { display: flex; gap: 8px; }
+    .quiz-grade[hidden] { display: none; }
+    .quiz-grade .btn { flex: 1; }
 
     /* 반응형 */
     @media (max-width: 640px) {
@@ -415,6 +440,7 @@
       .card { padding: 16px; min-height: 250px; }
       .card-front { font-size: 24px; }
       .card-value { font-size: 16px; }
+      .quiz-sentence { font-size: 18px; }
     }
   </style>
 </head>
@@ -433,9 +459,6 @@
     <div class="tab-content active" id="table">
       <div class="controls">
         <input type="text" class="search-box" id="searchInput" placeholder="스페인어, 영어, 한국어 검색...">
-        <select class="filter-select" id="roundSelect">
-          <option value="">모든 회차</option>
-        </select>
         <select class="filter-select" id="categorySelect">
           <option value="">모든 분류</option>
         </select>
@@ -443,6 +466,7 @@
           <option value="">모든 상태</option>
           <option value="none">학습 중</option>
           <option value="partial">적당히 앎</option>
+          <option value="almost">거의 앎</option>
           <option value="mastered">완전 터득</option>
         </select>
       </div>
@@ -468,6 +492,13 @@
       <div class="flashcard-container">
         <div class="flashcard-controls">
           <button class="btn" id="shuffleBtn">🔀 셔플</button>
+          <select class="filter-select" id="cardStatusSelect">
+            <option value="none" selected>학습 중</option>
+            <option value="partial">적당히 앎</option>
+            <option value="almost">거의 앎</option>
+            <option value="mastered">완전 터득</option>
+            <option value="all">전체</option>
+          </select>
           <select class="filter-select" id="cardCategorySelect">
             <option value="">모든 분류</option>
           </select>
@@ -496,13 +527,9 @@
             </div>
           </div>
         </div>
-        <div class="mastery-controls">
-          <button class="btn btn-partial" id="markPartialBtn">적당히 앎</button>
-          <button class="btn btn-mastered" id="markMasteredBtn">완전 터득</button>
-        </div>
-        <div class="card-nav">
-          <button class="btn btn-secondary" id="prevBtn">← 이전</button>
-          <button class="btn btn-secondary" id="nextBtn">다음 →</button>
+        <div class="card-actions">
+          <button class="btn btn-dont" id="dontKnowBtn">No lo sé<span class="btn-sub">모른다</span></button>
+          <button class="btn btn-know" id="knowBtn">Lo sé<span class="btn-sub">안다</span></button>
         </div>
       </div>
     </div>
@@ -510,8 +537,8 @@
     <!-- 복습 뷰 -->
     <div class="tab-content" id="review">
       <div class="review-container">
-        <div class="review-note">숨긴(적당히 앎·완전 터득) 단어는 카드 로테이션에서 빠집니다. 여기서 다시 학습 대상으로 복구하거나 승격할 수 있어요. ※ 상태는 이 기기(브라우저)에만 저장돼요.</div>
-        <div id="reviewContent"></div>
+        <div class="review-note">카드에서 'Lo sé'로 익힌 단어를 예문 빈칸으로 복습해요. 맞히면 한 단계 오르고, 틀리면 한 단계 내려갑니다. ※ 상태는 이 기기(브라우저)에만 저장돼요.</div>
+        <div id="quizArea"></div>
       </div>
     </div>
   </div>
@@ -522,6 +549,10 @@
       number: '수사', ordinal: '서수', direction: '방향'
     };
     const catLabel = (c) => c ? (CATEGORY_LABELS[c] || c) : '';
+
+    // 마스터리 레벨 (낮음 → 높음)
+    const LEVELS = ['none', 'partial', 'almost', 'mastered'];
+    const STATUS_LABELS = { none: '학습 중', partial: '적당히 앎', almost: '거의 앎', mastered: '완전 터득' };
 
     let allData = [];
     let deck = [];
@@ -554,6 +585,15 @@
       else wordStatus[es] = status;
       saveStatus();
     }
+    // 한 단계 승급/강등 (경계 캡)
+    function promote(es) {
+      const i = LEVELS.indexOf(getStatus(es));
+      setStatus(es, LEVELS[Math.min(i + 1, LEVELS.length - 1)]);
+    }
+    function demote(es) {
+      const i = LEVELS.indexOf(getStatus(es));
+      setStatus(es, LEVELS[Math.max(i - 1, 0)]);
+    }
 
     function escapeHtml(s) {
       return String(s == null ? '' : s)
@@ -570,7 +610,6 @@
         populateFilters();
         updateTable();
         resetDeck();
-        renderReview();
       } catch (error) {
         console.error('데이터 로드 실패:', error);
         document.getElementById('noData').textContent = '데이터를 불러올 수 없습니다.';
@@ -578,14 +617,6 @@
     }
 
     function populateFilters() {
-      const rounds = [...new Set(allData.map(w => w.round))].sort();
-      const roundSel = document.getElementById('roundSelect');
-      rounds.forEach(r => {
-        const o = document.createElement('option');
-        o.value = r; o.textContent = r;
-        roundSel.appendChild(o);
-      });
-
       const cats = [...new Set(allData.map(w => w.category).filter(Boolean))]
         .sort((a, b) => catLabel(a).localeCompare(catLabel(b)));
       [document.getElementById('categorySelect'), document.getElementById('cardCategorySelect')]
@@ -601,7 +632,6 @@
     // ── 표 뷰 ────────────────────────────────────────────────
     function updateTable() {
       const searchText = document.getElementById('searchInput').value.toLowerCase();
-      const round = document.getElementById('roundSelect').value;
       const category = document.getElementById('categorySelect').value;
       const status = document.getElementById('statusSelect').value;
 
@@ -610,10 +640,9 @@
           w.es.toLowerCase().includes(searchText) ||
           (w.en || '').toLowerCase().includes(searchText) ||
           (w.ko || '').toLowerCase().includes(searchText);
-        const matchRound = !round || w.round === round;
         const matchCat = !category || w.category === category;
         const matchStatus = !status || getStatus(w.es) === status;
-        return matchSearch && matchRound && matchCat && matchStatus;
+        return matchSearch && matchCat && matchStatus;
       });
 
       const tbody = document.getElementById('tableBody');
@@ -629,39 +658,46 @@
 
       rows.forEach(w => {
         const st = getStatus(w.es);
-        const stLabel = st === 'partial' ? '적당히 앎' : st === 'mastered' ? '완전 터득' : '학습 중';
+        const esAttr = escapeHtml(w.es);
+        const actions = st === 'none' ? '' :
+          `<div class="row-actions">` +
+            (st !== 'mastered' ? `<button class="mini-btn" data-promote="${esAttr}">승급</button>` : '') +
+            `<button class="mini-btn" data-restore="${esAttr}">복구</button>` +
+          `</div>`;
         const tr = document.createElement('tr');
         tr.innerHTML =
-          `<td><strong>${escapeHtml(w.es)}</strong><br><span style="color:var(--muted);font-size:12px">${escapeHtml(w.en || '')}</span></td>` +
+          `<td><strong>${esAttr}</strong><br><span style="color:var(--muted);font-size:12px">${escapeHtml(w.en || '')}</span></td>` +
           `<td>${escapeHtml(w.ko || '-')}</td>` +
           `<td class="ex-cell">` +
             `<div>${escapeHtml(w.ex || '-')}</div>` +
             (w.ex_ko ? `<button class="ex-toggle" type="button">해석</button><div class="ex-ko" hidden>${escapeHtml(w.ex_ko)}</div>` : '') +
           `</td>` +
           `<td>${w.category ? `<span class="cat-badge">${escapeHtml(catLabel(w.category))}</span>` : '-'}</td>` +
-          `<td><span class="status-badge status-${st}">${stLabel}</span>` +
-            (st !== 'none' ? `<br><button class="mini-btn" data-restore="${escapeHtml(w.es)}">복구</button>` : '') +
-          `</td>`;
+          `<td><span class="status-badge status-${st}">${STATUS_LABELS[st]}</span>${actions}</td>`;
         tbody.appendChild(tr);
       });
     }
 
-    // 표: 예문 해석 토글 + 복구 (이벤트 위임)
+    // 표: 예문 해석 토글 + 승급/복구 (이벤트 위임)
     document.getElementById('tableBody').addEventListener('click', (e) => {
       if (e.target.classList.contains('ex-toggle')) {
         const exKo = e.target.nextElementSibling;
         const hidden = exKo.hasAttribute('hidden');
         if (hidden) { exKo.removeAttribute('hidden'); e.target.textContent = '해석 닫기'; }
         else { exKo.setAttribute('hidden', ''); e.target.textContent = '해석'; }
+      } else if (e.target.dataset.promote) {
+        promote(e.target.dataset.promote);
+        updateTable();
       } else if (e.target.dataset.restore) {
         setStatus(e.target.dataset.restore, 'none');
-        updateTable(); renderReview(); resetDeck();
+        updateTable();
       }
     });
 
-    ['searchInput', 'roundSelect', 'categorySelect', 'statusSelect'].forEach(id => {
-      document.getElementById(id).addEventListener('input', updateTable);
-      document.getElementById(id).addEventListener('change', updateTable);
+    ['searchInput', 'categorySelect', 'statusSelect'].forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener('input', updateTable);
+      el.addEventListener('change', updateTable);
     });
 
     // ── 플래시카드 뷰 ────────────────────────────────────────
@@ -674,8 +710,11 @@
 
     function buildDeck() {
       const cat = document.getElementById('cardCategorySelect').value;
-      return allData.filter(w =>
-        getStatus(w.es) === 'none' && (!cat || w.category === cat));
+      const st = document.getElementById('cardStatusSelect').value; // none|partial|almost|mastered|all
+      return allData.filter(w => {
+        const matchStatus = st === 'all' ? true : getStatus(w.es) === st;
+        return matchStatus && (!cat || w.category === cat);
+      });
     }
 
     function resetDeck() {
@@ -709,31 +748,19 @@
       document.getElementById('cardInfo').textContent = `카드 ${currentCardIndex + 1} / ${deck.length}`;
     }
 
-    function nextCard() {
-      if (deck.length === 0) return;
-      currentCardIndex = (currentCardIndex + 1) % deck.length;
-      updateCard();
-    }
-    function prevCard() {
-      if (deck.length === 0) return;
-      currentCardIndex = (currentCardIndex - 1 + deck.length) % deck.length;
-      updateCard();
-    }
-
-    // 현재 카드에 상태 부여 → 덱에서 제거하고 다음 카드
-    function markCurrent(status) {
+    // Lo sé(안다)=+1 / No lo sé(모른다)=−1, 한 장씩 처리 후 다음 카드
+    function answerCard(known) {
       if (deck.length === 0) return;
       const w = deck[currentCardIndex];
-      setStatus(w.es, status);
+      known ? promote(w.es) : demote(w.es);
       deck.splice(currentCardIndex, 1);
       if (currentCardIndex >= deck.length) currentCardIndex = 0;
       updateCard();
       updateTable();
-      renderReview();
     }
 
     document.getElementById('card').addEventListener('click', (e) => {
-      if (e.target.closest('.ex-toggle')) return; // 토글 버튼 클릭은 뒤집기 방지
+      if (e.target.closest('.ex-toggle')) return; // 토글 클릭은 뒤집기 방지
       document.getElementById('card').classList.toggle('flipped');
     });
     document.getElementById('cardExToggle').addEventListener('click', (e) => {
@@ -744,67 +771,144 @@
       else { el.setAttribute('hidden', ''); e.target.textContent = '해석 보기'; }
     });
     document.getElementById('shuffleBtn').addEventListener('click', resetDeck);
+    document.getElementById('cardStatusSelect').addEventListener('change', resetDeck);
     document.getElementById('cardCategorySelect').addEventListener('change', resetDeck);
-    document.getElementById('nextBtn').addEventListener('click', nextCard);
-    document.getElementById('prevBtn').addEventListener('click', prevCard);
-    document.getElementById('markPartialBtn').addEventListener('click', (e) => { e.stopPropagation(); markCurrent('partial'); });
-    document.getElementById('markMasteredBtn').addEventListener('click', (e) => { e.stopPropagation(); markCurrent('mastered'); });
+    document.getElementById('knowBtn').addEventListener('click', () => answerCard(true));
+    document.getElementById('dontKnowBtn').addEventListener('click', () => answerCard(false));
 
-    // 스와이프 (좌우)
-    (function addSwipeSupport() {
-      const card = document.getElementById('card');
-      let startX = null, startY = null;
-      const threshold = 40;
-      card.addEventListener('touchstart', (e) => {
-        const t = e.touches[0]; startX = t.clientX; startY = t.clientY;
-      }, { passive: true });
-      card.addEventListener('touchend', (e) => {
-        if (startX === null) return;
-        const t = e.changedTouches[0];
-        const dx = t.clientX - startX, dy = t.clientY - startY;
-        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > threshold) {
-          if (dx < 0) nextCard(); else prevCard();
+    // ── 복습 뷰 — 자가채점 빈칸 퀴즈 ─────────────────────────
+    let quizQueue = [];
+    let quizPos = 0;
+
+    function norm(s) {
+      return (s || '').toLowerCase().normalize('NFD')
+        .replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9 ]/g, '').trim();
+    }
+    function stripParen(s) {
+      return (s || '').replace(/\(.*?\)/g, '').replace(/\s+/g, ' ').trim();
+    }
+    const BLANK = '______';
+    const ARTICLES = new Set(['el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas']);
+
+    function reLiteral(s) { return new RegExp(s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'); }
+
+    // 예문에서 target 단어(굴절형 포함)를 빈칸으로. 성공 시 문장, 실패 시 null.
+    function blankToken(ex, target) {
+      const nT = norm(target);
+      if (!nT) return null;
+      const stem = nT.slice(0, Math.min(3, nT.length));
+      const parts = ex.split(/(\s+)/);
+      for (let i = 0; i < parts.length; i++) {
+        if (/^\s+$/.test(parts[i])) continue;
+        const raw = parts[i];
+        const core = raw.replace(/^[^A-Za-zÀ-ÿ0-9]+|[^A-Za-zÀ-ÿ0-9]+$/g, '');
+        const nCore = norm(core);
+        if (nCore && (nCore === nT || (stem.length >= 3 && nCore.startsWith(stem)))) {
+          parts[i] = raw.replace(core, BLANK);
+          return parts.join('');
         }
-        startX = startY = null;
-      });
-    })();
+      }
+      return null;
+    }
 
-    // ── 복습 뷰 ──────────────────────────────────────────────
-    function renderReview() {
-      const container = document.getElementById('reviewContent');
-      const partial = allData.filter(w => getStatus(w.es) === 'partial');
-      const mastered = allData.filter(w => getStatus(w.es) === 'mastered');
+    // 예문에서 표제어 자리를 빈칸으로. {sentence, matched}
+    function makeCloze(w) {
+      const ex = w.ex || '';
+      const es = stripParen(w.es || '');
+      if (!ex || !es) return { sentence: ex, matched: false };
 
-      if (partial.length === 0 && mastered.length === 0) {
-        container.innerHTML = '<div class="no-data">아직 숨긴 단어가 없어요. 카드에서 "적당히 앎"/"완전 터득"을 눌러보세요.</div>';
+      if (es.includes(' ')) {
+        // 구 표제어: 대소문자 무시 리터럴 치환
+        if (reLiteral(es).test(ex)) return { sentence: ex.replace(reLiteral(es), BLANK), matched: true };
+        // 관사로 시작하면 관사 떼고 나머지로 재시도 (명사: el anillo → anillo)
+        const words = es.split(' ');
+        if (ARTICLES.has(words[0].toLowerCase())) {
+          const rest = words.slice(1).join(' ');
+          if (rest.includes(' ')) {
+            if (reLiteral(rest).test(ex)) return { sentence: ex.replace(reLiteral(rest), BLANK), matched: true };
+          } else {
+            const s = blankToken(ex, rest);
+            if (s) return { sentence: s, matched: true };
+          }
+        }
+        return { sentence: ex, matched: false };
+      }
+
+      // 단어 표제어: 토큰 일치 또는 어간 접두 일치(굴절형)
+      const s = blankToken(ex, es);
+      if (s) return { sentence: s, matched: true };
+      return { sentence: ex, matched: false };
+    }
+
+    function startQuiz() {
+      quizQueue = allData.filter(w => getStatus(w.es) !== 'none');
+      shuffleArray(quizQueue);
+      quizPos = 0;
+      renderQuiz();
+    }
+
+    function renderQuiz() {
+      const area = document.getElementById('quizArea');
+
+      if (quizQueue.length === 0) {
+        area.innerHTML = '<div class="no-data">복습할 단어가 없어요. 카드에서 \'Lo sé\'로 표시한 단어가 여기서 복습돼요.</div>';
+        return;
+      }
+      if (quizPos >= quizQueue.length) {
+        area.innerHTML =
+          `<div class="no-data">복습 완료! (${quizQueue.length}개)</div>` +
+          `<div class="quiz-controls"><button class="btn" id="quizRestart">다시</button></div>`;
         return;
       }
 
-      const row = (w, promote) =>
-        `<div class="review-item">` +
-          `<span class="review-word">${escapeHtml(w.es)}</span>` +
-          `<span class="review-meaning">${escapeHtml(w.ko || w.en || '')}</span>` +
-          `<span class="review-actions">` +
-            (promote ? `<button class="mini-btn" data-promote="${escapeHtml(w.es)}">완전 터득으로 승격</button>` : '') +
-            `<button class="mini-btn" data-restore="${escapeHtml(w.es)}">복구</button>` +
-          `</span>` +
-        `</div>`;
+      const w = quizQueue[quizPos];
+      const cloze = makeCloze(w);
+      const sentenceHtml = escapeHtml(cloze.sentence)
+        .replace(BLANK, '<span class="quiz-blank">' + BLANK + '</span>');
+      const prompt = cloze.matched
+        ? `<div class="quiz-sentence">${sentenceHtml}</div>`
+        : `<div class="quiz-sentence">${escapeHtml(cloze.sentence)}</div>` +
+          `<div class="quiz-hint">↑ 이 문장의 핵심 단어를 스페인어로?</div>`;
 
-      let html = '';
-      html += `<div class="review-section-title"><span class="status-badge status-partial">적당히 앎</span> ${partial.length}개</div>`;
-      html += partial.length ? partial.map(w => row(w, true)).join('') : '<div class="review-note">없음</div>';
-      html += `<div class="review-section-title"><span class="status-badge status-mastered">완전 터득</span> ${mastered.length}개</div>`;
-      html += mastered.length ? mastered.map(w => row(w, false)).join('') : '<div class="review-note">없음</div>';
-      container.innerHTML = html;
+      area.innerHTML =
+        `<div class="quiz-progress">복습 ${quizPos + 1} / ${quizQueue.length} · <span class="status-badge status-${getStatus(w.es)}">${STATUS_LABELS[getStatus(w.es)]}</span></div>` +
+        `<div class="quiz-card">` +
+          prompt +
+          `<div class="quiz-hint">뜻: ${escapeHtml(w.ko || w.en || '')}</div>` +
+          `<div class="quiz-answer" id="quizAnswer" hidden>` +
+            `<div class="quiz-answer-word">${escapeHtml(w.es)}</div>` +
+            `<div class="quiz-answer-ex">${escapeHtml(w.ex || '')}</div>` +
+            (w.ex_ko ? `<div class="quiz-answer-exko">${escapeHtml(w.ex_ko)}</div>` : '') +
+          `</div>` +
+          `<div class="quiz-controls">` +
+            `<button class="btn" id="quizReveal">정답 보기</button>` +
+            `<div class="quiz-grade" id="quizGrade" hidden>` +
+              `<button class="btn btn-dont" data-grade="0">❌ 틀렸어요</button>` +
+              `<button class="btn btn-know" data-grade="1">✅ 맞았어요</button>` +
+            `</div>` +
+          `</div>` +
+        `</div>`;
     }
 
-    document.getElementById('reviewContent').addEventListener('click', (e) => {
-      const promote = e.target.dataset.promote;
-      const restore = e.target.dataset.restore;
-      if (promote) { setStatus(promote, 'mastered'); }
-      else if (restore) { setStatus(restore, 'none'); }
-      else return;
-      renderReview(); updateTable(); resetDeck();
+    function gradeQuiz(correct) {
+      const w = quizQueue[quizPos];
+      if (!w) return;
+      correct ? promote(w.es) : demote(w.es);
+      quizPos++;
+      updateTable();
+      renderQuiz();
+    }
+
+    document.getElementById('quizArea').addEventListener('click', (e) => {
+      if (e.target.id === 'quizReveal') {
+        document.getElementById('quizAnswer').removeAttribute('hidden');
+        document.getElementById('quizGrade').removeAttribute('hidden');
+        e.target.setAttribute('hidden', '');
+      } else if (e.target.dataset.grade !== undefined) {
+        gradeQuiz(e.target.dataset.grade === '1');
+      } else if (e.target.id === 'quizRestart') {
+        startQuiz();
+      }
     });
 
     // ── 탭 전환 ──────────────────────────────────────────────
@@ -816,7 +920,7 @@
         const tabId = e.target.getAttribute('data-tab');
         document.getElementById(tabId).classList.add('active');
         if (tabId === 'flashcard') resetDeck();
-        if (tabId === 'review') renderReview();
+        if (tabId === 'review') startQuiz();
         if (tabId === 'table') updateTable();
       });
     });

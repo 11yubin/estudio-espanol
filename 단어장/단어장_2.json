@@ -1,9 +1,0 @@
-[
-  { "es": "poner",          "en": "to put; to place",                 "ko": "놓다; 두다",         "ex": "Pon el libro en la mesa.",              "ex_ko": "책을 탁자 위에 놓아라.",     "note": "불규칙 동사 — yo: pongo | 단순과거: puse, pusiste, puso... | 미래 어간: pondr- | 과거분사: puesto" },
-  { "es": "sacar",          "en": "to take out; to get; to pull out", "ko": "꺼내다; 얻다; 빼다",    "ex": "Saca el libro de la mochila.",          "ex_ko": "가방에서 책을 꺼내라.",      "note": "관용구: sacar una foto = 사진 찍다 / sacar buenas notas = 좋은 성적을 받다" },
-  { "es": "llenar",         "en": "to fill",                          "ko": "채우다",            "ex": "Llena el vaso de agua.",                "ex_ko": "컵에 물을 채워라.",        "note": null },
-  { "es": "dejar",          "en": "to leave; to let; to stop",        "ko": "두다; 떠나다; 그만두다",  "ex": "Deja tu mochila aquí.",                 "ex_ko": "가방을 여기에 두어라.",      "note": "dejar de + inf = ~하기를 그만두다 (e.g. Dejé de fumar. 담배를 끊었다.)" },
-  { "es": "alquilar",       "en": "to rent",                          "ko": "빌리다; 임대하다",      "ex": "Queremos alquilar un apartamento.",     "ex_ko": "우리는 아파트를 임대하고 싶다.", "note": null },
-  { "es": "imprescindible", "en": "essential; indispensable",         "ko": "필수적인; 없어서는 안 될", "ex": "El agua es imprescindible para vivir.", "ex_ko": "물은 살아가는 데 필수적이다.",  "note": "성별 구분 없음 (m/f), 복수형: imprescindibles" },
-  { "es": "arreglar",       "en": "to fix; to arrange; to tidy up",   "ko": "고치다; 정리하다",      "ex": "Necesito arreglar mi bicicleta.",       "ex_ko": "나는 자전거를 고쳐야 한다.",   "note": null }
-]
