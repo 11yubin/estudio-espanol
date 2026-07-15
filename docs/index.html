@@ -903,8 +903,14 @@
 
     document.getElementById('quizArea').addEventListener('click', (e) => {
       if (e.target.id === 'quizHintBtn') {
-        document.getElementById('quizHint').removeAttribute('hidden');
-        e.target.setAttribute('hidden', '');
+        const hint = document.getElementById('quizHint');
+        if (hint.hasAttribute('hidden')) {
+          hint.removeAttribute('hidden');
+          e.target.textContent = '💡 힌트 숨기기';
+        } else {
+          hint.setAttribute('hidden', '');
+          e.target.textContent = '💡 힌트(뜻)';
+        }
       } else if (e.target.id === 'quizReveal') {
         document.getElementById('quizAnswer').removeAttribute('hidden');
         document.getElementById('quizGrade').removeAttribute('hidden');
