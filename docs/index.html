@@ -372,6 +372,33 @@
       padding: 0 0 12px;
     }
 
+    .chip-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .chip {
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: none;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .chip.active {
+      background-color: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .chip-count { opacity: 0.7; font-size: 11px; }
+
     .quiz-progress {
       font-size: 12px;
       color: var(--muted);
@@ -538,7 +565,8 @@
     <!-- 복습 뷰 -->
     <div class="tab-content" id="review">
       <div class="review-container">
-        <div class="review-note">카드에서 'Lo sé'로 익힌 단어를 예문 빈칸으로 복습해요. 맞히면 한 단계 오르고, 틀리면 한 단계 내려갑니다. ※ 상태는 이 기기(브라우저)에만 저장돼요.</div>
+        <div class="review-note">레벨을 골라 그 단어들만 예문 빈칸으로 복습해요. 힌트(뜻)·정답은 버튼으로 열리고, 맞히면 한 단계 승급·틀리면 강등. ※ 상태는 이 기기(브라우저)에만 저장돼요.</div>
+        <div class="chip-row" id="quizLevelFilter"></div>
         <div id="quizArea"></div>
       </div>
     </div>
@@ -841,10 +869,33 @@
       return { sentence: ex, matched: false };
     }
 
+    // 복습 레벨 필터 (칩): 전체 = 모든 레벨, 나머지는 해당 레벨만
+    const QUIZ_LEVELS = [
+      { key: 'all', label: '전체' },
+      { key: 'none', label: '학습 중' },
+      { key: 'partial', label: '적당히 앎' },
+      { key: 'almost', label: '거의 앎' },
+      { key: 'mastered', label: '완전 터득' }
+    ];
+    let quizLevel = 'all';
+
+    function levelCount(key) {
+      if (key === 'all') return allData.length;
+      return allData.filter(w => getStatus(w.es) === key).length;
+    }
+
+    function renderLevelChips() {
+      document.getElementById('quizLevelFilter').innerHTML = QUIZ_LEVELS.map(l =>
+        `<button class="chip${quizLevel === l.key ? ' active' : ''}" data-level="${l.key}">` +
+        `${l.label} <span class="chip-count">${levelCount(l.key)}</span></button>`
+      ).join('');
+    }
+
     function startQuiz() {
-      quizQueue = allData.filter(w => getStatus(w.es) !== 'none');
+      quizQueue = allData.filter(w => quizLevel === 'all' ? true : getStatus(w.es) === quizLevel);
       shuffleArray(quizQueue);
       quizPos = 0;
+      renderLevelChips();
       renderQuiz();
     }
 
@@ -852,7 +903,8 @@
       const area = document.getElementById('quizArea');
 
       if (quizQueue.length === 0) {
-        area.innerHTML = '<div class="no-data">복습할 단어가 없어요. 카드에서 \'Lo sé\'로 표시한 단어가 여기서 복습돼요.</div>';
+        const lname = (QUIZ_LEVELS.find(l => l.key === quizLevel) || {}).label || '이';
+        area.innerHTML = `<div class="no-data">'${lname}' 레벨에 복습할 단어가 없어요. 다른 레벨을 골라 보세요.</div>`;
         return;
       }
       if (quizPos >= quizQueue.length) {
@@ -898,8 +950,17 @@
       correct ? promote(w.es) : demote(w.es);
       quizPos++;
       updateTable();
+      renderLevelChips();
       renderQuiz();
     }
+
+    // 레벨 칩 선택 → 해당 레벨만 퀴즈
+    document.getElementById('quizLevelFilter').addEventListener('click', (e) => {
+      const chip = e.target.closest('.chip');
+      if (!chip) return;
+      quizLevel = chip.dataset.level;
+      startQuiz();
+    });
 
     document.getElementById('quizArea').addEventListener('click', (e) => {
       if (e.target.id === 'quizHintBtn') {
