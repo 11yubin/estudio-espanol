@@ -463,6 +463,49 @@
     .quiz-grade[hidden] { display: none; }
     .quiz-grade .btn { flex: 1; }
 
+    /* 동사 활용 뷰 */
+    .verbs-container { padding: 16px; }
+    .verb-item {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .verb-item summary {
+      padding: 10px 12px;
+      cursor: pointer;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+    .verb-item summary::-webkit-details-marker { display: none; }
+    .verb-item[open] summary { border-bottom: 1px solid var(--border); }
+    .verb-en { color: var(--muted); font-size: 13px; }
+    .group-badge {
+      display: inline-block;
+      padding: 1px 8px;
+      background: var(--primary-light);
+      color: var(--text);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .conj-wrap { overflow-x: auto; }
+    .conj-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .conj-table th, .conj-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      white-space: nowrap;
+    }
+    .conj-table th { background: var(--primary-light); font-weight: 600; }
+    .conj-table td.person { color: var(--muted); font-size: 13px; }
+    .conj-table tr.pl-start td { border-top: 2px solid var(--primary); }
+    .vq-form { font-size: 34px; font-weight: 700; text-align: center; margin-bottom: 8px; }
+
     /* 문법 하이라이팅 */
     .hl-q { color: var(--hl-q); font-weight: 700; }
     .hl-v { color: var(--hl-v); font-weight: 700; }
@@ -504,6 +547,7 @@
         <button class="tab-btn active" data-tab="table">표</button>
         <button class="tab-btn" data-tab="flashcard">카드</button>
         <button class="tab-btn" data-tab="review">복습</button>
+        <button class="tab-btn" data-tab="verbs">동사</button>
       </div>
     </header>
 
@@ -592,6 +636,18 @@
         <div class="review-note">레벨을 골라 그 단어들만 예문 빈칸으로 복습해요. 힌트(뜻)·정답은 버튼으로 열리고, 맞히면 한 단계 승급·틀리면 강등. ※ 상태는 이 기기(브라우저)에만 저장돼요.</div>
         <div class="chip-row" id="quizLevelFilter"></div>
         <div id="quizArea"></div>
+      </div>
+    </div>
+
+    <!-- 동사 활용 뷰 -->
+    <div class="tab-content" id="verbs">
+      <div class="verbs-container">
+        <div class="review-note">고빈도 불규칙 동사의 활용을 그룹별로 비교하고(활용표), 변형된 형태로 원형·시제·인칭을 맞혀요(역추적 퀴즈). 활용형은 사람이 검수한 데이터라 정확합니다.</div>
+        <div class="chip-row" id="verbModeRow">
+          <button class="chip active" data-vmode="browse">📋 활용표</button>
+          <button class="chip" data-vmode="quiz">🎯 역추적 퀴즈</button>
+        </div>
+        <div id="verbArea"></div>
       </div>
     </div>
   </div>
@@ -734,6 +790,7 @@
       try {
         const response = await fetch('./data.json');
         allData = await response.json();
+        try { verbData = await (await fetch('./verbs.json')).json(); } catch (e) { verbData = []; }
         loadStatus();
         populateFilters();
         updateTable();
@@ -1090,6 +1147,123 @@
       }
     });
 
+    // ── 동사 활용 뷰 (그룹 비교표 + 역추적 퀴즈) ──────────────
+    let verbData = [];
+    const GROUP_LABELS = {
+      'stem-ie': '어간 e→ie', 'stem-ue': '어간 o→ue', 'stem-i': '어간 e→i', 'stem-uue': '어간 u→ue',
+      'yo-go': '1인칭 -go', 'yo-zco': '1인칭 -zco',
+      'u-pret': 'U형 강변화과거', 'i-pret': 'I형 강변화과거', 'j-pret': 'J형 강변화과거',
+      'orth': '철자 변화', 'irreg-part': '불규칙 과거분사', 'muy-irreg': '완전 불규칙'
+    };
+    const PERSONS = ['yo', 'tú', 'él/ella', 'nosotros', 'vosotros', 'ellos/ellas'];
+    const HABER_PRES = ['he', 'has', 'ha', 'hemos', 'habéis', 'han'];
+    const TENSES = [{ key: 'pres', label: '현재' }, { key: 'pret', label: '부정과거' }, { key: 'perf', label: '현재완료' }];
+    const gLabel = (g) => GROUP_LABELS[g] || g;
+    // 현재완료 = haber(현재, 규칙) + 저장된 과거분사 → 생성이 아니라 authored 조합이라 항상 정확
+    function verbForm(v, tKey, i) {
+      return tKey === 'perf' ? `${HABER_PRES[i]} ${v.part}` : v[tKey][i];
+    }
+
+    let verbMode = 'browse';
+    let verbGroupFilter = 'all';
+    let verbTenses = { pres: true, pret: true, perf: true };
+
+    function renderVerbs() {
+      if (verbData.length === 0) {
+        document.getElementById('verbArea').innerHTML = '<div class="no-data">동사 활용 데이터를 불러올 수 없습니다.</div>';
+        return;
+      }
+      if (verbMode === 'quiz') renderVerbQuiz();
+      else renderVerbBrowse();
+    }
+
+    function verbCardHtml(v) {
+      const active = TENSES.filter(t => verbTenses[t.key]);
+      const badges = v.groups.map(g => `<span class="group-badge">${escapeHtml(gLabel(g))}</span>`).join('');
+      const head = `<thead><tr><th>인칭</th>${active.map(t => `<th>${t.label}</th>`).join('')}</tr></thead>`;
+      const rows = PERSONS.map((p, i) =>
+        `<tr${i === 3 ? ' class="pl-start"' : ''}><td class="person">${p}</td>` +
+        active.map(t => `<td>${escapeHtml(verbForm(v, t.key, i))}</td>`).join('') + `</tr>`
+      ).join('');
+      return `<details class="verb-item"><summary><strong>${escapeHtml(v.es)}</strong> ` +
+        `<span class="verb-en">${escapeHtml(v.en)}</span> ${badges}</summary>` +
+        `<div class="conj-wrap"><table class="conj-table">${head}<tbody>${rows}</tbody></table></div></details>`;
+    }
+
+    function renderVerbBrowse() {
+      const groups = [...new Set(verbData.flatMap(v => v.groups))];
+      const groupChips = `<div class="chip-row">` +
+        `<button class="chip${verbGroupFilter === 'all' ? ' active' : ''}" data-vgroup="all">전체 <span class="chip-count">${verbData.length}</span></button>` +
+        groups.map(g => `<button class="chip${verbGroupFilter === g ? ' active' : ''}" data-vgroup="${g}">${escapeHtml(gLabel(g))} <span class="chip-count">${verbData.filter(v => v.groups.includes(g)).length}</span></button>`).join('') +
+        `</div>`;
+      const tenseChips = `<div class="chip-row">` +
+        TENSES.map(t => `<button class="chip${verbTenses[t.key] ? ' active' : ''}" data-vtense="${t.key}">${t.label}</button>`).join('') +
+        `</div>`;
+      const list = verbData.filter(v => verbGroupFilter === 'all' || v.groups.includes(verbGroupFilter));
+      document.getElementById('verbArea').innerHTML = groupChips + tenseChips + list.map(verbCardHtml).join('');
+    }
+
+    // 역추적 퀴즈: 변형형 → 원형·시제·인칭 (자가채점 리빌)
+    let vquiz = null;
+    function newVerbQuiz() {
+      const v = verbData[Math.floor(Math.random() * verbData.length)];
+      const t = TENSES[Math.floor(Math.random() * TENSES.length)];
+      const i = Math.floor(Math.random() * 6);
+      vquiz = { es: v.es, en: v.en, tenseLabel: t.label, person: PERSONS[i], form: verbForm(v, t.key, i) };
+    }
+    function renderVerbQuiz() {
+      if (!vquiz) newVerbQuiz();
+      const q = vquiz;
+      const tts = TTS_OK ? ` <button class="tts-btn" type="button" data-tts="${escapeHtml(q.form)}" aria-label="듣기">🔊</button>` : '';
+      document.getElementById('verbArea').innerHTML =
+        `<div class="quiz-card">` +
+          `<div class="vq-form"><span class="hl-v">${escapeHtml(q.form)}</span>${tts}</div>` +
+          `<div class="quiz-hint">이 형태의 <b>원형 · 시제 · 인칭</b>은? (머릿속으로 답한 뒤 정답 보기)</div>` +
+          `<div class="quiz-answer" id="vqAnswer" hidden>` +
+            `<div>원형: <strong>${escapeHtml(q.es)}</strong> <span class="verb-en">${escapeHtml(q.en)}</span></div>` +
+            `<div>시제: <strong>${q.tenseLabel}</strong></div>` +
+            `<div>인칭: <strong>${escapeHtml(q.person)}</strong></div>` +
+          `</div>` +
+          `<div class="quiz-controls">` +
+            `<button class="btn" id="vqReveal">정답 보기</button>` +
+            `<button class="btn btn-secondary" id="vqNext" hidden>다음 문제 →</button>` +
+          `</div>` +
+        `</div>`;
+    }
+
+    document.getElementById('verbModeRow').addEventListener('click', (e) => {
+      const chip = e.target.closest('.chip');
+      if (!chip) return;
+      verbMode = chip.dataset.vmode;
+      document.querySelectorAll('#verbModeRow .chip').forEach(c => c.classList.toggle('active', c === chip));
+      if (verbMode === 'quiz') newVerbQuiz();
+      renderVerbs();
+    });
+
+    document.getElementById('verbArea').addEventListener('click', (e) => {
+      const ttsBtn = e.target.closest('.tts-btn');
+      if (ttsBtn) { speakSequence(ttsBtn.dataset.tts, ttsBtn); return; }
+      const gchip = e.target.closest('[data-vgroup]');
+      if (gchip) { verbGroupFilter = gchip.dataset.vgroup; renderVerbBrowse(); return; }
+      const tchip = e.target.closest('[data-vtense]');
+      if (tchip) {
+        const k = tchip.dataset.vtense;
+        // 최소 1개 시제는 유지
+        if (verbTenses[k] && TENSES.filter(t => verbTenses[t.key]).length === 1) return;
+        verbTenses[k] = !verbTenses[k];
+        renderVerbBrowse();
+        return;
+      }
+      if (e.target.id === 'vqReveal') {
+        document.getElementById('vqAnswer').removeAttribute('hidden');
+        document.getElementById('vqNext').removeAttribute('hidden');
+        e.target.setAttribute('hidden', '');
+      } else if (e.target.id === 'vqNext') {
+        newVerbQuiz();
+        renderVerbQuiz();
+      }
+    });
+
     // ── 탭 전환 ──────────────────────────────────────────────
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -1101,6 +1275,7 @@
         if (tabId === 'flashcard') resetDeck();
         if (tabId === 'review') startQuiz();
         if (tabId === 'table') updateTable();
+        if (tabId === 'verbs') renderVerbs();
       });
     });
 
