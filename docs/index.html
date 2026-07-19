@@ -28,6 +28,9 @@
       --mastered: #16a34a;
       --mastered-bg: #dcfce7;
       --wrong: #dc2626;
+      --hl-q: #b91c1c;
+      --hl-v: #1d4ed8;
+      --hl-rel: #15803d;
       --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
@@ -40,6 +43,9 @@
         --partial-bg: #422006;
         --almost-bg: #083344;
         --mastered-bg: #052e16;
+        --hl-q: #f87171;
+        --hl-v: #93c5fd;
+        --hl-rel: #86efac;
       }
     }
 
@@ -457,6 +463,24 @@
     .quiz-grade[hidden] { display: none; }
     .quiz-grade .btn { flex: 1; }
 
+    /* 문법 하이라이팅 */
+    .hl-q { color: var(--hl-q); font-weight: 700; }
+    .hl-v { color: var(--hl-v); font-weight: 700; }
+    .hl-rel { color: var(--hl-rel); font-weight: 700; }
+
+    /* 듣기 버튼 (TTS) */
+    .tts-btn {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 15px;
+      padding: 0 4px;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .tts-btn.playing { animation: ttsPulse 0.8s ease-in-out infinite; }
+    @keyframes ttsPulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
     /* 반응형 */
     @media (max-width: 640px) {
       header { padding: 12px; }
@@ -630,6 +654,81 @@
         .replace(/"/g, '&quot;');
     }
 
+    // ── 문법 하이라이팅 (예문 구조 시각 인코딩) ───────────────
+    // 의문사=빨강, haber+과거분사(복합시제)=파랑, 관계사+절=초록[ ]. 휴리스틱이라 오탐 가능.
+    const HL_L = 'A-Za-zÁÉÍÓÚÜÑáéíóúüñ';
+    const RELATIVES = ['lo que', 'lo cual', 'el que', 'la que', 'los que', 'las que', 'el cual', 'la cual', 'los cuales', 'las cuales', 'quienes', 'quien', 'cuyos', 'cuyas', 'cuyo', 'cuya', 'donde'];
+    const INTERROG = ['por qué', 'qué', 'cuándo', 'adónde', 'dónde', 'cómo', 'cuántos', 'cuántas', 'cuánto', 'cuánta', 'quiénes', 'quién', 'cuáles', 'cuál'];
+    const HABER = ['he', 'has', 'ha', 'hemos', 'habéis', 'han', 'había', 'habías', 'habíamos', 'habíais', 'habían', 'habré', 'habrás', 'habrá', 'habremos', 'habréis', 'habrán', 'haya', 'hayas', 'hayamos', 'hayáis', 'hayan', 'hubiera', 'hubieras', 'hubiéramos', 'hubierais', 'hubieran', 'hubiese', 'hubieses', 'hubiésemos', 'hubieseis', 'hubiesen'];
+    const IRREG_PART = ['hecho', 'dicho', 'visto', 'puesto', 'vuelto', 'escrito', 'roto', 'abierto', 'muerto', 'cubierto', 'resuelto', 'impreso', 'frito', 'descubierto', 'devuelto', 'compuesto'];
+
+    function highlightGrammar(raw) {
+      let s = escapeHtml(raw);
+      // 1) 관계사 + 절 (초록 + 대괄호) — 깨끗한 텍스트에서 먼저
+      const relAlt = RELATIVES.map(r => r.replace(/ /g, '\\s+')).join('|');
+      s = s.replace(new RegExp(`(^|[^${HL_L}])(${relAlt})((?:(?![.;:,!?¡¿])[^])*)`, 'gi'),
+        (m, pre, rel, tail) => `${pre}<span class="hl-rel">[${rel}${tail}]</span>`);
+      // 2) 복합시제 haber(+부사) + 과거분사 (파랑)
+      const haberAlt = HABER.join('|');
+      s = s.replace(new RegExp(`(^|[^${HL_L}])((?:${haberAlt})\\s+(?:[${HL_L}]+mente\\s+)?(?:[${HL_L}]+(?:ado|ido)|${IRREG_PART.join('|')}))(?![${HL_L}])`, 'gi'),
+        (m, pre, chunk) => `${pre}<span class="hl-v">${chunk}</span>`);
+      // 3) 의문사 (빨강)
+      const intAlt = INTERROG.map(r => r.replace(/ /g, '\\s+')).join('|');
+      s = s.replace(new RegExp(`(^|[^${HL_L}])(${intAlt})(?![${HL_L}])`, 'gi'),
+        (m, pre, word) => `${pre}<span class="hl-q">${word}</span>`);
+      return s;
+    }
+
+    // ── 예문 출력 블록 (하이라이팅 + 듣기 버튼) ───────────────
+    const TTS_OK = ('speechSynthesis' in window);
+    function exBlockHtml(ex) {
+      if (!ex) return '-';
+      const btn = TTS_OK
+        ? ` <button class="tts-btn" type="button" data-tts="${escapeHtml(ex)}" title="듣기 (0.8→1.0→1.2배속)" aria-label="듣기">🔊</button>`
+        : '';
+      return `${highlightGrammar(ex)}${btn}`;
+    }
+
+    // ── 자동 연속 재생 (SpeechSynthesis, 0.8→1.0→1.2배속) ────
+    let esVoice = null;
+    function loadVoices() {
+      if (!TTS_OK) return;
+      const vs = speechSynthesis.getVoices();
+      esVoice = vs.find(v => /^es[-_]/i.test(v.lang)) ||
+                vs.find(v => v.lang && v.lang.toLowerCase().startsWith('es')) || null;
+    }
+    if (TTS_OK) { loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
+
+    let ttsToken = 0;
+    function stopTTS() { if (TTS_OK) { ttsToken++; speechSynthesis.cancel(); } }
+    const delay = (ms) => new Promise(r => setTimeout(r, ms));
+    function speakOnce(text, rate) {
+      return new Promise((resolve) => {
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = esVoice ? esVoice.lang : 'es-ES';
+        if (esVoice) u.voice = esVoice;
+        u.rate = rate;
+        u.onend = resolve;
+        u.onerror = resolve;
+        speechSynthesis.speak(u);
+      });
+    }
+    // 프로토콜: 0.8배속 → 2초 → 1.0배속 → 2초 → 1.2배속
+    async function speakSequence(text, btn) {
+      if (!TTS_OK || !text) return;
+      speechSynthesis.cancel();
+      const my = ++ttsToken;
+      if (btn) btn.classList.add('playing');
+      const rates = [0.8, 1.0, 1.2];
+      for (let i = 0; i < rates.length; i++) {
+        if (my !== ttsToken) { if (btn) btn.classList.remove('playing'); return; }
+        await speakOnce(text, rates[i]);
+        if (my !== ttsToken) { if (btn) btn.classList.remove('playing'); return; }
+        if (i < rates.length - 1) await delay(2000);
+      }
+      if (btn) btn.classList.remove('playing');
+    }
+
     // ── 데이터 로드 ──────────────────────────────────────────
     async function loadData() {
       try {
@@ -698,7 +797,7 @@
           `<td><strong>${esAttr}</strong><br><span style="color:var(--muted);font-size:12px">${escapeHtml(w.en || '')}</span></td>` +
           `<td>${escapeHtml(w.ko || '-')}</td>` +
           `<td class="ex-cell">` +
-            `<div>${escapeHtml(w.ex || '-')}</div>` +
+            `<div>${w.ex ? exBlockHtml(w.ex) : '-'}</div>` +
             (w.ex_ko ? `<button class="ex-toggle" type="button">해석</button><div class="ex-ko" hidden>${escapeHtml(w.ex_ko)}</div>` : '') +
           `</td>` +
           `<td>${w.category ? `<span class="cat-badge">${escapeHtml(catLabel(w.category))}</span>` : '-'}</td>` +
@@ -707,8 +806,10 @@
       });
     }
 
-    // 표: 예문 해석 토글 + 승급/복구 (이벤트 위임)
+    // 표: 듣기 + 예문 해석 토글 + 승급/복구 (이벤트 위임)
     document.getElementById('tableBody').addEventListener('click', (e) => {
+      const ttsBtn = e.target.closest('.tts-btn');
+      if (ttsBtn) { speakSequence(ttsBtn.dataset.tts, ttsBtn); return; }
       if (e.target.classList.contains('ex-toggle')) {
         const exKo = e.target.nextElementSibling;
         const hidden = exKo.hasAttribute('hidden');
@@ -754,6 +855,7 @@
     }
 
     function updateCard() {
+      stopTTS();
       const card = document.getElementById('card');
       card.classList.remove('flipped');
       document.getElementById('cardExKo').setAttribute('hidden', '');
@@ -768,7 +870,7 @@
       document.querySelector('.card-front').textContent = w.es;
       document.getElementById('cardEn').textContent = w.en || '-';
       document.getElementById('cardKo').textContent = w.ko || '-';
-      document.getElementById('cardEx').textContent = w.ex || '-';
+      document.getElementById('cardEx').innerHTML = w.ex ? exBlockHtml(w.ex) : '-';
       const exKoEl = document.getElementById('cardExKo');
       const exToggle = document.getElementById('cardExToggle');
       if (w.ex_ko) { exKoEl.textContent = w.ex_ko; exToggle.style.display = ''; }
@@ -789,6 +891,8 @@
     }
 
     document.getElementById('card').addEventListener('click', (e) => {
+      const ttsBtn = e.target.closest('.tts-btn');
+      if (ttsBtn) { e.stopPropagation(); speakSequence(ttsBtn.dataset.tts, ttsBtn); return; }
       if (e.target.closest('.ex-toggle')) return; // 토글 클릭은 뒤집기 방지
       document.getElementById('card').classList.toggle('flipped');
     });
@@ -900,6 +1004,7 @@
     }
 
     function renderQuiz() {
+      stopTTS();
       const area = document.getElementById('quizArea');
 
       if (quizQueue.length === 0) {
@@ -930,7 +1035,7 @@
           `<div class="quiz-hint" id="quizHint" hidden>뜻: ${escapeHtml(w.ko || w.en || '')}</div>` +
           `<div class="quiz-answer" id="quizAnswer" hidden>` +
             `<div class="quiz-answer-word">${escapeHtml(w.es)}</div>` +
-            `<div class="quiz-answer-ex">${escapeHtml(w.ex || '')}</div>` +
+            `<div class="quiz-answer-ex">${w.ex ? exBlockHtml(w.ex) : ''}</div>` +
             (w.ex_ko ? `<div class="quiz-answer-exko">${escapeHtml(w.ex_ko)}</div>` : '') +
           `</div>` +
           `<div class="quiz-controls">` +
@@ -963,6 +1068,8 @@
     });
 
     document.getElementById('quizArea').addEventListener('click', (e) => {
+      const ttsBtn = e.target.closest('.tts-btn');
+      if (ttsBtn) { speakSequence(ttsBtn.dataset.tts, ttsBtn); return; }
       if (e.target.id === 'quizHintBtn') {
         const hint = document.getElementById('quizHint');
         if (hint.hasAttribute('hidden')) {
