@@ -30,6 +30,16 @@
     "round": "wb1"
   },
   {
+    "es": "abrazar",
+    "en": "to hug; to embrace",
+    "ko": "껴안다; 포옹하다",
+    "ex": "Me abrazó cuando llegué.",
+    "ex_ko": "내가 도착했을 때 나를 껴안았다.",
+    "note": "철자 변화 -zar: z→c (yo abracé) | el abrazo(명사) = 포옹 | ¡Un abrazo! = 안아줘요!; 편지 끝인사 | darse un abrazo = 서로 포옹하다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "abrir",
     "en": "to open",
     "ko": "열다",
@@ -120,6 +130,16 @@
     "round": "wb1"
   },
   {
+    "es": "agregar",
+    "en": "to add; to append; to include",
+    "ko": "추가하다; 더하다",
+    "ex": "Agrega más sal si hace falta.",
+    "ex_ko": "필요하면 소금을 더 추가해.",
+    "note": "철자 변화 -gar: g→gu (yo agregué) | ≈ añadir(추가하다) | agregar a un grupo = 그룹에 추가하다 | el agregado(첨가물; 외교관)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "ahorrar",
     "en": "to save (money/time)",
     "ko": "저축하다; 아끼다",
@@ -170,6 +190,16 @@
     "round": "wb1"
   },
   {
+    "es": "alcanzar",
+    "en": "to reach; to achieve; to catch up",
+    "ko": "닿다; 이루다; 따라잡다",
+    "ex": "No alcanzo el estante de arriba.",
+    "ex_ko": "위쪽 선반에 손이 닿지 않는다.",
+    "note": "철자 변화 -zar: z→c (yo alcancé) | alcanzar una meta = 목표를 이루다 | alcanzar a alguien = ~를 따라잡다 | al alcance de = ~의 손이 닿는 곳에",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "alegre",
     "en": "cheerful; happy",
     "ko": "즐거운; 명랑한",
@@ -187,6 +217,16 @@
     "ex_ko": "무슨 문제 있어?",
     "note": "남성 단수 명사 앞: algún | f: alguna | 복수: algunos/as | ↔ ninguno/a(어떤 ~도 없다) | algún día = 언젠가",
     "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "almorzar",
+    "en": "to have lunch; to eat lunch",
+    "ko": "점심을 먹다",
+    "ex": "Almorzamos juntos en la cafetería.",
+    "ex_ko": "우리는 구내식당에서 함께 점심을 먹었다.",
+    "note": "철자 변화 -zar: z→c (yo almorcé) + 어간 변화 o→ue: almuerzo, almuerzas, almuerza, almorzamos, almorzáis, almuerzan | el almuerzo(명사) = 점심 식사",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -227,6 +267,16 @@
     "ex_ko": "오기 전에 전화해.",
     "note": "antes de + 명사/inf | 반의어: después de(~후에) | antes de que + 접속법 = ~하기 전에(절)",
     "category": "direction",
+    "round": "wb1"
+  },
+  {
+    "es": "apagar",
+    "en": "to turn off; to switch off; to put out",
+    "ko": "끄다; 불을 끄다",
+    "ex": "Apaga la luz antes de salir.",
+    "ex_ko": "나가기 전에 불 꺼.",
+    "note": "철자 변화 -gar: g→gu (yo apagué) | apagar la luz/tele/ordenador = 불/TV/컴퓨터를 끄다 | ↔ encender/prender(켜다) | apagar el fuego = 불을 끄다",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -276,6 +326,16 @@
     "ex": "Me arrepiento de no haber estudiado más.",
     "ex_ko": "더 공부하지 않은 것을 후회한다.",
     "note": "재귀동사 + de + 명사/inf | 어간 변화 e→ie: me arrepiento, te arrepientes, se arrepiente, nos arrepentimos, os arrepentís, se arrepienten",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "atacar",
+    "en": "to attack; to assault",
+    "ko": "공격하다; 습격하다",
+    "ex": "El perro atacó al cartero.",
+    "ex_ko": "개가 우편집배원을 공격했다.",
+    "note": "철자 변화 -car: c→qu (yo ataqué) | el ataque(명사) = 공격; 발작 | ataque al corazón = 심장마비 | ≈ agredir(공격하다, 더 폭력적)",
     "category": "verb",
     "round": "wb1"
   },
@@ -430,6 +490,16 @@
     "round": "wb1"
   },
   {
+    "es": "cargar",
+    "en": "to carry; to load; to charge (battery)",
+    "ko": "나르다; 싣다; 충전하다",
+    "ex": "Carga el móvil antes de salir.",
+    "ex_ko": "나가기 전에 휴대폰 충전해.",
+    "note": "철자 변화 -gar: g→gu (yo cargué) | cargar el equipaje = 짐을 싣다 | cargar la batería = 배터리를 충전하다 | la carga(짐; 하중; 충전)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "casa de huéspedes",
     "en": "guest house; inn; boarding house",
     "ko": "게스트하우스; 여관",
@@ -446,6 +516,16 @@
     "ex": "Se casaron en primavera.",
     "ex_ko": "그들은 봄에 결혼했다.",
     "note": "재귀동사 | me caso, te casas, se casa... | casarse con = ~와 결혼하다 | estar casado/a = 기혼이다 | la boda(결혼식)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "castigar",
+    "en": "to punish; to penalize",
+    "ko": "처벌하다; 벌을 주다",
+    "ex": "El juez castigó al culpable con prisión.",
+    "ex_ko": "판사가 범인에게 징역형을 선고했다.",
+    "note": "철자 변화 -gar: g→gu (yo castigué) | el castigo(명사) = 벌; 처벌 | castigar sin salir = 외출 금지 벌을 주다 | ↔ premiar(상을 주다)",
     "category": "verb",
     "round": "wb1"
   },
@@ -500,6 +580,16 @@
     "round": "wb1"
   },
   {
+    "es": "chocar",
+    "en": "to crash; to collide; to shock",
+    "ko": "충돌하다; 충격을 주다",
+    "ex": "Los dos coches chocaron en la esquina.",
+    "ex_ko": "두 차가 모퉁이에서 충돌했다.",
+    "note": "철자 변화 -car: c→qu (yo choqué) | chocar con = ~와 충돌하다 | me choca = 나를 충격적으로 만들다; 마음에 안 들다 | el choque(충돌; 충격)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "ciego/a",
     "en": "blind; unaware; reckless",
     "ko": "눈먼; 맹목적인; 장님의",
@@ -540,6 +630,26 @@
     "round": "wb1"
   },
   {
+    "es": "coger",
+    "en": "to take; to grab; to catch; to pick up",
+    "ko": "잡다; 타다; 집어들다",
+    "ex": "Coge el autobús número cinco.",
+    "ex_ko": "5번 버스를 타.",
+    "note": "⚠️ 스페인에서만 일상적으로 쓰임 — 중남미에서는 성적 의미로 매우 비속하므로 사용 금지 | 철자 변화: g→j (cojo, coges...) | ≈ tomar(중남미 대체어) | coger el tren/taxi = 기차/택시를 타다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "colocar",
+    "en": "to place; to put; to position; to install",
+    "ko": "놓다; 배치하다; 설치하다",
+    "ex": "Coloca los libros en la estantería.",
+    "ex_ko": "책들을 책꽂이에 놓아.",
+    "note": "철자 변화 -car: c→qu (yo coloqué) | ≈ poner(놓다)보다 격식체·정밀 배치 뉘앙스 | colocarse = 취직하다 | la colocación(배치; 취업)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "comenzar",
     "en": "to start; to begin",
     "ko": "시작하다",
@@ -570,6 +680,16 @@
     "round": "wb1"
   },
   {
+    "es": "complicar",
+    "en": "to complicate; to make difficult",
+    "ko": "복잡하게 만들다",
+    "ex": "No compliques las cosas innecesariamente.",
+    "ex_ko": "불필요하게 일을 복잡하게 만들지 마.",
+    "note": "철자 변화 -car: c→qu (yo compliqué) | complicarse = 복잡해지다 | complicado/a(형용사) = 복잡한 | la complicación(명사) = 복잡함; 합병증",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "comprender",
     "en": "to understand; to comprise",
     "ko": "이해하다; 포함하다",
@@ -596,6 +716,16 @@
     "ex": "Cuéntame qué pasó.",
     "ex_ko": "무슨 일이 있었는지 말해줘.",
     "note": "어간 변화 o→ue: cuento, cuentas, cuenta, contamos, contáis, cuentan | contar con = ~을 믿다; ~을 보유하다 | contar un chiste = 농담하다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "cruzar",
+    "en": "to cross; to go across",
+    "ko": "건너다; 가로지르다",
+    "ex": "Cruza la calle con cuidado.",
+    "ex_ko": "조심해서 길을 건너.",
+    "note": "철자 변화 -zar: z→c (yo crucé) | cruzar la calle/el río = 거리/강을 건너다 | cruzar los brazos = 팔짱을 끼다 | la cruz(십자가; 십자형)",
     "category": "verb",
     "round": "wb1"
   },
@@ -646,6 +776,16 @@
     "ex": "Te doy un regalo.",
     "ex_ko": "너에게 선물을 줄게.",
     "note": "불규칙 동사 — 현재: doy, das, da, damos, dais, dan | 단순과거: di, diste, dio, dimos, disteis, dieron",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "darse cuenta de",
+    "en": "to realize; to notice; to become aware of",
+    "ko": "깨닫다; 알아채다; 인식하다",
+    "ex": "Me di cuenta de que había cometido un error.",
+    "ex_ko": "실수를 저질렀다는 것을 깨달았다.",
+    "note": "재귀동사구 | me doy cuenta, te das cuenta, se da cuenta... | darse cuenta de + 명사/que절 | ≠ realizar(실현하다) — 혼동 주의",
     "category": "verb",
     "round": "wb1"
   },
@@ -956,6 +1096,16 @@
     "ex": "El arquero tensó el arco.",
     "ex_ko": "궁수가 활을 당겼다.",
     "note": "남성명사: el arco | 다의어: arco y flecha(활과 화살) / arco iris(무지개) / arco arquitectónico(아치)",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "el armario",
+    "en": "wardrobe; closet; cabinet; cupboard",
+    "ko": "옷장; 벽장; 찬장",
+    "ex": "La ropa está en el armario.",
+    "ex_ko": "옷은 옷장에 있다.",
+    "note": "남성명사: el armario | armario empotrado = 붙박이장 | armario de cocina = 주방 찬장 | ≈ el ropero(옷장, 중남미식)",
     "category": "noun",
     "round": "wb1"
   },
@@ -1790,6 +1940,16 @@
     "round": "wb1"
   },
   {
+    "es": "explicar",
+    "en": "to explain; to account for",
+    "ko": "설명하다",
+    "ex": "El profesor explicó la gramática despacio.",
+    "ex_ko": "선생님이 문법을 천천히 설명했다.",
+    "note": "철자 변화 -car: c→qu (yo expliqué) | explicar + que절 | la explicación(명사) = 설명 | explicarse = 자신을 표현하다; 이해가 되다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "extranjero/a",
     "en": "foreigner; foreign",
     "ko": "외국인; 외국의",
@@ -1940,6 +2100,16 @@
     "round": "wb1"
   },
   {
+    "es": "gozar",
+    "en": "to enjoy; to experience; to possess",
+    "ko": "즐기다; 누리다",
+    "ex": "Goza de buena salud.",
+    "ex_ko": "그녀는 건강을 누리고 있다.",
+    "note": "철자 변화 -zar: z→c (yo gocé) | gozar de = ~을 누리다(건강·특권 등) | gozar con = ~으로 즐기다 | ≈ disfrutar(즐기다, 더 일상적)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "helado",
     "en": "(n.) ice cream; (adj.) frozen",
     "ko": "아이스크림; 얼어붙은",
@@ -1957,6 +2127,16 @@
     "ex_ko": "물은 살아가는 데 필수적이다.",
     "note": "성별 구분 없음 (m/f), 복수형: imprescindibles",
     "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "indicar",
+    "en": "to indicate; to point out; to show",
+    "ko": "가리키다; 나타내다; 지시하다",
+    "ex": "El médico indicó el tratamiento adecuado.",
+    "ex_ko": "의사가 적절한 치료를 지시했다.",
+    "note": "철자 변화 -car: c→qu (yo indiqué) | indicar + que절 = ~임을 나타내다 | el indicador(지표; 계기판) | indicativo(직설법; 지시적인)",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -2380,6 +2560,16 @@
     "round": "wb1"
   },
   {
+    "es": "lanzar",
+    "en": "to throw; to launch; to release",
+    "ko": "던지다; 발사하다; 출시하다",
+    "ex": "Lanzaron un nuevo producto al mercado.",
+    "ex_ko": "새 제품을 시장에 출시했다.",
+    "note": "철자 변화 -zar: z→c (yo lancé) | lanzar una pelota = 공을 던지다 | lanzar un cohete = 로켓을 발사하다 | el lanzamiento(명사) = 발사; 출시",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "las olimpiadas",
     "en": "the Olympics; the Games",
     "ko": "올림픽",
@@ -2620,6 +2810,16 @@
     "round": "wb1"
   },
   {
+    "es": "negar",
+    "en": "to deny; to refuse; to negate",
+    "ko": "부정하다; 거부하다",
+    "ex": "Negó haber robado el dinero.",
+    "ex_ko": "돈을 훔쳤다는 것을 부인했다.",
+    "note": "철자 변화 -gar: g→gu (yo negué) + 어간 변화 e→ie: niego, niegas, niega, negamos, negáis, niegan | negarse a + inf = ~하기를 거부하다 | la negación = 부정",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "nieve",
     "en": "snow",
     "ko": "눈",
@@ -2716,6 +2916,16 @@
     "ex": "¿Qué pasó? / Pasé el fin de semana en casa.",
     "ex_ko": "무슨 일이 있었어? / 나는 주말을 집에서 보냈다.",
     "note": "다의어 — ¿Qué pasa? = 무슨 일이야? / pasar tiempo = 시간을 보내다 / pasar por = ~을 지나치다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "pegar",
+    "en": "to hit; to stick; to glue; to spread (illness)",
+    "ko": "때리다; 붙이다; 풀로 붙이다; 옮기다",
+    "ex": "Pega el sello en el sobre.",
+    "ex_ko": "봉투에 우표를 붙여.",
+    "note": "철자 변화 -gar: g→gu (yo pegué) | pegar un golpe = 한 대 때리다 | pegar un cartel = 포스터를 붙이다 | se pega (병이) 전염된다 | el pegamento(풀)",
     "category": "verb",
     "round": "wb1"
   },
@@ -2960,6 +3170,16 @@
     "round": "wb1"
   },
   {
+    "es": "rezar",
+    "en": "to pray",
+    "ko": "기도하다",
+    "ex": "Reza todas las noches antes de dormir.",
+    "ex_ko": "그는 매일 밤 자기 전에 기도한다.",
+    "note": "철자 변화 -zar: z→c (yo recé) | rezar por alguien = ~를 위해 기도하다 | la oración/el rezo(명사) = 기도 | ≈ orar(기도하다, 더 격식체)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "romperse",
     "en": "to break; to get broken; to tear",
     "ko": "부러지다; 깨지다; 찢어지다",
@@ -3090,6 +3310,16 @@
     "round": "wb1"
   },
   {
+    "es": "soler + inf",
+    "en": "to usually do; to be in the habit of",
+    "ko": "보통 ~하다; ~하는 편이다",
+    "ex": "Suelo hacer ejercicio por las mañanas.",
+    "ex_ko": "나는 보통 아침에 운동을 한다.",
+    "note": "어간 변화 o→ue: suelo, sueles, suele, solemos, soléis, suelen | 현재·과거(불완료)형만 쓰는 결함동사 | 과거: solía hacer = 예전에는 ~하곤 했다 | soler + inf = 반복 습관 표현",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "soltero/a",
     "en": "single; unmarried",
     "ko": "미혼의; 독신의",
@@ -3190,6 +3420,16 @@
     "round": "wb1"
   },
   {
+    "es": "tranquilizar",
+    "en": "to calm (down); to reassure; to soothe",
+    "ko": "진정시키다; 안심시키다",
+    "ex": "Intenta tranquilizarte antes de hablar.",
+    "ex_ko": "말하기 전에 진정하려고 해.",
+    "note": "철자 변화 -zar: z→c (yo tranquilicé) | tranquilizarse = 진정하다(재귀) | ¡Tranquilo/a! = 진정해! | tranquilo/a(형용사) = 평온한; 걱정 마",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "tranquilo/a",
     "en": "calm; quiet; relaxed",
     "ko": "조용한; 차분한",
@@ -3217,6 +3457,16 @@
     "ex_ko": "그 비행은 300분 걸린다.",
     "note": "성 일치: trescientos (m) / trescientas (f)",
     "category": "number",
+    "round": "wb1"
+  },
+  {
+    "es": "tropezar",
+    "en": "to trip; to stumble; to run into",
+    "ko": "걸려 넘어지다; 우연히 마주치다",
+    "ex": "Tropecé con una piedra y caí.",
+    "ex_ko": "돌에 걸려 넘어졌다.",
+    "note": "철자 변화 -zar: z→c (yo tropecé) + 어간 변화 e→ie: tropiezo, tropiezas, tropieza, tropezamos, tropezáis, tropiezan | tropezar con alguien = ~와 우연히 마주치다",
+    "category": "verb",
     "round": "wb1"
   },
   {
