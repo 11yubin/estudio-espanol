@@ -340,6 +340,16 @@
     "round": "wb1"
   },
   {
+    "es": "atraer",
+    "en": "to attract; to draw; to lure",
+    "ko": "끌어당기다; 매혹하다",
+    "ex": "La ciudad atrae a miles de turistas.",
+    "ex_ko": "그 도시는 수천 명의 관광객을 끌어들인다.",
+    "note": "traer 파생 | yo: atraigo | 과거 어간: atraj- (atraje, atrajiste...) | 현재분사: atrayendo | 과거분사: atraído | la atracción(명사) = 매력; 어트랙션",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "atreverse a",
     "en": "to dare to; to venture to",
     "ko": "감히 ~하다; 용기 내다",
@@ -440,6 +450,16 @@
     "round": "wb1"
   },
   {
+    "es": "caber",
+    "en": "to fit; to be contained in",
+    "ko": "들어가다; 맞다; 넣을 수 있다",
+    "ex": "No cabe más gente en el ascensor.",
+    "ex_ko": "엘리베이터에 더 이상 사람이 들어가지 않는다.",
+    "note": "불규칙 yo: quepo | 단순과거 어간 불규칙: cupe, cupiste, cupo, cupimos, cupisteis, cupieron | 미래 어간: cabr- | No cabe duda = 의심할 여지가 없다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "cada",
     "en": "each; every",
     "ko": "각각의; 매~",
@@ -487,6 +507,16 @@
     "ex_ko": "그녀는 세계 챔피언이다.",
     "note": "m: el campeón / f: la campeona / 복수: los campeones, las campeonas",
     "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "carcajearse",
+    "en": "to burst out laughing; to roar with laughter",
+    "ko": "폭소를 터뜨리다; 배꼽 잡고 웃다",
+    "ex": "Se carcajeó al oír el chiste.",
+    "ex_ko": "농담을 듣고 폭소를 터뜨렸다.",
+    "note": "재귀동사 | 규칙 동사 | la carcajada(명사) = 폭소 | reírse a carcajadas = 폭소를 터뜨리다 (동일 표현) | ≈ desternillarse de risa",
+    "category": "verb",
     "round": "wb1"
   },
   {
@@ -690,6 +720,16 @@
     "round": "wb1"
   },
   {
+    "es": "componer",
+    "en": "to compose; to make up; to fix",
+    "ko": "작곡하다; 구성하다; 고치다",
+    "ex": "Beethoven compuso nueve sinfonías.",
+    "ex_ko": "베토벤은 교향곡 9개를 작곡했다.",
+    "note": "poner 파생 — 불규칙 그대로 상속 | yo: compongo | 과거 어간: compus- (compuse, compusiste...) | 미래 어간: compondr- | 과거분사: compuesto",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "comprender",
     "en": "to understand; to comprise",
     "ko": "이해하다; 포함하다",
@@ -716,6 +756,16 @@
     "ex": "Cuéntame qué pasó.",
     "ex_ko": "무슨 일이 있었는지 말해줘.",
     "note": "어간 변화 o→ue: cuento, cuentas, cuenta, contamos, contáis, cuentan | contar con = ~을 믿다; ~을 보유하다 | contar un chiste = 농담하다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "convenir",
+    "en": "to suit; to be advisable; to agree",
+    "ko": "적합하다; ~하는 게 좋다; 동의하다",
+    "ex": "No te conviene comer tan tarde.",
+    "ex_ko": "그렇게 늦게 먹는 건 좋지 않아.",
+    "note": "venir 파생 | yo: convengo | 과거 어간: convin- (convine, conviniste...) | 미래 어간: convendr- | convenir en = ~에 합의하다 | conveniente(형용사) = 적절한",
     "category": "verb",
     "round": "wb1"
   },
@@ -900,6 +950,36 @@
     "round": "wb1"
   },
   {
+    "es": "desdecir(se)",
+    "en": "to retract; to go back on one's word",
+    "ko": "말을 번복하다; 취소하다",
+    "ex": "Se desdijo de todo lo que había prometido.",
+    "ex_ko": "약속한 것을 모두 번복했다.",
+    "note": "decir 파생 | yo: desdigo | 과거: desdije, desdigiste... | 과거분사: desdicho | 미래 어간: desdecir- (규칙, decir의 dir-과 달리) | desdecirse = 자기 말을 취소하다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "deshacer",
+    "en": "to undo; to dismantle; to melt",
+    "ko": "취소하다; 해체하다; 녹이다",
+    "ex": "No puedo deshacer lo que hice.",
+    "ex_ko": "내가 한 일을 되돌릴 수 없다.",
+    "note": "hacer 파생 | yo: deshago | 과거: deshice, deshiciste, deshizo... | 미래 어간: deshar- | 과거분사: deshecho | deshacerse de = ~을 처분하다; 없애다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "desoír",
+    "en": "to ignore; to turn a deaf ear to",
+    "ko": "무시하다; 못 들은 척하다",
+    "ex": "Desoyó todos los consejos de su familia.",
+    "ex_ko": "가족의 모든 조언을 무시했다.",
+    "note": "oír(듣다)의 des- 파생어 | 현재: desoigo, desoyes, desoye... (oír과 동일 불규칙) | 과거분사: desoído | des-(부정접두사) + oír",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "desordenado/a",
     "en": "messy; disorganized",
     "ko": "지저분한; 무질서한",
@@ -946,6 +1026,26 @@
     "ex": "Tengo que devolver estos libros a la biblioteca.",
     "ex_ko": "이 책들을 도서관에 반납해야 한다.",
     "note": "어간 변화 o→ue: devuelvo, devuelves, devuelve... | 과거분사 불규칙: devuelto | devolver el dinero = 돈을 돌려주다 | volver(돌아오다)의 강조형",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "disponer",
+    "en": "to arrange; to have available; to order",
+    "ko": "배치하다; 보유하다; 명하다",
+    "ex": "Dispón las sillas en círculo.",
+    "ex_ko": "의자들을 원형으로 배치해.",
+    "note": "poner 파생 | yo: dispongo | 과거 어간: dispus- (dispuse...) | 미래 어간: dispondr- | 과거분사: dispuesto | disponer de = ~을 보유하다/활용하다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "distraer",
+    "en": "to distract; to divert; to entertain",
+    "ko": "주의를 분산시키다; 즐겁게 하다",
+    "ex": "El ruido me distrae cuando estudio.",
+    "ex_ko": "공부할 때 소음이 집중을 방해한다.",
+    "note": "traer 파생 | yo: distraigo | 과거 어간: distraj- (distraje, distrajiste...) | 현재분사: distrayendo | distraerse = 딴짓하다; 주의가 흐트러지다 | distraído/a(형용사) = 부주의한",
     "category": "verb",
     "round": "wb1"
   },
@@ -1136,6 +1236,16 @@
     "ex": "El jugador golpeó la pelota con el bate.",
     "ex_ko": "선수가 배트로 공을 쳤다.",
     "note": "남성명사: el bate / 복수: los bates",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "el boletín",
+    "en": "bulletin; newsletter; report card",
+    "ko": "공보; 소식지; 성적표",
+    "ex": "El boletín de notas llegó por correo.",
+    "ex_ko": "성적표가 우편으로 왔다.",
+    "note": "남성명사: el boletín / 복수: los boletines | boletín informativo = 뉴스레터; 정보지 | boletín oficial = 관보 | boletín de notas = 성적표",
     "category": "noun",
     "round": "wb1"
   },
@@ -1640,6 +1750,16 @@
     "round": "wb1"
   },
   {
+    "es": "el tenedor",
+    "en": "fork",
+    "ko": "포크",
+    "ex": "Usa el tenedor, no los dedos.",
+    "ex_ko": "손가락 말고 포크를 써.",
+    "note": "남성명사: el tenedor | los cubiertos = 식기류 세트 | el tenedor / el cuchillo(칼) / la cuchara(숟가락) / la cucharilla(티스푼)",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
     "es": "el timbre",
     "en": "doorbell; bell; stamp; timbre (sound quality)",
     "ko": "초인종; 우표; 음색",
@@ -2120,6 +2240,16 @@
     "round": "wb1"
   },
   {
+    "es": "huir",
+    "en": "to flee; to escape; to run away",
+    "ko": "도망치다; 피하다",
+    "ex": "Intentó huir pero lo atraparon.",
+    "ex_ko": "도망치려 했지만 잡혔다.",
+    "note": "-uir 동사 y 삽입: huyo, huyes, huye, huimos, huís, huyen | 과거 3인칭: huyó, huyeron | huir de = ~에서 도망치다 | la huida(도주)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "imprescindible",
     "en": "essential; indispensable",
     "ko": "필수적인; 없어서는 안 될",
@@ -2136,6 +2266,16 @@
     "ex": "El médico indicó el tratamiento adecuado.",
     "ex_ko": "의사가 적절한 치료를 지시했다.",
     "note": "철자 변화 -car: c→qu (yo indiqué) | indicar + que절 = ~임을 나타내다 | el indicador(지표; 계기판) | indicativo(직설법; 지시적인)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "intuir",
+    "en": "to intuit; to sense; to feel",
+    "ko": "직감하다; 느끼다",
+    "ex": "Intuyo que algo va a pasar.",
+    "ex_ko": "무언가 일어날 것 같은 느낌이 든다.",
+    "note": "-uir 동사 y 삽입 (huir과 동일 패턴): intuyo, intuyes, intuye, intuimos, intuís, intuyen | 과거 3인칭: intuyó, intuyeron | la intuición(직감)",
     "category": "verb",
     "round": "wb1"
   },
@@ -2330,6 +2470,16 @@
     "round": "wb1"
   },
   {
+    "es": "la llave",
+    "en": "key; wrench; tap; faucet",
+    "ko": "열쇠; 렌치; 수도꼭지",
+    "ex": "No encuentro la llave de casa.",
+    "ex_ko": "집 열쇠를 찾을 수가 없다.",
+    "note": "여성명사: la llave | llave de paso = 잠금 밸브; 수도꼭지 | llave inglesa = 렌치 | echar la llave = 잠그다 | llavero = 열쇠고리",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
     "es": "la madrugada",
     "en": "early morning hours; wee hours; dawn",
     "ko": "새벽 (자정~6시)",
@@ -2506,6 +2656,16 @@
     "ex": "No sé la respuesta correcta.",
     "ex_ko": "정답을 모르겠다.",
     "note": "여성명사: la respuesta | ← responder(대답하다) | en respuesta a = ~에 대한 답으로",
+    "category": "noun",
+    "round": "wb1"
+  },
+  {
+    "es": "la revista",
+    "en": "magazine; review; inspection",
+    "ko": "잡지; 리뷰; 사열",
+    "ex": "Leo una revista de moda cada semana.",
+    "ex_ko": "나는 매주 패션 잡지를 읽는다.",
+    "note": "여성명사: la revista | revisar(동사)의 명사형 | revista mensual/semanal = 월간/주간 잡지 | pasar revista = 사열하다",
     "category": "noun",
     "round": "wb1"
   },
@@ -3030,6 +3190,26 @@
     "round": "wb1"
   },
   {
+    "es": "poseer",
+    "en": "to possess; to own; to have",
+    "ko": "소유하다; 가지고 있다",
+    "ex": "Posee una gran fortuna.",
+    "ex_ko": "그는 큰 재산을 소유하고 있다.",
+    "note": "-eer 동사 철자 변화: i→y (3인칭 단·복수 과거: poseyó, poseyeron) | 과거분사: poseído | la posesión(소유) | ≈ tener(구어체)보다 격식체",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "predecir",
+    "en": "to predict; to forecast; to foretell",
+    "ko": "예언하다; 예측하다",
+    "ex": "Es difícil predecir el futuro.",
+    "ex_ko": "미래를 예측하는 것은 어렵다.",
+    "note": "decir 파생 | yo: predigo | 과거: predije, predijiste... | 과거분사: predicho | ⚠️ 미래 어간: predecir- (규칙형, *predir- 아님) | la predicción(예언; 예측)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "preferir",
     "en": "to prefer",
     "ko": "선호하다",
@@ -3150,6 +3330,46 @@
     "round": "wb1"
   },
   {
+    "es": "regresar",
+    "en": "to return; to go back; to come back",
+    "ko": "돌아가다; 돌아오다",
+    "ex": "Regresó a casa después del viaje.",
+    "ex_ko": "여행 후 집으로 돌아왔다.",
+    "note": "규칙 동사 | ≈ volver(돌아오다)의 중남미식 동의어 | regresar a = ~로 돌아가다 | el regreso(귀환; 귀가) | viaje de regreso = 귀갓길",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "rehacer",
+    "en": "to redo; to remake; to rebuild",
+    "ko": "다시 하다; 재건하다",
+    "ex": "Tuve que rehacer todo el trabajo.",
+    "ex_ko": "모든 일을 다시 해야 했다.",
+    "note": "hacer 파생 | yo: rehago | 과거: rehíce, rehíciste, rehízo... | 미래 어간: rehar- | 과거분사: rehecho | rehacerse = 회복하다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "reír",
+    "en": "to laugh",
+    "ko": "웃다; 웃음 짓다",
+    "ex": "Me hizo reír mucho.",
+    "ex_ko": "나를 많이 웃게 했다.",
+    "note": "e→i 어간변화 + 강세 표기 주의: río, ríes, ríe, reímos, reís, ríen | 과거 3인칭: rió, rieron | reírse = 웃다(재귀, 더 일상적) | reírse de = ~를 비웃다",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "reproducir",
+    "en": "to reproduce; to play back; to copy",
+    "ko": "재생하다; 복제하다; 번식하다",
+    "ex": "El sistema puede reproducir cualquier sonido.",
+    "ex_ko": "그 시스템은 어떤 소리든 재생할 수 있다.",
+    "note": "producir 파생 (-ducir류) | yo: reproduzco | 과거 어간: reproduj- (reproduje, reprodujiste...) | 과거분사: reproducido | la reproducción(재생; 복제; 번식)",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
     "es": "resfriado",
     "en": "(n.) cold; (adj.) having a cold",
     "ko": "감기; 감기에 걸린",
@@ -3195,7 +3415,7 @@
     "ko": "알다; 맛이 나다",
     "ex": "No sé dónde está.",
     "ex_ko": "그가 어디 있는지 모르겠어.",
-    "note": "불규칙 yo: sé | saber vs conocer: saber는 사실·방법, conocer는 사람·장소 | saber a = ~맛이 나다",
+    "note": "불규칙 yo: sé | 단순과거 어간 불규칙: supe, supiste, supo, supimos, supisteis, supieron | saber vs conocer: saber는 사실·방법, conocer는 사람·장소 | saber a = ~맛이 나다",
     "category": "verb",
     "round": "wb1"
   },
@@ -3337,6 +3557,26 @@
     "ex_ko": "그녀는 매우 울리는 목소리를 가지고 있다.",
     "note": "형용사 | m: sonoro / f: sonora | 언어학: consonante sonora = 유성 자음 (↔ sorda 무성음) | efecto sonoro = 음향 효과",
     "category": "adjective",
+    "round": "wb1"
+  },
+  {
+    "es": "sonreír",
+    "en": "to smile",
+    "ko": "미소 짓다",
+    "ex": "Siempre sonríe cuando te ve.",
+    "ex_ko": "그녀는 너를 볼 때마다 항상 미소 짓는다.",
+    "note": "reír(웃다)의 son- 파생어, 활용 동일 | sonrío, sonríes, sonríe... | 과거: sonrió, sonrieron | la sonrisa(명사) = 미소",
+    "category": "verb",
+    "round": "wb1"
+  },
+  {
+    "es": "suponer",
+    "en": "to suppose; to assume; to imply",
+    "ko": "가정하다; 추정하다; 의미하다",
+    "ex": "Supongo que tienes razón.",
+    "ex_ko": "네 말이 맞는 것 같아.",
+    "note": "poner 파생 | yo: supongo | 과거 어간: supus- (supuse...) | 미래 어간: supondr- | 과거분사: supuesto | supuestamente = 아마도; 이른바",
+    "category": "verb",
     "round": "wb1"
   },
   {
